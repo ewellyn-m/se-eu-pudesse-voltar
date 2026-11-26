@@ -251,6 +251,8 @@ const Cenarios = {
   "estacao-dia":     { img: CEN + "Estação Central ao Sol com Pombos.png" }, // estação de dia
   "estacao-por-do-sol": { img: CEN + "estaçao-por-do-sol.png" },    // estação ao pôr do sol
   "frente-lamen":    { img: CEN + "esquina-loja-de-lamen.png" },     // frente da lojinha de lámen do tio do Kaito
+  "frente-lamen-noite": { img: CEN + "esquina-loja-de-lamen.png", tom: "noite" },
+  "loja-lamen-noite": { img: CEN + "loja-lamen.png", tom: "noite" },  // lojinha de luz apagada (capítulo 30)
   "rua-padaria-noite": { img: CEN + "rua-padaria.png", tom: "noite" }, // esquina da padaria, à noite
   terraco:           { img: CEN + "Terraço-Bloco-B.png" },          // terraço do bloco B
   laboratorio:       { img: CEN + "Laboratório.png" },              // laboratório de biologia (aquário)

@@ -285,15 +285,24 @@ const Capitulos = [
     pagina: "src/html/capitulo29.html",
     capa: "src/imagens/cenarios/Garagem.png",
     descricao: "Uma dívida rasgada em oito pedaços, uma frase sobre quem fica de costas e uma pergunta que só alguém da praça do balanço saberia fazer."
+  }  ,
+  {
+    id: "capitulo30",
+    numero: 30,
+    titulo: "Sem soco",
+    subtitulo: "",
+    pagina: "src/html/capitulo30.html",
+    capa: "src/imagens/cenarios/loja-lamen.png",
+    descricao: "Uma demissão, uma blitz, uma livraria fechada e um aviso de despejo. Ninguém levou um soco. E a gangue está caindo."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 30,
-  titulo: "Capítulo 30",
-  capa: "src/imagens/cenarios/patio-gangue.png",
-  descricao: "A próxima peça não é ela. São eles."
+  numero: 31,
+  titulo: "Capítulo 31",
+  capa: "src/imagens/cenarios/sala-de-aula.jpg",
+  descricao: "Ele riu. Ele gostou. Agora o jogo é dos dois lados."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);
