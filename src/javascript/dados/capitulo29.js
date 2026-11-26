@@ -180,7 +180,7 @@ Roteiro.registrar("capitulo29", {
     // ▶ ESCOLHA — Rota Kaito
     rk_esc: { escolhas: [
       { texto: "A. “Eu ando com gente que fica de costas pra proteger os outros. Eu gosto dessa gente.”", proxima: "rk_a1", pontos: { kaito: 3 }, flags: ["Gosto_dessa_gente"] },
-      { texto: "B. “Leva eu pra lojinha. Eu quero um lámen. Com dois ovos.”", proxima: "rk_b1", pontos: { kaito: 2 }, flags: ["Lamen_depois_Ren"] },
+      { texto: "B. “Me leva pra lojinha. Eu quero um lámen. Com dois ovos.”", proxima: "rk_b1", pontos: { kaito: 2 }, flags: ["Lamen_depois_Ren"] },
       { texto: "C. Encostar a testa no peito dele. Só um segundo.", proxima: "rk_c1", pontos: { kaito: 3 }, flags: ["Testa_peito_Kaito"] }
     ]},
     rk_a1: { tipo: "narracao", texto: "O Kaito olha para ela. Muito tempo. Na calçada, com as pessoas passando, com o shopping atrás.", proxima: "rk_a2" },
