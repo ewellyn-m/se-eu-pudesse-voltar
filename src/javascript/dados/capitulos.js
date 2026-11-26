@@ -294,15 +294,24 @@ const Capitulos = [
     pagina: "src/html/capitulo30.html",
     capa: "src/imagens/cenarios/loja-lamen.png",
     descricao: "Uma demissão, uma blitz, uma livraria fechada e um aviso de despejo. Ninguém levou um soco. E a gangue está caindo."
+  },
+  {
+    id: "capitulo31",
+    numero: 31,
+    titulo: "Seja homem",
+    subtitulo: "",
+    pagina: "src/html/capitulo31.html",
+    capa: "src/imagens/cenarios/fliperama.png",
+    descricao: "O Takeo chega com o braço quebrado e diz que caiu da escada. Ela acha o fliperama da Midorata. E entra sozinha."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 31,
-  titulo: "Capítulo 31",
-  capa: "src/imagens/cenarios/sala-de-aula.jpg",
-  descricao: "Ele riu. Ele gostou. Agora o jogo é dos dois lados."
+  numero: 32,
+  titulo: "Capítulo 32",
+  capa: "src/imagens/cenarios/loja-lamen.png",
+  descricao: "Três voltaram em uma noite. A lojinha, não. \"O rei, não.\""
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);

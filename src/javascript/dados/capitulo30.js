@@ -131,7 +131,7 @@ Roteiro.registrar("capitulo30", {
     c3_cam_rota: { caminhos: [
       { flag: "Rota_Takeo", proxima: "c3_takeo_vem" }
     ], proxima: "c3_03" },
-    c3_takeo_vem: { tipo: "narracao", sprite: "takeo", texto: "E, do lado dela, o Takeo. Ele veio junto. Ele não é da gangue. Ele disse “eu não sei brigar, mas eu sei pesquisar” e enfiou na mochila uma pasta de plástico cheia de folhas impressas da biblioteca.", proxima: "c3_03" },
+    c3_takeo_vem: { tipo: "narracao", sprite: "takeo", texto: "E, do lado dela, o Takeo. Ele veio junto. Ele é da gangue, mas anda sumido faz semanas, e ninguém cobrou. Hoje ele apareceu. Ele disse “eu não sei brigar, mas eu sei pesquisar” e enfiou na mochila uma pasta de plástico cheia de folhas impressas da biblioteca.", proxima: "c3_03" },
     c3_03: { tipo: "narracao", sprite: "tio_kaito", texto: "O tio do Kaito está sentado no banquinho da cozinha, de boné, com um cigarro apagado na boca. Ele olha para a SN quando ela entra. Faz um aceno de cabeça. Como quem cumprimenta alguém da casa.", proxima: "c3_04" },
     c3_04: { quem: "victor", sprite: "victor", texto: "Eu digo pra gente ir atrás da Midorata. Agora. Hoje. Quebrar tudo.", proxima: "c3_05" },
     c3_05: { quem: "ryuji", sprite: "ryuji", texto: "E quebrar o quê, Victor? A Midorata não demitiu você. A Midorata não levou a minha moto. Foi um policial. Com papel. Com carimbo.", proxima: "c3_06" },
