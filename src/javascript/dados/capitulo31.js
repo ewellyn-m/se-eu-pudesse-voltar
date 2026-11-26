@@ -54,20 +54,20 @@ Roteiro.registrar("capitulo31", {
     c1_01: { roupa: "escolar", tipo: "narracao", cenario: "sala-de-aula", transicao: "tempo", legenda: "Quinta, 7h50 — Cena 1", sprite: null, texto: "Primeira aula. Matemática. O Ren já está com o livro aberto e o café pela metade, como se o tabuleiro nunca tivesse existido. A cadeira do lado da janela está vazia. A do Takeo.", proxima: "c1_02" },
     c1_02: { tipo: "pensamento", texto: "O Takeo nunca atrasa. Ele chega antes do porteiro. Ele diz que gosta de ver a escola vazia porque ela parece outra escola.", proxima: "c1_03" },
     c1_03: { tipo: "narracao", texto: "Oito e dez. Alguém bate na porta. A professora abre.", proxima: "c1_04" },
-    c1_04: { tipo: "narracao", efeito: "tremor", sprite: "takeo", texto: "É o Takeo. Uma faixa branca em volta da cabeça, com uma mancha amarelada de remédio na testa. O braço esquerdo engessado, numa tipoia azul. Ele está mancando. Cada passo da porta até a carteira é uma conta que ele faz de cabeça.", proxima: "c1_05" },
+    c1_04: { tipo: "narracao", efeito: "tremor", sprite: "takeo:machucado", texto: "É o Takeo. Uma faixa branca em volta da cabeça, com uma mancha amarelada de remédio na testa. O braço esquerdo engessado, numa tipoia azul. Ele está mancando. Cada passo da porta até a carteira é uma conta que ele faz de cabeça.", proxima: "c1_05" },
     c1_05: { tipo: "narracao", texto: "A sala inteira para. Até o Ren levanta os olhos do livro. Um segundo. Depois volta para a página.", proxima: "c1_06" },
     c1_06: { quem: "desconhecido", rotulo: "Professora", texto: "Takeo! Meu Deus. O que aconteceu?", proxima: "c1_07" },
-    c1_07: { quem: "takeo", texto: "Caí da escada. Lá de casa. Desculpa o atraso. Tive que passar no posto pra trocar o curativo.", proxima: "c1_08" },
+    c1_07: { quem: "takeo", sprite: "takeo:machucado", texto: "Caí da escada. Lá de casa. Desculpa o atraso. Tive que passar no posto pra trocar o curativo.", proxima: "c1_08" },
     c1_08: { tipo: "narracao", texto: "Ele sorri. O sorriso dele de sempre, meio sem graça. Só que o lábio está cortado no canto, e o sorriso para no meio.", proxima: "c1_09" },
     c1_09: { tipo: "pensamento", texto: "A casa do Takeo é térrea. Eu já fui lá. Tem um degrau só. O da porta da cozinha.", proxima: "c1_10" },
     c1_10: { tipo: "narracao", texto: "Ele senta. Demora para achar um jeito de colocar o braço. O olhar dele cruza com o dela do outro lado da sala. Ele faz um sinal pequeno com a cabeça: depois.", proxima: "c1_11" },
     c1_11: { tipo: "narracao", texto: "A aula continua. A SN não escuta uma palavra. Ela conta as vezes que o Takeo faz careta quando mexe o braço. Onze. Em uma aula só.", proxima: "c1_12" },
 
     // Intervalo
-    c1_12: { roupa: "escolar", tipo: "narracao", cenario: "patio-fundos", transicao: "tempo", legenda: "Intervalo", sprite: "takeo", texto: "No intervalo, o pátio dos fundos, atrás do bebedouro quebrado. Ela leva o Takeo pelo braço bom. Ele vai mancando e reclamando que consegue andar sozinho.", proxima: "c1_13" },
+    c1_12: { roupa: "escolar", tipo: "narracao", cenario: "patio-fundos", transicao: "tempo", legenda: "Intervalo", sprite: "takeo:machucado", texto: "No intervalo, o pátio dos fundos, atrás do bebedouro quebrado. Ela leva o Takeo pelo braço bom. Ele vai mancando e reclamando que consegue andar sozinho.", proxima: "c1_13" },
     c1_13: { quem: "eu", texto: "Escada.", proxima: "c1_14" },
-    c1_14: { quem: "takeo", texto: "...Tá. Não foi escada.", proxima: "c1_15" },
-    c1_15: { quem: "takeo", texto: "Ontem à noite. Eu estava voltando. Uns caras saíram do escuro do lado do terreno baldio. Quatro. Ou cinco. Não falaram nada. Nem pediram celular. Nem dinheiro. Só bateram.", proxima: "c1_cam1" },
+    c1_14: { quem: "takeo", sprite: "takeo:machucado", texto: "...Tá. Não foi escada.", proxima: "c1_15" },
+    c1_15: { quem: "takeo", sprite: "takeo:machucado", texto: "Ontem à noite. Eu estava voltando. Uns caras saíram do escuro do lado do terreno baldio. Quatro. Ou cinco. Não falaram nada. Nem pediram celular. Nem dinheiro. Só bateram.", proxima: "c1_cam1" },
     c1_cam1: { caminhos: [
       { flag: "Rota_Takeo", proxima: "c1_rt" },
       { flag: "Rota_Kaito", proxima: "c1_rk" },
@@ -76,20 +76,20 @@ Roteiro.registrar("capitulo31", {
       { flag: "Rota_Victor", proxima: "c1_rv" }
     ], proxima: "c1_rk" },
     // Na Rota Takeo, ele estava voltando depois de deixar a SN no prédio (Cap. 30).
-    c1_rt: { quem: "takeo", texto: "Foi depois de te deixar no prédio. Eu estava feliz. Eu estava andando pensando na mesa da biblioteca. Na que tem tomada.", proxima: "c1_rt2" },
+    c1_rt: { quem: "takeo", sprite: "takeo:machucado", texto: "Foi depois de te deixar no prédio. Eu estava feliz. Eu estava andando pensando na mesa da biblioteca. Na que tem tomada.", proxima: "c1_rt2" },
     c1_rt2: { tipo: "pensamento", texto: "Ele estava voltando de mim. Ele me levou até a porta, segurou a minha mão em cima da pasta, e voltou sozinho. No escuro.", proxima: "c1_16" },
-    c1_rk: { quem: "takeo", texto: "Eu estava voltando da lojinha. Da reunião. A pé. O Kaito ofereceu carona e eu disse que não precisava.", proxima: "c1_16" },
-    c1_rb: { quem: "takeo", texto: "Eu estava voltando da lojinha. Da reunião. O Blake saiu na frente com uma poltrona amarrada na moto e eu fui a pé.", proxima: "c1_16" },
-    c1_rr: { quem: "takeo", texto: "Eu estava voltando da lojinha. Da reunião. O Ryuji ia comigo, mas ficou na calçada, olhando o lugar da moto. Eu fui na frente.", proxima: "c1_16" },
-    c1_rv: { quem: "takeo", texto: "Eu estava voltando da lojinha. Da reunião. O Victor ficou sentado no meio-fio e eu não quis atrapalhar. Fui na frente.", proxima: "c1_16" },
-    c1_16: { quem: "takeo", texto: "Estava escuro. Eu não vi rosto. Mas eu vi as motos depois, indo embora. Verdes. Todas verdes.", proxima: "c1_17" },
+    c1_rk: { quem: "takeo", sprite: "takeo:machucado", texto: "Eu estava voltando da lojinha. Da reunião. A pé. O Kaito ofereceu carona e eu disse que não precisava.", proxima: "c1_16" },
+    c1_rb: { quem: "takeo", sprite: "takeo:machucado", texto: "Eu estava voltando da lojinha. Da reunião. O Blake saiu na frente com uma poltrona amarrada na moto e eu fui a pé.", proxima: "c1_16" },
+    c1_rr: { quem: "takeo", sprite: "takeo:machucado", texto: "Eu estava voltando da lojinha. Da reunião. O Ryuji ia comigo, mas ficou na calçada, olhando o lugar da moto. Eu fui na frente.", proxima: "c1_16" },
+    c1_rv: { quem: "takeo", sprite: "takeo:machucado", texto: "Eu estava voltando da lojinha. Da reunião. O Victor ficou sentado no meio-fio e eu não quis atrapalhar. Fui na frente.", proxima: "c1_16" },
+    c1_16: { quem: "takeo", sprite: "takeo:machucado", texto: "Estava escuro. Eu não vi rosto. Mas eu vi as motos depois, indo embora. Verdes. Todas verdes.", proxima: "c1_17" },
     c1_17: { quem: "eu", texto: "Midorata.", proxima: "c1_18" },
-    c1_18: { quem: "takeo", texto: "Eu sou da gangue do Kaito faz dois anos e nunca ninguém encostou em mim. Nem na fábrica. Eu sempre fico atrás. Eu sou o que segura os casacos.", proxima: "c1_19" },
-    c1_19: { quem: "takeo", texto: "Eu sumi essas semanas. Por causa da minha avó. Por causa de... sei lá. E aí, no primeiro dia que eu volto pra uma reunião, isso.", proxima: "c1_20" },
+    c1_18: { quem: "takeo", sprite: "takeo:machucado", texto: "Eu sou da gangue do Kaito faz dois anos e nunca ninguém encostou em mim. Nem na fábrica. Eu sempre fico atrás. Eu sou o que segura os casacos.", proxima: "c1_19" },
+    c1_19: { quem: "takeo", sprite: "takeo:machucado", texto: "Eu sumi essas semanas. Por causa da minha avó. Por causa de... sei lá. E aí, no primeiro dia que eu volto pra uma reunião, isso.", proxima: "c1_20" },
     c1_20: { tipo: "narracao", texto: "Ele tenta rir. Não consegue. Ele encosta a cabeça enfaixada no muro.", proxima: "c1_21" },
-    c1_21: { quem: "takeo", texto: "Não conta pro Kaito ainda. Ele já está com a lojinha. Eu conto. Hoje. Fora daqui.", proxima: "c1_22" },
+    c1_21: { quem: "takeo", sprite: "takeo:machucado", texto: "Não conta pro Kaito ainda. Ele já está com a lojinha. Eu conto. Hoje. Fora daqui.", proxima: "c1_22" },
     c1_22: { tipo: "narracao", texto: "Ela faz que sim. Coisa de gangue fica fora da escola. Ela não é de fofoquinha. Mas a mão dela está fechada tão forte que as unhas marcam a palma.", proxima: "c1_23" },
-    c1_23: { quem: "takeo", texto: "Ah. Uma coisa. Eu estava no chão. Um deles falou pro outro: “Bora, volta pro fliperama antes que alguém passe.” Fliperama. Eu fiquei repetindo isso no posto pra não esquecer.", proxima: "c1_24" },
+    c1_23: { quem: "takeo", sprite: "takeo:machucado", texto: "Ah. Uma coisa. Eu estava no chão. Um deles falou pro outro: “Bora, volta pro fliperama antes que alguém passe.” Fliperama. Eu fiquei repetindo isso no posto pra não esquecer.", proxima: "c1_24" },
     c1_24: { tipo: "pensamento", texto: "Fliperama.", proxima: "c1_esc1" },
 
     // ▶ ESCOLHA 1 — Com o Takeo, no pátio
@@ -99,16 +99,16 @@ Roteiro.registrar("capitulo31", {
       { texto: "C. “Quem fez isso vai se arrepender.” Baixo. Firme. Sem sorrir.", proxima: "c1_1c_1", pontos: { takeo: 1, desvio: 1 }, flags: ["Promessa_Takeo"] }
     ]},
     c1_1a_1: { tipo: "narracao", texto: "Ela desenrola um pedaço da faixa e enrola de novo, mais reta. Os dedos encostam no cabelo dele. Ele fica parado. Respira devagar, como se respirar rápido fosse estragar.", proxima: "c1_1a_2" },
-    c1_1a_2: { quem: "takeo", texto: "A minha avó fez isso hoje de manhã. Ela chorou enquanto fazia. Você fez melhor.", proxima: "c1_1a_3" },
+    c1_1a_2: { quem: "takeo", sprite: "takeo:machucado", texto: "A minha avó fez isso hoje de manhã. Ela chorou enquanto fazia. Você fez melhor.", proxima: "c1_1a_3" },
     c1_1a_3: { quem: "eu", texto: "Porque eu não chorei.", proxima: "c1_1a_4" },
-    c1_1a_4: { quem: "takeo", texto: "...Você está com cara de quem vai chorar depois.", proxima: "c1_25" },
+    c1_1a_4: { quem: "takeo", sprite: "takeo:machucado", texto: "...Você está com cara de quem vai chorar depois.", proxima: "c1_25" },
     c1_1b_1: { tipo: "narracao", texto: "O Takeo vira a cabeça devagar para olhar para ela. A faixa escorrega um pouco.", proxima: "c1_1b_2" },
-    c1_1b_2: { quem: "takeo", texto: "Você fala umas coisas como se tivesse vivido muito mais que eu.", proxima: "c1_1b_3" },
+    c1_1b_2: { quem: "takeo", sprite: "takeo:machucado", texto: "Você fala umas coisas como se tivesse vivido muito mais que eu.", proxima: "c1_1b_3" },
     c1_1b_3: { tipo: "pensamento", texto: "Doze anos a mais. Eu vivi doze anos a mais. E em todos eles você não estava.", proxima: "c1_25" },
     c1_1c_1: { tipo: "narracao", texto: "O Takeo olha para ela. Ele conhece essa voz. Ele ouviu essa voz uma vez só: no dia da viga.", proxima: "c1_1c_2" },
-    c1_1c_2: { quem: "takeo", texto: "Não faz nada idiota. Promete.", proxima: "c1_1c_3" },
+    c1_1c_2: { quem: "takeo", sprite: "takeo:machucado", texto: "Não faz nada idiota. Promete.", proxima: "c1_1c_3" },
     c1_1c_3: { quem: "eu", texto: "Eu não faço coisa idiota. Eu faço coisa eficiente.", proxima: "c1_1c_4" },
-    c1_1c_4: { quem: "takeo", texto: "Isso é pior.", proxima: "c1_25" },
+    c1_1c_4: { quem: "takeo", sprite: "takeo:machucado", texto: "Isso é pior.", proxima: "c1_25" },
 
     // (todas as opções continuam aqui)
     c1_25: { tipo: "narracao", texto: "O sinal toca. Ele levanta com o braço bom. Ela segura a mochila dele. Ele deixa.", proxima: "c2_01" },
@@ -338,7 +338,7 @@ Roteiro.registrar("capitulo31", {
 
     // (todas as opções continuam aqui)
     c5_08: { tipo: "narracao", sprite: "ren", cenario: "sala-de-aula", transicao: "tempo", texto: "Na sala, o Ren na carteira perto da porta. O livro aberto. O café. Ele não olha para ela. Ela não olha para ele. A sala inteira normal.", proxima: "c5_09" },
-    c5_09: { tipo: "narracao", sprite: "takeo", texto: "O Takeo chega no horário. Ainda mancando, menos. A avó desenhou uma flor de caneta no gesso. Alguém da sala já escreveu “melhoras” em letra torta embaixo.", proxima: "c5_10" },
+    c5_09: { tipo: "narracao", sprite: "takeo:machucado", texto: "O Takeo chega no horário. Ainda mancando, menos. A avó desenhou uma flor de caneta no gesso. Alguém da sala já escreveu “melhoras” em letra torta embaixo.", proxima: "c5_10" },
     c5_10: { tipo: "narracao", texto: "Quando o Takeo passa pela carteira do Ren, o Ren levanta os olhos do livro. Olha para o gesso. Um segundo. Depois volta para a página. Vira uma folha.", proxima: "c5_11" },
     c5_11: { tipo: "pensamento", texto: "Ele olhou pro gesso. Do mesmo jeito que olhou pro meu rabo de cavalo ontem. Como quem confere um trabalho.", proxima: "c5_12" },
     c5_12: { tipo: "narracao", sprite: "sayuri", texto: "A Sayuri passa pela carteira dela no caminho para a lousa. Fala sem parar de andar. Baixinho.", proxima: "c5_13" },
@@ -386,13 +386,13 @@ Roteiro.registrar("capitulo31", {
     rk_c5: { tipo: "narracao", texto: "Ele fica parado. Do lado dela, atrás do balcão. Ele não pergunta mais nada da noite anterior. Ele pega outra faca. Os dois cortando cebolinha, ombro com ombro, até o tio mandar parar porque não tem mais pote.", proxima: "r_fim" },
 
     // ---------- Rota Takeo ----------
-    rt_01: { roupa: "fora", tipo: "narracao", cenario: "casa-takeo", transicao: "tempo", legenda: "Sexta, 17h", sprite: "takeo", texto: "Depois da aula, a casa do Takeo. A avó abre a porta antes de ela bater. Abraça ela. Forte. Com cheiro de canja.", proxima: "rt_02" },
+    rt_01: { roupa: "fora", tipo: "narracao", cenario: "casa-takeo", transicao: "tempo", legenda: "Sexta, 17h", sprite: "takeo:machucado", texto: "Depois da aula, a casa do Takeo. A avó abre a porta antes de ela bater. Abraça ela. Forte. Com cheiro de canja.", proxima: "rt_02" },
     rt_02: { quem: "avo_takeo", texto: "A menina da viga. Entra. Ele está no quintal. Não quer ficar deitado. Diz que deitado ele pensa demais.", proxima: "rt_03" },
     rt_03: { tipo: "narracao", texto: "No quintal, embaixo do caquizeiro, o Takeo sentado no balanço de corda. Com uma mão só. O gesso apoiado no joelho. Balançando bem devagar, com a ponta do pé no chão.", proxima: "rt_04" },
-    rt_04: { quem: "takeo", texto: "É pra quando a gente tiver setenta. Eu estou treinando. Com setenta a gente também vai ter alguma coisa quebrada.", proxima: "rt_05" },
+    rt_04: { quem: "takeo", sprite: "takeo:machucado", texto: "É pra quando a gente tiver setenta. Eu estou treinando. Com setenta a gente também vai ter alguma coisa quebrada.", proxima: "rt_05" },
     rt_05: { tipo: "narracao", texto: "Ela ri. Não consegue não rir. E aí, no meio do riso, a garganta fecha.", proxima: "rt_06" },
     rt_06: { tipo: "pensamento", texto: "Setenta. Na primeira vez ele não chegou lá. Na primeira vez estava escuro.", proxima: "rt_07" },
-    rt_07: { quem: "takeo", texto: "Ei. Ei. Que cara é essa?", proxima: "rt_esc" },
+    rt_07: { quem: "takeo", sprite: "takeo:machucado", texto: "Ei. Ei. Que cara é essa?", proxima: "rt_esc" },
 
     // ▶ ESCOLHA — Rota Takeo
     rt_esc: { escolhas: [
@@ -401,17 +401,17 @@ Roteiro.registrar("capitulo31", {
       { texto: "C. “De hoje em diante, eu te levo em casa. Não o contrário.”", proxima: "rt_c1", pontos: { takeo: 3 }, flags: ["Leva_Takeo_casa"] }
     ]},
     rt_a1: { tipo: "narracao", texto: "O Takeo para o balanço com o pé.", proxima: "rt_a2" },
-    rt_a2: { quem: "takeo", texto: "Eu voltei de você feliz. Eu estava pensando na mesa da biblioteca. Isso não é culpa. Isso é a melhor parte da minha quarta-feira.", proxima: "rt_a3" },
-    rt_a3: { quem: "takeo", texto: "A culpa é de quem estava no escuro. Não de quem estava na luz.", proxima: "rt_a4" },
+    rt_a2: { quem: "takeo", sprite: "takeo:machucado", texto: "Eu voltei de você feliz. Eu estava pensando na mesa da biblioteca. Isso não é culpa. Isso é a melhor parte da minha quarta-feira.", proxima: "rt_a3" },
+    rt_a3: { quem: "takeo", sprite: "takeo:machucado", texto: "A culpa é de quem estava no escuro. Não de quem estava na luz.", proxima: "rt_a4" },
     rt_a4: { tipo: "narracao", texto: "Ela olha para ele. Ele fala isso sem saber o que está falando. Sem saber de nada. E acerta tudo.", proxima: "r_fim" },
     rt_b1: { tipo: "narracao", texto: "Ela senta na terra, embaixo do caquizeiro. Encosta a cabeça no joelho bom dele. Ele fica parado. Depois a mão boa dele vai até o cabelo dela. Bem devagar. Pergunta antes de encostar.", proxima: "rt_b2" },
-    rt_b2: { quem: "takeo", texto: "Posso?", proxima: "rt_b3" },
+    rt_b2: { quem: "takeo", sprite: "takeo:machucado", texto: "Posso?", proxima: "rt_b3" },
     rt_b3: { tipo: "pensamento", texto: "Ontem um cara pegou meu cabelo sem perguntar. Hoje o Takeo pergunta.", proxima: "rt_b4" },
     rt_b4: { quem: "eu", texto: "Pode.", proxima: "rt_b5" },
     rt_b5: { tipo: "narracao", texto: "Os dois ficam ali. O balanço parado. Um caqui cai no telhado do vizinho. A avó espiando pela janela da cozinha e fingindo que está lavando louça.", proxima: "r_fim" },
-    rt_c1: { quem: "takeo", texto: "Você vai me levar em casa? Eu sou mais alto que você.", proxima: "rt_c2" },
+    rt_c1: { quem: "takeo", sprite: "takeo:machucado", texto: "Você vai me levar em casa? Eu sou mais alto que você.", proxima: "rt_c2" },
     rt_c2: { quem: "eu", texto: "Você é mais alto. Eu sou mais eficiente.", proxima: "rt_c3" },
-    rt_c3: { quem: "takeo", texto: "Isso vai ser muito ruim pra minha reputação na gangue.", proxima: "rt_c4" },
+    rt_c3: { quem: "takeo", sprite: "takeo:machucado", texto: "Isso vai ser muito ruim pra minha reputação na gangue.", proxima: "rt_c4" },
     rt_c4: { quem: "eu", texto: "A sua reputação na gangue é segurar casaco.", proxima: "rt_c5" },
     rt_c5: { tipo: "narracao", texto: "Ele ri tão alto que dói o braço. Ele reclama do braço rindo. A avó grita da janela que ele vai abrir os pontos da testa.", proxima: "r_fim" },
 

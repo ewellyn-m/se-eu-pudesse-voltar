@@ -19,7 +19,7 @@
  *    • Bloco de rota: o menino da rota depois da festa.
  *    • Domingo: na casa da Hana, contando assinaturas. A Hana descobre que as compras da Sakuma
  *      começaram todas depois de uma mesma semana: a do capacete vermelho.
- *    • Gancho: mensagem de um número desconhecido. "287. Bonito."
+ *    • Gancho: mensagem do mesmo número das fotos de antes. "287. Bonito."
  *
  *  REGRA DE CONTINUIDADE
  *    • Da outra vida, dos meninos, a SN só conheceu o Takeo. O Kaito ela conheceu só quando criança,
@@ -97,7 +97,7 @@ Roteiro.registrar("capitulo32", {
     ], proxima: "c1_25" },
     c1_feij: { quem: "mensagem", rotulo: "Mensagem — Victor (no grupo da gangue)", texto: "E a minha mãe disse que a feijoada de aniversário da doca vai ser na festa. Ela fez uma panela do tamanho de uma criança. SN, você é a convidada de honra duas vezes.", proxima: "c1_25" },
     c1_25: { quem: "mensagem", rotulo: "Mensagem — Blake (no grupo da gangue)", texto: "Levo mesas.", proxima: "c1_26" },
-    c1_26: { quem: "mensagem", rotulo: "Mensagem — Takeo (no grupo da gangue)", texto: "Eu só tenho um braço, mas eu entrego panfleto com ele. A minha avó vai fazer os panfletos. Ela tem caneta de glitter.", proxima: "c1_27" },
+    c1_26: { quem: "mensagem", rotulo: "Mensagem — Takeo (no grupo da gangue)", texto: "Eu só tenho um braço, mas eu entrego panfleto com ele. A minha avó vai fazer os panfletos. Ela tem impressora.", proxima: "c1_27" },
     c1_27: { tipo: "narracao", texto: "E por último, depois de cinco minutos inteiros.", proxima: "c1_28" },
     c1_28: { quem: "mensagem", rotulo: "Mensagem — Kaito (no grupo da gangue)", texto: "O tio está chorando na frente da panela grande. Ele mandou dizer que não está chorando. Quatro horas.", proxima: "c2_01" },
 
@@ -106,8 +106,8 @@ Roteiro.registrar("capitulo32", {
     c2_01: { roupa: "fora", tipo: "narracao", cenario: "frente-lamen", transicao: "tempo", legenda: "Sábado, 14h — Cena 2", sprite: null, texto: "Duas da tarde. A calçada da lojinha. O Blake chega primeiro, com três mesas dobráveis nas costas. Ele não fala nada. Ele monta as três em fila, reta, perfeita, e senta no meio-fio esperando ordem.", proxima: "c2_02" },
     c2_02: { tipo: "narracao", texto: "A Hana chega em segundo. Com uma prancheta, quatro canetas, um rolo de durex e uma pasta com folhas impressas. Na primeira folha, em letra grande: “ABAIXO-ASSINADO PELA PERMANÊNCIA DA LOJINHA DE LÁMEN DA ESQUINA (22 ANOS)”.", proxima: "c2_03" },
     c2_03: { quem: "hana", sprite: "hana", texto: "Colunas: nome, endereço, telefone, há quantos anos come aqui, prato favorito. O prato favorito não serve pra prefeitura. Serve pra mim.", proxima: "c2_04" },
-    c2_04: { tipo: "narracao", sprite: "takeo", texto: "O Takeo chega com o braço na tipoia e uma sacola cheia de panfletos. Feitos à mão. Pela avó dele. Com caneta de glitter. Cada um tem uma tigela desenhada com fumacinha. São uns duzentos. Todos diferentes.", proxima: "c2_05" },
-    c2_05: { quem: "takeo", texto: "Ela fez a noite inteira. Ela disse que se o neto dela apanhou por causa dessa turma, essa turma vai ter panfleto bonito.", proxima: "c2_06" },
+    c2_04: { tipo: "narracao", sprite: "takeo:machucado", texto: "O Takeo chega com o braço na tipoia e uma sacola cheia de panfletos. Feitos pela avó dele. Cada um tem uma tigela desenhada com fumacinha. São uns duzentos. Todos diferentes.", proxima: "c2_05" },
+    c2_05: { quem: "takeo", sprite: "takeo:machucado", texto: "Ela fez a noite inteira. Ela disse que se o neto dela apanhou por causa dessa turma, essa turma vai ter panfleto bonito.", proxima: "c2_06" },
     c2_06: { tipo: "narracao", sprite: "reina", texto: "A Reina chega de carro. De motorista. Ela desce com quatro sacolas de supermercado de cada lado: copo descartável, guardanapo, colher, toalha de mesa xadrez, um varal de bandeirinhas e um balão de hélio em forma de estrela que ninguém pediu.", proxima: "c2_07" },
     c2_07: { quem: "reina", texto: "Eu não paguei nada. Isso tudo eu já tinha em casa.", proxima: "c2_08" },
     c2_08: { quem: "akane", texto: "Você tinha um balão de estrela em casa.", proxima: "c2_09" },
@@ -146,7 +146,7 @@ Roteiro.registrar("capitulo32", {
     c2_18: { tipo: "narracao", sprite: "mio", texto: "A Mio chega às três e meia. Com o rabo de cavalo com o elástico de morango, uma caixinha de som pendurada no pescoço e um microfone de brinquedo, rosa, que acende quando a pessoa fala.", proxima: "c2_19" },
     c2_19: { quem: "mio", texto: "Boa tarde, ouvintes da calçada! Aqui é a Mio da Madrugada, só que de tarde, porque a lojinha fecha às dez.", proxima: "c2_20" },
     c2_20: { tipo: "narracao", texto: "Ela para de falar. O microfone apaga. Ela está olhando para a esquina.", proxima: "c2_21" },
-    c2_21: { tipo: "narracao", sprite: "blake", texto: "O Blake está na esquina. Ele foi buscar mais cadeiras. Ele está voltando com duas cadeiras de plástico numa mão. E, do lado dele, segurando a outra mão, a Sayuri. Laço rosa. Vestido branco.", proxima: "c2_22" },
+    c2_21: { tipo: "narracao", sprite: "blake", texto: "O Blake está na esquina. Ele foi buscar mais cadeiras. Ele está voltando com duas cadeiras de plástico numa mão. E, do lado dele, segurando a outra mão, a Sayuri.", proxima: "c2_22" },
     c2_22: { tipo: "pensamento", texto: "A Sayuri. Na festa da lojinha do Kaito. De mão dada com o Blake.", proxima: "c2_23" },
     c2_23: { tipo: "narracao", sprite: "mio", texto: "A Mio não fala nada. Ela fica parada com o microfone de brinquedo apagado na mão. Depois aperta o botão. Acende.", proxima: "c2_24" },
     c2_24: { quem: "mio", texto: "...E chegam mais convidados. Que bom. Quanto mais gente, mais assinatura.", proxima: "c2_25" },
@@ -184,14 +184,14 @@ Roteiro.registrar("capitulo32", {
 
     /* =================== CENA 3 — A FESTA =================== */
     // Cenário: calçada da lojinha, sábado, 16h às 20h (usa "beco-mercado"). Música: teclado da Akane.
-    c3_01: { roupa: "fora", tipo: "narracao", transicao: "tempo", legenda: "Sábado, 16h — Cena 3", texto: "Primeiro, os vizinhos de porta. Depois os do quarteirão. Depois gente que ninguém conhece, que viu o panfleto de glitter da avó do Takeo grudado no poste da padaria.", proxima: "c3_02" },
+    c3_01: { roupa: "fora", tipo: "narracao", transicao: "tempo", legenda: "Sábado, 16h — Cena 3", texto: "Primeiro, os vizinhos de porta. Depois os do quarteirão. Depois gente que ninguém conhece, que viu o panfleto da avó do Takeo grudado no poste da padaria.", proxima: "c3_02" },
     c3_02: { quem: "desconhecido", rotulo: "Senhora do bairro", texto: "Eu como aqui desde que abriu. Eu estava grávida do meu primeiro. Ele tem vinte e um anos agora. Ele cresceu nesse caldo.", proxima: "c3_03" },
     c3_03: { quem: "desconhecido", rotulo: "Senhor do bairro", texto: "O tio me deu fiado no ano que eu fiquei desempregado. Um ano inteiro. Ele nunca cobrou. Eu vou assinar com letra grande.", proxima: "c3_04" },
     c3_04: { tipo: "narracao", sprite: "hana", texto: "A prancheta da Hana vai enchendo. Uma folha. Duas. Cinco. A coluna do prato favorito diz caldo, caldo, caldo, caldo com ovo, caldo sem cebolinha (riscado pelo tio, com uma observação: “não existe”).", proxima: "c3_05" },
     c3_05: { tipo: "narracao", sprite: "mio", texto: "A Mio narra tudo no microfone de brinquedo. Ela entrevista a senhora grávida de vinte e um anos atrás. Entrevista o Ryuji, que conta a história da prisão da Relâmpago como se fosse um filme de guerra. Entrevista um cachorro que passa.", proxima: "c3_06" },
-    c3_06: { tipo: "narracao", sprite: "takeo", texto: "O Takeo entrega panfleto com uma mão só. Quando acaba a sacola, ele senta numa das cadeiras e a Reina aparece do lado com uma tigela de caldo e uma colher.", proxima: "c3_07" },
+    c3_06: { tipo: "narracao", sprite: "takeo:machucado", texto: "O Takeo entrega panfleto com uma mão só. Quando acaba a sacola, ele senta numa das cadeiras e a Reina aparece do lado com uma tigela de caldo e uma colher.", proxima: "c3_07" },
     c3_07: { quem: "reina", sprite: "reina", texto: "Você não consegue segurar a tigela e a colher ao mesmo tempo.", proxima: "c3_08" },
-    c3_08: { quem: "takeo", sprite: "takeo", texto: "Consigo, sim. Eu apoio a tigela no gesso.", proxima: "c3_09" },
+    c3_08: { quem: "takeo", sprite: "takeo:machucado", texto: "Consigo, sim. Eu apoio a tigela no gesso.", proxima: "c3_09" },
     c3_09: { quem: "reina", sprite: "reina", texto: "O gesso não é mesa, Takeo.", proxima: "c3_10" },
     c3_10: { tipo: "narracao", texto: "Ela segura a tigela para ele. Ele come. Os dois brigando sobre a função do gesso. A briga limpa da Reina continua limpa. Ela não faz nada além de segurar a tigela.", proxima: "c3_cam_feij" },
     c3_cam_feij: { caminhos: [
@@ -288,19 +288,19 @@ Roteiro.registrar("capitulo32", {
     rk_c6: { quem: "kaito", texto: "É. É muito.", proxima: "r_fim" },
 
     // ---------- Rota Takeo ----------
-    rt_01: { roupa: "fora", tipo: "narracao", cenario: "rua-padaria-noite", transicao: "tempo", sprite: "takeo", texto: "Depois da festa, ela leva o Takeo em casa. A pé. Pela rua da padaria, que tem luz.", proxima: "rt_cam" },
+    rt_01: { roupa: "fora", tipo: "narracao", cenario: "rua-padaria-noite", transicao: "tempo", sprite: "takeo:machucado", texto: "Depois da festa, ela leva o Takeo em casa. A pé. Pela rua da padaria, que tem luz.", proxima: "rt_cam" },
     rt_cam: { caminhos: [
       { flag: "Leva_Takeo_casa", proxima: "rt_leva" }
     ], proxima: "rt_02" },
-    rt_leva: { quem: "takeo", texto: "A eficiente me levando em casa. A minha reputação na gangue acabou oficialmente.", proxima: "rt_02" },
+    rt_leva: { quem: "takeo", sprite: "takeo:machucado", texto: "A eficiente me levando em casa. A minha reputação na gangue acabou oficialmente.", proxima: "rt_02" },
     rt_02: { tipo: "narracao", texto: "Ele anda mais devagar que ela. Por causa do pé. Ela anda mais devagar ainda. Pra ele não perceber que ela está esperando.", proxima: "rt_03" },
-    rt_03: { quem: "takeo", texto: "A Reina segurou a minha tigela a tarde inteira. Ela não falou nada. Só segurou. Eu não sei o que fazer com isso.", proxima: "rt_04" },
+    rt_03: { quem: "takeo", sprite: "takeo:machucado", texto: "A Reina segurou a minha tigela a tarde inteira. Ela não falou nada. Só segurou. Eu não sei o que fazer com isso.", proxima: "rt_04" },
     rt_04: { quem: "eu", texto: "Agradece. E come.", proxima: "rt_05" },
-    rt_05: { quem: "takeo", texto: "Eu agradeci. E comi. Ela disse “de nada” como se estivesse brigando comigo.", proxima: "rt_06" },
+    rt_05: { quem: "takeo", sprite: "takeo:machucado", texto: "Eu agradeci. E comi. Ela disse “de nada” como se estivesse brigando comigo.", proxima: "rt_06" },
     rt_06: { tipo: "narracao", cenario: "casa-takeo-noite", texto: "Eles chegam no portão da casa dele. O caquizeiro aparecendo por cima do muro. O balanço de corda balançando sozinho com o vento.", proxima: "rt_07" },
     rt_07: { tipo: "pensamento", texto: "Na outra vida, eu nunca vim até esse portão. Não deu tempo.", proxima: "rt_08" },
-    rt_08: { tipo: "pensamento", texto: "Agora eu conheço o caquizeiro. O balanço. A avó com caneta de glitter.", proxima: "rt_09" },
-    rt_09: { quem: "takeo", texto: "Ei. De novo essa cara. A da sexta.", proxima: "rt_esc" },
+    rt_08: { tipo: "pensamento", texto: "Agora eu conheço o caquizeiro. O balanço.", proxima: "rt_09" },
+    rt_09: { quem: "takeo", sprite: "takeo:machucado", texto: "Ei. De novo essa cara. A da sexta.", proxima: "rt_esc" },
 
     // ▶ ESCOLHA — Rota Takeo
     rt_esc: { escolhas: [
@@ -309,17 +309,17 @@ Roteiro.registrar("capitulo32", {
       { texto: "C. “Promete que nunca mais volta sozinho no escuro. Nunca.”", proxima: "rt_c1", pontos: { takeo: 2 }, flags: ["Promessa_escuro"] }
     ]},
     rt_a1: { tipo: "narracao", texto: "O Takeo olha para o portão. Um portão de ferro pintado de verde, com a tinta descascando. Depois olha para ela.", proxima: "rt_a2" },
-    rt_a2: { quem: "takeo", texto: "É um portão bem feio.", proxima: "rt_a3" },
+    rt_a2: { quem: "takeo", sprite: "takeo:machucado", texto: "É um portão bem feio.", proxima: "rt_a3" },
     rt_a3: { quem: "eu", texto: "É o melhor portão da cidade.", proxima: "rt_a4" },
     rt_a4: { tipo: "narracao", texto: "Ele fica vermelho. Embaixo do poste. Ele abre o portão. Não entra. Fica segurando aberto.", proxima: "rt_a5" },
-    rt_a5: { quem: "takeo", texto: "Então entra amanhã. Pela porta da frente. A avó faz bolo de caqui no domingo.", proxima: "r_fim" },
+    rt_a5: { quem: "takeo", sprite: "takeo:machucado", texto: "Então entra amanhã. Pela porta da frente. A avó faz bolo de caqui no domingo.", proxima: "r_fim" },
     rt_b1: { tipo: "narracao", texto: "Ela abraça ele de lado. Pelo braço bom. Com cuidado, como quem abraça um vaso. Ele fica parado. Depois o braço bom dele passa pelas costas dela e aperta.", proxima: "rt_b2" },
-    rt_b2: { quem: "takeo", texto: "Você abraça igual a minha avó. Como se eu fosse quebrar.", proxima: "rt_b3" },
+    rt_b2: { quem: "takeo", sprite: "takeo:machucado", texto: "Você abraça igual a minha avó. Como se eu fosse quebrar.", proxima: "rt_b3" },
     rt_b3: { quem: "eu", texto: "Você quebrou. Literalmente.", proxima: "rt_b4" },
-    rt_b4: { quem: "takeo", texto: "Um braço. O resto está inteiro. Pode abraçar mais forte.", proxima: "rt_b5" },
+    rt_b4: { quem: "takeo", sprite: "takeo:machucado", texto: "Um braço. O resto está inteiro. Pode abraçar mais forte.", proxima: "rt_b5" },
     rt_b5: { tipo: "narracao", texto: "Ela abraça mais forte. Só um pouco. Com a força de uma menina de um metro e sessenta. Só isso.", proxima: "r_fim" },
     rt_c1: { tipo: "narracao", texto: "O Takeo fica sério. Ele olha para ela muito tempo. Ela está falando sério demais para uma promessa de portão.", proxima: "rt_c2" },
-    rt_c2: { quem: "takeo", texto: "Prometo. Mas você também. Você também anda sozinha no escuro. Eu sei que anda.", proxima: "rt_c3" },
+    rt_c2: { quem: "takeo", sprite: "takeo:machucado", texto: "Prometo. Mas você também. Você também anda sozinha no escuro. Eu sei que anda.", proxima: "rt_c3" },
     rt_c3: { tipo: "pensamento", texto: "Ele sabe. Ele não sabe de nada, e sabe.", proxima: "rt_c4" },
     rt_c4: { quem: "eu", texto: "...Prometo.", proxima: "rt_c5" },
     rt_c5: { tipo: "narracao", texto: "Os dois sabem que ela está mentindo. Ele aceita assim mesmo. Ele entra. Acende a luz da varanda. E fica na janela até ela virar a esquina.", proxima: "r_fim" },
@@ -457,24 +457,24 @@ Roteiro.registrar("capitulo32", {
     c4_16: { tipo: "narracao", cenario: "quarto-sn-noite", sprite: null, transicao: "tempo", legenda: "Domingo, 22h", texto: "Domingo à noite. O quarto dela. O uniforme passado em cima da cadeira. A mãe dormindo antes do plantão de segunda. A casa quieta.", proxima: "c4_17" },
     c4_17: { tipo: "narracao", texto: "Ela está deitada, olhando para o teto. Pensando no banquinho do canto. Numa menina pequenininha que balançava as pernas. Que ela não lembra de ter sido.", proxima: "c4_18" },
     c4_18: { tipo: "narracao", texto: "O celular vibra em cima do peito dela.", proxima: "c4_19" },
-    c4_19: { tipo: "narracao", texto: "Um número que não está salvo. Ela nunca viu esse número. Uma mensagem só.", proxima: "c4_20" },
+    c4_19: { tipo: "narracao", texto: "Um número que não está salvo. Mas ela conhece. É o mesmo número das fotos. As que chegaram antes, sem nome, pra ameaçar. Ela nunca salvou. Nunca bloqueou. Uma mensagem só.", proxima: "c4_20" },
     c4_20: { quem: "mensagem", rotulo: "Mensagem — Número desconhecido", texto: "287. Bonito.", proxima: "c4_21" },
-    c4_21: { tipo: "narracao", efeito: "eco", texto: "Ela senta na cama. Fica olhando para a tela. O número. A palavra. O ponto final.", proxima: "c4_22" },
+    c4_21: { tipo: "narracao", efeito: "eco", texto: "Ela senta na cama. Sobe a conversa. As fotos de antes, todas ali, uma embaixo da outra. Sem uma palavra. E agora, embaixo delas, duas.", proxima: "c4_22" },
     c4_22: { tipo: "pensamento", texto: "“Seja homem e fala direto comigo.”", proxima: "c4_23" },
-    c4_23: { tipo: "pensamento", texto: "Ele falou. Direto comigo. Pela primeira vez. Com duas palavras.", proxima: "c4_24" },
-    c4_24: { tipo: "pensamento", texto: "E ele não tem o meu número. Ninguém deu. Eu nunca dei.", proxima: "c4_esc6" },
+    c4_23: { tipo: "pensamento", texto: "Antes ele mandava foto. Pra eu saber que ele estava olhando. Agora ele escreveu. Pra eu saber que ele ouviu.", proxima: "c4_24" },
+    c4_24: { tipo: "pensamento", texto: "Duzentas e oitenta e sete. Ele contou. Ou alguém contou pra ele. Do carro preto, na esquina.", proxima: "c4_esc6" },
 
     // ▶ ESCOLHA 6 — Responder?
     c4_esc6: { escolhas: [
       { texto: "A. Responder: “300 até sexta.”", proxima: "c4_6a_1", pontos: { desvio: 1 }, flags: ["Respondeu_300"] },
-      { texto: "B. Responder: “Quem te deu esse número?”", proxima: "c4_6b_1", pontos: { desvio: 1 }, flags: ["Perguntou_numero"] },
+      { texto: "B. Responder: “Isso é você falando direto comigo? Duas palavras?”", proxima: "c4_6b_1", pontos: { desvio: 1 }, flags: ["Duas_palavras"] },
       { texto: "C. Não responder. Salvar o número. Nome do contato: “Rei”.", proxima: "c4_6c_1", pontos: { desvio: 2 }, flags: ["Salvou_Rei"] }
     ]},
     c4_6a_1: { quem: "mensagem", rotulo: "Mensagem — SN", texto: "300 até sexta.", proxima: "c4_6a_2" },
     c4_6a_2: { tipo: "narracao", texto: "Visualizado. Na hora. Ele estava olhando para a tela. Esperando. Ele não responde. Mas os três pontinhos aparecem. Somem. Aparecem. Somem. Ficam sumidos.", proxima: "c4_25" },
-    c4_6b_1: { quem: "mensagem", rotulo: "Mensagem — SN", texto: "Quem te deu esse número?", proxima: "c4_6b_2" },
-    c4_6b_2: { tipo: "narracao", texto: "Visualizado. Na hora. Nenhuma resposta. Nenhum pontinho. Só o “visto” embaixo da pergunta dela. Ele leu. E escolheu não responder. Isso também é resposta.", proxima: "c4_25" },
-    c4_6c_1: { tipo: "narracao", texto: "Ela não responde. Ela salva o número. Digita o nome do contato devagar. “Rei.” Salva.", proxima: "c4_6c_2" },
+    c4_6b_1: { quem: "mensagem", rotulo: "Mensagem — SN", texto: "Isso é você falando direto comigo? Duas palavras?", proxima: "c4_6b_2" },
+    c4_6b_2: { tipo: "narracao", texto: "Visualizado. Na hora. Nenhuma resposta. Nenhum pontinho. Só o “visto” embaixo da pergunta dela. Embaixo das fotos. Ele leu. E escolheu não responder. Isso também é resposta.", proxima: "c4_25" },
+    c4_6c_1: { tipo: "narracao", texto: "Ela não responde. Depois de todas aquelas fotos, ela finalmente salva o número. Digita o nome do contato devagar. “Rei.” Salva.", proxima: "c4_6c_2" },
     c4_6c_2: { tipo: "pensamento", texto: "Ele vê quando eu fico online. Ele vê que eu li. Ele não vê que eu salvei. Agora eu também sei de uma coisa que ele não sabe.", proxima: "c4_25" },
 
     // (todas as opções continuam aqui)
@@ -493,8 +493,8 @@ Roteiro.registrar("capitulo32", {
  *    A lojinha: 28 dias no domingo à noite.
  *  • PLANILHA DA HANA: a Sakuma Participações comprou a doca, a empresa de reboque, o prédio da livraria e o
  *    da lojinha na mesma semana — a semana do balanço e do capacete vermelho (Cap. 22). Esperou e usou tudo junto.
- *  • O Ren mandou mensagem: "287. Bonito." Ele tem o número dela (ninguém deu). Respostas: Respondeu_300 /
- *    Perguntou_numero / Salvou_Rei.
+ *  • O Ren mandou mensagem do MESMO número das fotos de antes: "287. Bonito." Primeira vez com palavras. Respostas: Respondeu_300 /
+ *    Duas_palavras / Salvou_Rei.
  *  • PISTA (NÃO REVELAR): o tio do Kaito lembra de uma "cliente pequenininha" que sentava no banquinho do canto
  *    e vinha com alguém. A SN não lembra. O Kaito ouviu e guardou. (Eles se conheceram quando crianças.)
  *  • Blake e Sayuri: ela veio de mão dada; a Mio aguentou; o Blake "não sabe o que está fazendo".
@@ -513,5 +513,5 @@ Roteiro.registrar("capitulo32", {
  *  Respondeu_como_Kaito · Banquinho_canto · Gosta_portao · Abraco_lado_Takeo · Promessa_escuro · Pede_voce_Blake
  *  Reparou_Blake · Mesa_Blake · Passa_todo_mundo · Testa_costas_Ryuji · Ninguem_entende · Cliente_12
  *  Nome_mae_caderno · Roubou_pirulito · Contou_capacete_amigas · Guarda_planilha · Arena_domingo
- *  Respondeu_300 · Perguntou_numero · Salvou_Rei
+ *  Respondeu_300 · Duas_palavras · Salvou_Rei
  */

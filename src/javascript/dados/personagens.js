@@ -21,7 +21,7 @@ const Personagens = {
     nome: "Mio", grupo: "amigos", cor: "#e0a74a",
     papel: "Melhor amiga de infância",
     retrato: IMG + "Mio-Retrato.png", corpo: IMG + "mio.png", sprite: IMG + "mio.png",
-    roupas: { festival: IMG + "mio-kimoto-festival.png", fantasma: IMG + "mio-fantasma.png", shopping: IMG + "mio-shopping.png" },
+    roupas: { festival: IMG + "mio-kimoto-festival.png", fantasma: IMG + "mio-fantasma.png", shopping: IMG + "mio-shopping.png", fora: IMG + "mio-fora-escola-sem-fundo.png" },
     descricao: "Mio é uma garota extremamente animada e espontânea, conhecida por ser a alegria do grupo. Ela não se preocupa com o que os outros pensam e demonstra sua personalidade sem medo de julgamentos. É amiga de infância da protagonista e sempre esteve ao seu lado. As duas se conheceram ainda crianças, quando alguns valentões roubaram e amassaram um desenho da protagonista, e Mio foi a única que decidiu defendê-la. Por morarem perto, elas cresceram juntas e frequentaram a mesma escola durante a infância. Leal e protetora, Mio está sempre disposta a defender quem ama. Apesar de toda a sua confiança, ela fica um pouco diferente quando o assunto é Blake, por quem secretamente tem uma queda.",
     ficha: { "Altura": "1,70 cm", "Peso": "52 kg", "Aniversário": "10 de Novembro", "Futuro:": "Desconhecido" }
   },
@@ -29,7 +29,7 @@ const Personagens = {
     nome: "Hana", grupo: "amigos", cor: "#8f9ad0",
     papel: "Amiga do clube de leitura",
     retrato: IMG + "Hana-Retrato.png", corpo: IMG + "ameni.png", sprite: IMG + "ameni.png",
-    roupas: { festival: IMG + "hana-festival.png", shopping: IMG + "hana-shopping-sem-fundo.png" },
+    roupas: { festival: IMG + "hana-festival.png", shopping: IMG + "hana-shopping-sem-fundo.png", fora: IMG + "hana-fora-escola-sem-fundo.png" },
     descricao: "Hana é uma garota reservada, tímida e observadora. Ela prefere ouvir a falar e costuma ficar um pouco sem jeito quando recebe muita atenção. Apesar de seu jeito quieto, é inteligente, perspicaz e percebe facilmente detalhes que os outros deixam passar. Hana conheceu SN na adolescência, quando as duas entraram para o mesmo clube na escola, e aos poucos se tornaram amigas próximas. Embora não faça parte do grupo mais extrovertido, ela é alguém em quem SN pode confiar. Por trás de sua timidez, Hana também tem um lado divertido que poucos conhecem e é apaixonada por karaokê, onde costuma deixar a vergonha de lado.",
     ficha: { "Altura": "1,51 cm", "Peso": "42 kg", "Aniversário": "07 de Fevereiro", "Futuro:": "Desconhecido" }
   },
@@ -47,7 +47,7 @@ const Personagens = {
     nome: "Takeo", grupo: "paquera", cor: "#e08a5a",
     papel: "O amigo de infancia",
     retrato: IMG + "Takeo-Retrato.png", corpo: IMG + "takeo.png", sprite: IMG + "takeo.png",
-    roupas: { festival: IMG + "takeo-festival.png", fora: IMG + "takeo-fora-escola-sem-fundo.png" },
+    roupas: { festival: IMG + "takeo-festival.png", fora: IMG + "takeo-fora-escola-sem-fundo.png", machucado: IMG + "takeo-machucado-31-sem-fundo.png" },  // machucado: capítulos 31-32 (use sprite "takeo:machucado"),
     descricao: "Takeo é um rapaz gentil e determinado. Ele é amigo de infância da protagonista, com quem se conhece desde os seis anos, e sempre foi apaixonado por ela. Quando criança, costumava apanhar dos valentões da escola por defender os mais fracos e nunca desistir do que acreditava ser certo. Ele não suporta ver alguém sozinho e está sempre tentando se aproximar de pessoas isoladas. Takeo faz parte da gangue Black Dragons e é um dos amigos mais próximos de Blake.",
     ficha: { "Altura": "1,72 cm", "Peso": "58 kg", "Aniversário": "14 de Março", "Futuro:": "Morreu protegendo alguem..." }
   },
@@ -143,7 +143,7 @@ const Personagens = {
     nome: "Akane", grupo: "outros", cor: "#5b4a6e",
     papel: "Braço direito da Reina no Lírio Negro",
     retrato: IMG + "Akane.png", corpo: IMG + "Akane.png", sprite: IMG + "Akane.png",
-    roupas: { escolar: IMG + "akane-escolar-sem-fundo.png" }   // uniforme da escola (fundo tirado de akane-escolar.png); use roupa: "escolar" no capítulo
+    roupas: { escolar: IMG + "akane-escolar-sem-fundo.png", fora: IMG + "akane-fora-escola-sem-fundo.png" }   // uniforme da escola (fundo tirado de akane-escolar.png); use roupa: "escolar" no capítulo
   },
 
   avo_takeo: {
@@ -306,11 +306,11 @@ const Cenarios = {
   "estacionamento-topo": { img: CEN + "Garagem.png" }, // último andar do estacionamento do shopping
   "quarto-sn":       { img: CEN + "quarto.png" },                 // epílogo, aos 16
   "frente-fliperama": { img: CEN + "beco.png" },                    // porta do fliperama fechado da Midorata, à noite (capítulo 31)
-  "fliperama-midorata": { img: CEN + "fliperama.png", tom: "noite" }, // dentro do fliperama fechado (provisório)
+  "fliperama-midorata": { img: CEN + "fliperama-abandonado.png" },  // dentro do fliperama fechado da Midorata
   "cozinha-sn-noite": { img: CEN + "cozinha.png", tom: "noite" },
   "patio-apreendidos": { img: CEN + "Garagem.png", tom: "entardecer" }, // pátio de veículos apreendidos (provisório)
   "casa-takeo-noite": { img: CEN + "frente-casa-takeo.png", tom: "noite" }, // portão da casa do Takeo, à noite (capítulo 32)
-  "quarto-hana":     { img: CEN + "quarto.png", tom: "entardecer" }    // quarto da Hana (provisório)
+  "quarto-hana":     { img: CEN + "quarto-hana.png" }                 // quarto da Hana
 };
 
 const Itens = {};
