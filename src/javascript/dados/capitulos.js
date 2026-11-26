@@ -312,15 +312,24 @@ const Capitulos = [
     pagina: "src/html/capitulo32.html",
     capa: "src/imagens/cenarios/esquina-loja-de-lamen.png",
     descricao: "Se a lojinha está morrendo em silêncio, a gente faz barulho. Duzentas e oitenta e sete assinaturas. E um carro preto que não para."
+  },
+  {
+    id: "capitulo33",
+    numero: 33,
+    titulo: "Por partes",
+    subtitulo: "",
+    pagina: "src/html/capitulo33.html",
+    capa: "src/imagens/cenarios/Garagem.png",
+    descricao: "Uma segunda normal. Até as nove da noite, quando chega uma mensagem com uma palavra só: \"Desce.\""
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 33,
-  titulo: "Capítulo 33",
+  numero: 34,
+  titulo: "Capítulo 34",
   capa: "src/imagens/cenarios/quarto.png",
-  descricao: "287. Bonito."
+  descricao: "\"Vem, a gente tem que ir. Agora. Larga isso aí.\""
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);

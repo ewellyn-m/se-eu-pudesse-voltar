@@ -310,7 +310,9 @@ const Cenarios = {
   "cozinha-sn-noite": { img: CEN + "cozinha.png", tom: "noite" },
   "patio-apreendidos": { img: CEN + "Garagem.png", tom: "entardecer" }, // pátio de veículos apreendidos (provisório)
   "casa-takeo-noite": { img: CEN + "frente-casa-takeo.png", tom: "noite" }, // portão da casa do Takeo, à noite (capítulo 32)
-  "quarto-hana":     { img: CEN + "quarto-hana.png" }                 // quarto da Hana
+  "quarto-hana":     { img: CEN + "quarto-hana.png" },                // quarto da Hana
+  "predio-abandonado": { img: CEN + "galpao.png", tom: "noite" },      // prédio inacabado do pai do Ren, por fora (provisório)
+  "predio-abandonado-topo": { img: CEN + "Garagem.png", tom: "noite" } // oitavo andar sem teto (provisório)
 };
 
 const Itens = {};
