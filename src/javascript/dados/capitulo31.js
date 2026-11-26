@@ -381,7 +381,7 @@ Roteiro.registrar("capitulo31", {
     rk_b4: { quem: "kaito", texto: "...Tá. Quando você quiser contar o resto, eu estou cortando cebolinha. Todo dia. Às cinco.", proxima: "r_fim" },
     rk_c1: { tipo: "narracao", texto: "Ela vai para trás do balcão. Tira a faca da mão dele. Puxa a tábua. Corta. Reto. Fino. Rápido.", proxima: "rk_c2" },
     rk_c2: { quem: "kaito", texto: "Quem te ensinou a cortar assim?", proxima: "rk_c3" },
-    rk_c3: { tipo: "pensamento", texto: "Você. Em outra vida. Não. Nessa. Na semana passada. Eu fiquei olhando.", proxima: "rk_c4" },
+    rk_c3: { tipo: "pensamento", texto: "Cursos na vida passada. Eu fiquei olhando.", proxima: "rk_c4" },
     rk_c4: { quem: "eu", texto: "Eu fiquei olhando você.", proxima: "rk_c5" },
     rk_c5: { tipo: "narracao", texto: "Ele fica parado. Do lado dela, atrás do balcão. Ele não pergunta mais nada da noite anterior. Ele pega outra faca. Os dois cortando cebolinha, ombro com ombro, até o tio mandar parar porque não tem mais pote.", proxima: "r_fim" },
 
@@ -518,7 +518,7 @@ Roteiro.registrar("capitulo31", {
     c6_06: { tipo: "pensamento", texto: "Ele não quebrou a mão dele porque o cara me desrespeitou. Ele quebrou porque o cara encostou.", proxima: "c6_07" },
     c6_07: { tipo: "pensamento", texto: "Encostou em mim.", proxima: "c6_08" },
     c6_08: { tipo: "narracao", texto: "Ela fica parada na calçada. O sol acaba. Os postes acendem um por um. A rua da padaria, lá na frente, toda iluminada.", proxima: "c6_09" },
-    c6_09: { tipo: "pensamento", texto: "O Victor. O Ryuji. O Blake. O Kaito. Todos em volta de mim. Ele derrubou um por um. E devolveu em uma noite, porque eu pedi.", proxima: "c6_10" },
+    c6_09: { tipo: "pensamento", texto: "O Victor, o Ryuji, o Blake, o Kaito. Todos em volta de mim. Ele derrubou um por um. E devolveu em uma noite, porque eu pedi.", proxima: "c6_10" },
     c6_10: { tipo: "pensamento", texto: "E o Takeo ele não devolveu. Braço não se devolve.", proxima: "c6_11" },
     c6_11: { tipo: "pensamento", texto: "“Ele anda sozinho à noite.”", proxima: "c6_12" },
     c6_12: { tipo: "pensamento", texto: "Eu achei que eu tinha ido lá pra fazer ele parar. Agora eu acho que eu só mostrei pra ele que funciona. Que se ele derrubar todo mundo, eu vou até ele.", proxima: "c6_13" },
