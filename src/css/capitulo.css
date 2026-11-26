@@ -1,0 +1,757 @@
+/* capitulo1.html (e próximos capítulos) — palco: cenário, sprites, caixa de diálogo, escolhas, efeitos, histórico */
+
+.pagina-capitulo {
+    overflow: hidden;
+}
+
+.palco {
+    position: fixed;
+    inset: 0;
+    overflow: clip;           /* "clip" não cria área de rolagem (sprites grandes não deslocam o palco) */
+    isolation: isolate;
+}
+
+/* ---------- cenário (duas camadas para transição cruzada) ---------- */
+.cenario {
+    position: absolute;
+    inset: -2%;
+    background: center / cover no-repeat;
+    opacity: 0;
+    transform: scale(1.04);
+    transition: opacity 1.1s ease, transform 14s ease-out, filter 1s;
+}
+
+.cenario.visivel {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.cenario.sem-transicao {
+    transition: none;
+}
+
+/* climas (use "tom" em Cenarios) */
+.tom-lembranca { filter: sepia(.45) saturate(.75) brightness(1.05) blur(1px); }
+.tom-noite { filter: brightness(.6) saturate(.8) hue-rotate(-10deg); }
+.tom-entardecer { filter: sepia(.3) saturate(1.2) hue-rotate(-12deg); }
+
+/* véu suave: deixa o cenário levemente lavado e a caixa de diálogo legível */
+.vinheta {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse at 50% 35%, transparent 55%, rgba(250, 245, 244, .35) 100%),
+        linear-gradient(0deg, rgba(250, 245, 244, .45), transparent 32%);
+    z-index: 1;
+}
+
+
+/* ---------- sprite e item ---------- */
+/* os sprites são de corpo inteiro: enquadra da cabeça até perto do joelho */
+.sprite {
+    position: absolute;
+    left: 50%;
+    top: 4vh;
+    height: 175vh;
+    width: auto;
+    max-width: none;
+    z-index: 2;
+    opacity: 0;
+    transform: translate(-50%, 24px);
+    transition: opacity .45s ease, transform .55s var(--curva);
+    filter: drop-shadow(0 18px 30px rgba(88, 48, 58, .25));
+    pointer-events: none;
+}
+
+/* imagens de figurantes que não são de corpo inteiro (ex.: os três valentões, da cintura pra cima) */
+.sprite[data-personagem="valentoes"] {
+    top: auto;
+    bottom: 0;
+    height: min(78vh, 62vw);
+}
+
+.sprite.visivel {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.item {
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    width: min(440px, 70vw);
+    z-index: 3;
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-4deg) scale(.9);
+    transition: opacity .4s, transform .5s var(--curva);
+    filter: drop-shadow(0 20px 30px rgba(88, 48, 58, .3));
+    pointer-events: none;
+}
+
+.item.visivel {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(-2deg) scale(1);
+}
+
+/* Foto rápida (cena com "foto"): moldura branca, cenário atrás do personagem */
+.item.foto {
+    width: auto;
+    height: min(62%, 500px);
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: 50% 0;
+    border: 12px solid #fffaf7;
+    border-bottom-width: 48px;
+    border-radius: 4px;
+    background: center 35% / cover no-repeat;
+    box-sizing: border-box;
+    top: 40%;
+}
+
+/* Foto deitada (Fotos com formato: "horizontal"), como uma foto de álbum */
+.item.foto.horizontal {
+    width: min(62vw, 720px);
+    height: auto;
+    aspect-ratio: auto;                 /* mantém a proporção da própria foto */
+    object-fit: contain;
+    border-bottom-width: 36px;
+}
+
+.area-clique {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    cursor: pointer;
+}
+
+/* ---------- HUD ---------- */
+.hud {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: .4rem;
+    z-index: 8;
+    opacity: .55;
+    transition: opacity .3s;
+}
+
+.hud:hover,
+.hud:focus-within {
+    opacity: 1;
+}
+
+.botao-hud {
+    padding: .4rem .85rem;
+    border-radius: 999px;
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--tinta);
+    background: var(--vidro);
+    border: 1px solid var(--borda);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background .2s, border-color .2s;
+}
+
+.botao-hud:hover {
+    background: var(--papel);
+}
+
+.botao-hud[aria-pressed="true"] {
+    border-color: var(--destaque);
+    background: var(--destaque-claro);
+}
+
+/* ---------- caixa de diálogo ---------- */
+.caixa {
+    --cor-falante: var(--rosa);
+    position: absolute;
+    left: 50%;
+    bottom: clamp(.8rem, 2.6vh, 1.8rem);
+    width: min(1120px, 94vw);
+    min-height: clamp(130px, 21vh, 180px);
+    padding: clamp(1.3rem, 2.4vh, 1.7rem) clamp(1.3rem, 2.4vw, 2.2rem) clamp(1.3rem, 2.4vh, 1.6rem);
+    z-index: 6;
+    transform: translateX(-50%);
+    border-radius: calc(var(--raio) + 4px);
+    background: var(--vidro-forte);
+    border: 1px solid rgba(255, 255, 255, .9);
+    box-shadow: var(--sombra), 0 0 0 6px rgba(255, 252, 251, .35);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    cursor: pointer;
+    transition: opacity .35s, transform .45s var(--curva), padding .3s;
+}
+
+/* filete superior na cor de quem fala */
+.caixa::before {
+    content: "";
+    position: absolute;
+    left: 1.4rem;
+    right: 1.4rem;
+    top: -1px;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, transparent, var(--cor-falante), transparent);
+    opacity: .9;
+}
+
+.caixa.apagada {
+    opacity: 0;
+    transform: translate(-50%, 14px);
+    pointer-events: none;
+}
+
+.placa-nome {
+    position: absolute;
+    top: 0;
+    left: clamp(1.1rem, 2.2vw, 2rem);
+    transform: translateY(-58%);
+    padding: .2rem 1.1rem .3rem;
+    border-radius: 999px;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(1.2rem, 1.9vw, 1.5rem);
+    line-height: 1.3;
+    color: #fff;
+    background: var(--cor-falante);
+    box-shadow: 0 8px 18px -8px color-mix(in srgb, var(--cor-falante) 90%, transparent);
+    border: 2px solid #fff;
+}
+
+.texto {
+    font-size: clamp(1.02rem, 1.35vw, 1.2rem);
+    line-height: 1.7;
+    max-width: 78ch;
+    color: var(--tinta);
+    text-wrap: pretty;
+}
+
+.texto em {
+    color: color-mix(in srgb, var(--cor-falante) 75%, var(--tinta));
+}
+
+.aparte {
+    color: var(--tinta-suave);
+    font-style: italic;
+}
+
+/* narração e pensamentos da protagonista */
+/* narração: texto do narrador */
+.caixa.narracao .texto {
+    color: var(--tinta);
+}
+
+/* pensamento da SN: itálico, com o retrato dela */
+.caixa.pensamento .texto {
+    font-style: italic;
+    color: #6e5a6a;
+}
+
+.caixa.pensamento .retrato {
+    opacity: .85;
+    box-shadow: 0 0 0 2px var(--lavanda), var(--sombra-leve);
+}
+
+/* mensagem de celular: balão de chat */
+.caixa.mensagem .texto {
+    display: inline-block;
+    padding: .55rem 1rem;
+    border-radius: 16px 16px 16px 4px;
+    background: var(--lavanda-claro);
+    border: 1px solid rgba(155, 139, 196, .35);
+}
+
+.caixa.narracao .texto .aparte {
+    color: inherit;
+}
+
+/* retrato da protagonista (aparência criada no início) */
+.retrato {
+    display: none;
+    position: absolute;
+    left: clamp(1rem, 1.8vw, 1.5rem);
+    bottom: clamp(1rem, 2vh, 1.3rem);
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 35%, #fff, var(--rosa-claro) 60%, var(--lavanda-claro));
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px var(--rosa), var(--sombra-leve);
+}
+
+/* recorte do rosto: corpo base 399px de largura, cabeça entre x 133–283 */
+.retrato-avatar {
+    position: absolute;
+    width: 150px;
+    left: -22px;
+    top: -2px;
+}
+
+.caixa.com-retrato {
+    padding-left: calc(112px + clamp(2rem, 3.4vw, 3rem));
+}
+
+.caixa.com-retrato .retrato {
+    display: block;
+    animation: surgir .4s var(--curva);
+}
+
+.indicador {
+    position: absolute;
+    right: 1.4rem;
+    bottom: 1rem;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 9px solid var(--cor-falante);
+    opacity: 0;
+}
+
+.caixa.pronto .indicador {
+    opacity: 1;
+    animation: quicar 1s ease-in-out infinite;
+}
+
+@keyframes quicar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+}
+
+/* ---------- escolhas ---------- */
+.escolhas {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: calc(clamp(130px, 21vh, 180px) + 3.5rem);
+    width: min(720px, 92vw);
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;   /* opções logo acima da caixa de diálogo */
+    gap: .7rem;
+    z-index: 7;
+    pointer-events: none;
+}
+
+.escolhas.visivel {
+    pointer-events: auto;
+}
+
+/* escolha sem fala na tela: opções centralizadas */
+.escolhas.sem-caixa {
+    justify-content: center;
+    bottom: 0;
+}
+
+.escolha {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: .95rem 1.3rem .95rem 1rem;
+    border-radius: var(--raio);
+    text-align: left;
+    font-size: clamp(.98rem, 1.25vw, 1.08rem);
+    line-height: 1.45;
+    color: var(--tinta);
+    background: var(--vidro-forte);
+    border: 1px solid #fff;
+    box-shadow: var(--sombra-leve);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: background .2s, border-color .2s, transform .25s var(--curva), box-shadow .25s;
+}
+
+.escolhas.visivel .escolha {
+    animation: surgir .45s var(--atraso) var(--curva) forwards;
+}
+
+.escolha:hover,
+.escolha:focus-visible {
+    background: linear-gradient(90deg, #fdeced, var(--papel));
+    border-color: var(--destaque);
+    box-shadow: 0 14px 28px -14px rgba(168, 67, 79, .55);
+    transform: translateX(4px);
+}
+
+/* opção sugerida (personagem com mais afinidade) */
+.escolha.sugerida {
+    border-color: var(--destaque);
+    background: linear-gradient(90deg, #fdeced, var(--vidro-forte));
+}
+
+.escolha.sugerida::after {
+    content: "mais afinidade";
+    margin-left: auto;
+    flex: none;
+    padding: .15rem .6rem;
+    border-radius: 999px;
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--destaque-escuro);
+    background: var(--destaque-claro);
+}
+
+.escolha .selo {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: .9rem;
+    color: var(--destaque-escuro);
+    background: var(--destaque-claro);
+    border: 1px solid rgba(214, 96, 108, .4);
+    transition: background .2s, color .2s;
+}
+
+.escolha:hover .selo {
+    background: var(--destaque);
+    color: #fff;
+}
+
+/* ---------- cartões de capítulo / passagem de tempo / fim ---------- */
+.cartao,
+.fim {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: var(--tinta);
+    background: var(--fundo);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .6s, visibility 0s .6s;
+}
+
+.cartao.visivel,
+.fim.visivel {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .6s, visibility 0s;
+}
+
+.cartao-fundo {
+    position: absolute;
+    inset: 0;
+    background: center / cover;
+    filter: blur(4px) saturate(.7);
+    opacity: .35;
+    transform: scale(1.08);
+}
+
+.cartao.visivel .cartao-fundo {
+    animation: aproximar 3.2s ease-out forwards;
+}
+
+@keyframes aproximar {
+    to { transform: scale(1); }
+}
+
+.cartao-conteudo,
+.fim-conteudo {
+    position: relative;
+    padding: 2rem;
+}
+
+.cartao.visivel .cartao-conteudo > *,
+.fim.visivel .fim-conteudo > * {
+    animation: surgir .9s var(--curva) both;
+}
+
+.cartao.visivel .cartao-conteudo > :nth-child(2) { animation-delay: .25s; }
+.cartao.visivel .cartao-conteudo > :nth-child(3) { animation-delay: .5s; }
+.fim.visivel .fim-conteudo > :nth-child(2) { animation-delay: .2s; }
+.fim.visivel .fim-conteudo > :nth-child(3) { animation-delay: .5s; }
+.fim.visivel .fim-conteudo > :nth-child(4) { animation-delay: .8s; }
+
+.cartao-sobre {
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    color: var(--destaque-escuro);
+}
+
+.cartao-titulo {
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(2.8rem, 7vw, 5.2rem);
+    line-height: 1.05;
+    margin: .5rem 0;
+    text-shadow: 0 4px 30px rgba(255, 252, 251, .9);
+}
+
+.cartao-sub {
+    color: var(--tinta-suave);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+.cartao-titulo-cena {
+    font-size: clamp(2.2rem, 5.5vw, 4rem);
+}
+
+.cartao-tempo {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-style: italic;
+    color: var(--tinta-suave);
+}
+
+.fim {
+    background:
+        radial-gradient(ellipse at 50% 55%, var(--rosa-claro), transparent 60%),
+        var(--fundo);
+}
+
+.fim-proximo {
+    display: grid;
+    gap: .2rem;
+    margin: 1.8rem auto 2rem;
+    padding: 1rem 1.6rem;
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+    color: var(--tinta-suave);
+    font-size: .8rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.fim-proximo strong {
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.9rem;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--tinta);
+}
+
+.fim-proximo span {
+    letter-spacing: .05em;
+    text-transform: none;
+    font-style: italic;
+}
+
+/* ---------- aviso do próximo capítulo (aparece no fim do capítulo) ---------- */
+.aviso-capitulo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: min(560px, 92vw);
+    max-height: 90vh;
+    overflow: auto;
+    transform: translate(-50%, -50%);
+    border-radius: calc(var(--raio) + 6px);
+    background: var(--papel);
+    border: 1px solid #fff;
+    box-shadow: var(--sombra), 0 0 0 8px rgba(255, 252, 251, .5);
+    text-align: left;
+    animation: aviso-entrar .6s var(--curva) both;
+}
+
+.aviso-capa {
+    height: 180px;
+    background: center 30% / cover;
+}
+
+.aviso-corpo {
+    padding: 1.4rem 1.6rem 1.5rem;
+}
+
+.aviso-titulo {
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+    line-height: 1.1;
+    margin: .3rem 0 .6rem;
+}
+
+.aviso-descricao {
+    color: var(--tinta-suave);
+}
+
+.aviso-capitulo .acoes {
+    margin-top: 1.4rem;
+}
+
+/* com o aviso aberto, o "Fim do Capítulo" fica de fundo */
+.fim:has(.aviso-capitulo) .fim-conteudo {
+    opacity: .25;
+    filter: blur(2px);
+    transition: opacity .6s, filter .6s;
+}
+
+@keyframes aviso-entrar {
+    from { opacity: 0; transform: translate(-50%, -44%); }
+}
+
+/* ---------- clima: chuva (cenário com clima: "chuva") ---------- */
+.palco[data-clima="chuva"] .vinheta::after {
+    content: "";
+    position: absolute;
+    inset: -20% 0 0;
+    background:
+        repeating-linear-gradient(104deg, transparent 0 22px, rgba(220, 225, 240, .35) 22px 23px, transparent 23px 61px),
+        repeating-linear-gradient(100deg, transparent 0 37px, rgba(220, 225, 240, .25) 37px 38px, transparent 38px 90px);
+    background-size: 100% 180px, 100% 260px;
+    animation: chuva .55s linear infinite;
+}
+
+@keyframes chuva {
+    to { background-position: -30px 180px, -40px 260px; }
+}
+
+/* ---------- efeitos ---------- */
+.palco::before,
+.palco::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 5;
+}
+
+/* desmaio: clareia e borra (versão suave do "apagar") */
+.palco::after {
+    background: var(--fundo);
+    z-index: 19;
+}
+
+.palco.desmaiando::after {
+    animation: desmaio 1.7s ease-in-out;
+}
+
+.palco.desmaiando .cenario,
+.palco.desmaiando .sprite {
+    filter: blur(6px);
+}
+
+@keyframes desmaio {
+    0% { opacity: 0; }
+    45%, 60% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.efeito-tremor .cenario,
+.efeito-tremor .sprite {
+    animation: tremor .55s;
+}
+
+.efeito-grito .cenario,
+.efeito-grito .sprite {
+    animation: tremor .7s;
+}
+
+@keyframes tremor {
+    0%, 100% { translate: 0 0; }
+    15% { translate: -9px 3px; }
+    30% { translate: 8px -4px; }
+    45% { translate: -6px 2px; }
+    60% { translate: 5px 3px; }
+    75% { translate: -3px -2px; }
+}
+
+/* flashback: clarão branco, ideal para "voltar no tempo" */
+.efeito-flashback::before {
+    background: radial-gradient(circle at 50% 45%, #fff, rgba(255, 246, 246, .8) 40%, transparent 75%);
+    animation: clarao 1.6s ease-out;
+}
+
+.efeito-grito::before {
+    background: rgba(217, 143, 169, .45);
+    animation: clarao .7s ease-out;
+}
+
+.efeito-apagao::before {
+    background: #2a2329;
+    animation: apagao 1.4s steps(1);
+}
+
+.efeito-eco .texto {
+    animation: eco 1.6s ease-out;
+}
+
+@keyframes clarao {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes apagao {
+    0% { opacity: .85; }
+    15% { opacity: 0; }
+    30% { opacity: .9; }
+    45% { opacity: .2; }
+    60% { opacity: .95; }
+    100% { opacity: 0; }
+}
+
+@keyframes eco {
+    from { filter: blur(4px); letter-spacing: .08em; color: var(--lavanda); }
+    to { filter: none; letter-spacing: normal; }
+}
+
+/* ---------- histórico ---------- */
+.historico {
+    display: grid;
+    gap: .9rem;
+    max-height: 62vh;
+    overflow: auto;
+    padding-right: .4rem;
+}
+
+.historico li {
+    --cor: var(--tinta-suave);
+    padding-left: .9rem;
+    border-left: 2px solid var(--cor);
+}
+
+.historico strong {
+    display: block;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--cor);
+}
+
+.historico .narracao {
+    font-style: italic;
+    color: var(--tinta-suave);
+    border-left-color: var(--borda-forte);
+}
+
+.historico .escolhido span {
+    color: var(--destaque-escuro);
+    font-weight: 700;
+}
+
+/* ---------- telas pequenas ---------- */
+@media (max-width: 640px) {
+    .sprite { height: 150vh; top: 6vh; }
+    .retrato { width: 72px; height: 72px; }
+        .retrato-avatar { width: 96px; left: -14px; top: -1px; }
+    .caixa.com-retrato { padding-left: calc(72px + 1.8rem); }
+    .hud { left: .6rem; right: .6rem; justify-content: flex-end; top: .6rem; }
+}

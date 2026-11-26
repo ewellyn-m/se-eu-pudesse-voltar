@@ -1,0 +1,471 @@
+/*
+ * Base: identidade visual suave.
+ * Vermelho claro e rosado como cor de destaque (o laço, o "voltar" do título, os botões),
+ * sobre off-white levemente rosado, com cinza do blazer e tinta escura para o contraste.
+ * Rosa e lavanda continuam nos detalhes românticos.
+ */
+:root {
+    --fundo: #faf5f4;
+    --fundo-2: #f3e9e8;
+    --papel: #fffcfb;
+    --vidro: rgba(255, 251, 250, 0.78);
+    --vidro-forte: rgba(255, 251, 250, 0.92);
+    --borda: rgba(105, 62, 74, 0.12);
+    --borda-forte: rgba(105, 62, 74, 0.22);
+
+    --tinta: #3a2e35;
+    --tinta-suave: #7a6870;
+    --tinta-fraca: #a8979e;
+
+    /* destaque: vermelho claro (principal), vermelho queimado (texto e hover), rosado claro (fundos) */
+    --destaque: #d6606c;
+    --destaque-escuro: #a8434f;
+    --destaque-claro: #f8dde0;
+    --blazer: #5e585c;
+    --rosa: #e09aaa;
+    --rosa-claro: #f9e2e7;
+    --lavanda: #b6a7d4;
+    --lavanda-claro: #ece6f5;
+    --erro: #b83a4a;
+
+    --fonte: "Nunito", system-ui, sans-serif;
+    --fonte-titulo: "Cormorant Garamond", Georgia, serif;
+    --fonte-assinatura: "Dancing Script", "Brush Script MT", cursive;
+
+    --raio: 16px;
+    --raio-pequeno: 10px;
+    --sombra: 0 22px 50px -24px rgba(88, 48, 58, 0.35);
+    --sombra-leve: 0 8px 24px -14px rgba(88, 48, 58, 0.35);
+    --curva: cubic-bezier(.2, .7, .2, 1);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--tinta);
+    font-family: var(--fonte);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background: var(--destaque-claro);
+    color: var(--tinta);
+}
+
+:focus-visible {
+    outline: 2px solid var(--destaque);
+    outline-offset: 3px;
+}
+
+/* ---------- páginas ---------- */
+/* toda página fora do jogo: fundo off-white com o xadrez do uniforme e conteúdo centralizado */
+.pagina {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 4.5rem 1rem 2rem;
+    overflow: auto;
+    animation: aparecer-pagina .5s var(--curva) both;
+}
+
+@keyframes aparecer-pagina {
+    from { opacity: 0; }
+}
+
+.pagina::before {
+    /* fundo romântico: degradê rosado, brilhos suaves e o padrão de corações (imagens/fundo-padrao.svg) */
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(255, 255, 255, .95), transparent 32%),
+        radial-gradient(circle at 88% 82%, rgba(236, 226, 248, .9), transparent 42%),
+        radial-gradient(circle at 80% 14%, rgba(250, 210, 220, .85), transparent 38%),
+        url("../imagens/fundo-padrao.svg") 0 0 / 240px 240px,
+        linear-gradient(160deg, #fff7f8 0%, #fbe8ed 50%, #f4e7f3 100%);
+    animation: fundo-deriva 90s linear infinite;
+}
+
+/* os corações descem devagar, em diagonal */
+@keyframes fundo-deriva {
+    to { background-position: 0 0, 0 0, 0 0, 240px 480px, 0 0; }
+}
+
+/* fundo da sala de aula (menu, capítulos, personagens, aparência, configurações):
+   mesma foto do menu inicial, clarinha, com os corações caindo por cima */
+.pagina.fundo-sala::before {
+    background:
+        url("../imagens/fundo-padrao.svg") 0 0 / 260px 260px,
+        linear-gradient(180deg, rgba(255, 240, 246, .62), rgba(240, 228, 248, .8)),
+        url("../imagens/cenarios/sala-de-aula.jpg") center / cover no-repeat;
+    animation: fundo-sala-deriva 80s linear infinite;
+}
+
+@keyframes fundo-sala-deriva {
+    to { background-position: 260px 780px, 0 0, center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pagina::before { animation: none; }
+}
+
+/* botão "← Menu" no topo das páginas */
+.voltar-menu {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 5;
+    min-height: 38px;
+    padding: .4rem 1rem;
+    font-size: .88rem;
+    box-shadow: var(--sombra-leve);
+}
+
+@keyframes surgir {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+}
+
+/* ---------- tipografia comum ---------- */
+.sobretitulo {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--destaque-escuro);
+}
+
+.titulo-tela,
+.titulo-modal {
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    font-size: clamp(2rem, 3.2vw, 2.7rem);
+    line-height: 1.1;
+    color: var(--tinta);
+    margin: .2rem 0 1.4rem;
+}
+
+.rotulo {
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--tinta-suave);
+    margin: 1.2rem 0 .6rem;
+}
+
+kbd {
+    font-family: inherit;
+    font-size: .8em;
+    padding: .05em .45em;
+    border: 1px solid var(--borda-forte);
+    border-bottom-width: 2px;
+    border-radius: 5px;
+    color: var(--tinta);
+    background: var(--papel);
+}
+
+/* ---------- painéis ---------- */
+.painel {
+    position: relative;
+    background: var(--vidro);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid var(--borda);
+    border-radius: calc(var(--raio) + 6px);
+    box-shadow: var(--sombra);
+    padding: clamp(1.4rem, 3vw, 2.4rem);
+    width: min(92vw, 980px);
+    max-height: 92vh;
+    overflow: auto;
+}
+
+.painel-estreito {
+    width: min(92vw, 460px);
+}
+
+.painel-largo {
+    width: min(94vw, 1100px);
+}
+
+/* ---------- botões ---------- */
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    min-height: 44px;
+    padding: .6rem 1.3rem;
+    border-radius: 999px;
+    border: 1px solid var(--borda-forte);
+    background: var(--papel);
+    color: var(--tinta);
+    font-weight: 700;
+    letter-spacing: .02em;
+    transition: background .2s, border-color .2s, transform .2s var(--curva), box-shadow .2s;
+}
+
+.botao:hover:not(:disabled) {
+    background: var(--fundo-2);
+    transform: translateY(-1px);
+}
+
+.botao:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+.botao-primario {
+    background: linear-gradient(135deg, #e5838d, var(--destaque) 55%, var(--destaque-escuro));
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 10px 22px -12px rgba(168, 67, 79, .8);
+}
+
+.botao-primario:hover:not(:disabled) {
+    background: linear-gradient(135deg, #e9939b, #dd6f7a 55%, var(--destaque));
+    box-shadow: 0 14px 26px -12px rgba(168, 67, 79, .9);
+}
+
+.botao-perigo {
+    width: 100%;
+    margin-top: 1.4rem;
+    color: var(--erro);
+    border-color: rgba(184, 58, 74, .35);
+}
+
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: .7rem;
+    margin-top: 1.6rem;
+}
+
+/* botões de menu (menu inicial e pausa do capítulo) */
+.botao-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: .7rem 1.1rem .7rem 1.4rem;
+    border-radius: var(--raio-pequeno);
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-align: left;
+    color: var(--tinta);
+    transition: background .25s, padding .25s var(--curva), color .25s;
+}
+
+.botao-menu::before {
+    content: "";
+    position: absolute;
+    left: .45rem;
+    top: 50%;
+    width: 4px;
+    height: 0;
+    border-radius: 4px;
+    background: var(--destaque);
+    transform: translateY(-50%);
+    transition: height .25s var(--curva);
+}
+
+.botao-menu:hover,
+.botao-menu:focus-visible {
+    background: linear-gradient(90deg, rgba(214, 96, 108, .2), transparent);
+    padding-left: 1.8rem;
+}
+
+.botao-menu:hover::before,
+.botao-menu:focus-visible::before {
+    height: 60%;
+}
+
+.botao-menu small {
+    font-size: .74rem;
+    font-weight: 400;
+    letter-spacing: .02em;
+    color: var(--tinta-suave);
+}
+
+/* ---------- formulários ---------- */
+.campo {
+    display: block;
+}
+
+.campo > span {
+    display: block;
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--tinta-suave);
+    margin-bottom: .45rem;
+}
+
+.campo input {
+    width: 100%;
+    padding: .85rem 1rem;
+    border-radius: var(--raio-pequeno);
+    border: 1px solid var(--borda-forte);
+    background: var(--papel);
+    font-size: 1.05rem;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.campo input:focus {
+    outline: none;
+    border-color: var(--destaque);
+    box-shadow: 0 0 0 4px rgba(214, 96, 108, .18);
+}
+
+.caixa-marcar {
+    display: flex;
+    gap: .7rem;
+    align-items: flex-start;
+    margin-top: 1.3rem;
+    font-size: .92rem;
+    color: var(--tinta-suave);
+    cursor: pointer;
+}
+
+.caixa-marcar input,
+.campo-faixa input[type="checkbox"] {
+    accent-color: var(--destaque);
+    width: 18px;
+    height: 18px;
+    margin-top: .15rem;
+    flex: none;
+}
+
+.erro {
+    display: block;
+    min-height: 1.1em;
+    margin-top: .35rem;
+    font-size: .8rem;
+    color: var(--erro);
+}
+
+/* abas */
+.abas {
+    display: inline-flex;
+    gap: .3rem;
+    padding: .3rem;
+    border-radius: 999px;
+    background: var(--fundo-2);
+    border: 1px solid var(--borda);
+}
+
+.abas button {
+    padding: .45rem 1.1rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: .9rem;
+    color: var(--tinta-suave);
+    transition: background .2s, color .2s;
+}
+
+.abas button[aria-selected="true"] {
+    background: var(--papel);
+    color: var(--tinta);
+    box-shadow: var(--sombra-leve);
+}
+
+/* ---------- janelas (dialog) ---------- */
+.modal {
+    margin: auto;
+    width: min(92vw, 760px);
+    max-height: 88vh;
+    padding: clamp(1.4rem, 3vw, 2.2rem);
+    border: 1px solid var(--borda);
+    border-radius: calc(var(--raio) + 6px);
+    background: linear-gradient(180deg, var(--papel), var(--fundo));
+    color: var(--tinta);
+    box-shadow: var(--sombra);
+    overflow: auto;
+}
+
+.modal[open] {
+    animation: abrir-modal .35s var(--curva);
+}
+
+.modal::backdrop {
+    background: rgba(120, 100, 110, .28);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+@keyframes abrir-modal {
+    from { opacity: 0; transform: translateY(16px) scale(.98); }
+}
+
+.modal-pequeno { width: min(92vw, 420px); }
+.modal-largo { width: min(94vw, 1080px); }
+
+.fechar {
+    position: absolute;
+    top: .8rem;
+    right: .9rem;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--tinta-suave);
+    transition: background .2s, color .2s;
+}
+
+.fechar:hover {
+    background: var(--fundo-2);
+    color: var(--tinta);
+}
+
+.lista-botoes {
+    display: grid;
+    gap: .15rem;
+}
+
+.acoes-centro {
+    justify-content: center;
+}
+
+/* ---------- avatar em camadas (cabelo de trás, corpo, olhos, cabelo da frente) ---------- */
+.avatar {
+    position: relative;
+    aspect-ratio: 399 / 1530;
+}
+
+/* posição e tamanho do cabelo e dos olhos vêm do ENCAIXE em src/javascript/comum/avatar.js */
+.avatar img {
+    position: absolute;
+    max-width: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.avatar .avatar-corpo {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}

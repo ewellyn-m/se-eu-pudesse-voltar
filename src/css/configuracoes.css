@@ -1,0 +1,25 @@
+/* configuracoes.html e janela de configurações do capítulo (mesmo painel) */
+
+/* ---------- configurações ---------- */
+.campo-faixa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .8rem 0;
+    border-bottom: 1px solid var(--borda);
+    font-weight: 700;
+}
+
+.campo-faixa input[type="range"] {
+    width: 52%;
+    accent-color: var(--destaque);
+}
+
+.dica {
+    margin-top: 1rem;
+    font-size: .82rem;
+    line-height: 1.9;
+    color: var(--tinta-suave);
+}
+

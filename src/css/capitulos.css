@@ -1,0 +1,55 @@
+/* capitulos.html */
+
+/* ---------- capítulos ---------- */
+.lista-capitulos {
+    display: grid;
+    gap: 1rem;
+}
+
+.capitulo-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    border-radius: var(--raio);
+    overflow: hidden;
+    background: var(--papel);
+    border: 1px solid var(--borda);
+    box-shadow: var(--sombra-leve);
+}
+
+.capitulo-capa {
+    background: center / cover;
+    min-height: 150px;
+}
+
+.capitulo-card.bloqueado .capitulo-capa {
+    filter: grayscale(1) opacity(.45) blur(1px);
+}
+
+.capitulo-info {
+    padding: 1.1rem 1.3rem;
+    display: grid;
+    gap: .4rem;
+    align-content: start;
+}
+
+.capitulo-info h2 {
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.7rem;
+    line-height: 1.2;
+}
+
+.capitulo-info > p:not(.sobretitulo) {
+    color: var(--tinta-suave);
+    font-size: .93rem;
+}
+
+.capitulo-info .botao {
+    justify-self: start;
+    margin-top: .5rem;
+}
+
+@media (max-width: 760px) {
+    .capitulo-card { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-raiz="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Se eu pudesse voltar...</title>
+  <link rel="icon" type="image/png" href="src/imagens/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Dancing+Script:wght@600;700&family=Fredoka:wght@500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/reset.css">
+  <link rel="stylesheet" href="src/css/base.css">
+  <link rel="stylesheet" href="src/css/menu.css">
+</head>
+<!--
+  Menu inicial como uma "mesa da escola": carteirinha de estudante da personagem,
+  o bilhete do capítulo para continuar, post-its de atalho, a linha do tempo dos
+  capítulos e as polaroids dos garotos com a afinidade de cada um.
+-->
+<body class="pagina-painel">
+  <div class="painel-fundo" aria-hidden="true"></div>
+
+  <!-- ===== Barra do topo ===== -->
+  <header class="barra-topo">
+    <a class="marca" href="index.html">Se eu pudesse <span>voltar...</span></a>
+    <nav class="links-topo" aria-label="Menu">
+      <a href="src/html/capitulos.html">Capítulos</a>
+      <a href="src/html/personagens.html">Personagens</a>
+      <a href="src/html/aparencia.html">Minha aparência</a>
+      <a href="src/html/configuracoes.html">Configurações</a>
+      <a href="src/html/sobre.html">Sobre</a>
+    </nav>
+    <div class="usuario">
+      <span class="usuario-rosto" aria-hidden="true"><span class="avatar" data-avatar-mini></span></span>
+      <span class="usuario-nome" data-usuario></span>
+      <button type="button" class="botao-sair" data-acao="sair">Sair</button>
+    </div>
+  </header>
+
+  <main class="mesa">
+    <h1 class="sr">Início</h1>
+
+    <!-- ===== Carteirinha + bilhete do capítulo ===== -->
+    <section class="destaque">
+      <article class="carteirinha" aria-label="Sua carteirinha">
+        <span class="cordao" aria-hidden="true"></span>
+        <header class="carteirinha-topo">
+          <span class="carteirinha-escola">Colégio · Carteirinha estudantil</span>
+          <span class="carteirinha-ano">2026</span>
+        </header>
+        <div class="carteirinha-corpo">
+          <div class="foto-3x4" aria-hidden="true"><span class="avatar" data-avatar-foto></span></div>
+          <dl class="dados">
+            <div><dt>Nome</dt><dd data-usuario></dd></div>
+            <div><dt>Turma</dt><dd>2-A</dd></div>
+            <div><dt>Capítulos</dt><dd><span data-concluidos>0</span> de <span data-total>0</span></dd></div>
+            <div><dt>Coração</dt><dd data-favorito>—</dd></div>
+          </dl>
+        </div>
+        <a class="carteirinha-editar" href="src/html/aparencia.html">Mudar aparência</a>
+      </article>
+
+      <article class="bilhete-capitulo" data-bilhete>
+        <div class="bilhete-imagem" data-bilhete-capa aria-hidden="true"></div>
+        <div class="bilhete-conteudo">
+          <p class="bilhete-chamada" data-bilhete-chamada>Comece a história</p>
+          <p class="bilhete-numero" data-bilhete-numero>Capítulo 1</p>
+          <h2 class="bilhete-titulo" data-bilhete-titulo></h2>
+          <p class="bilhete-descricao" data-bilhete-descricao></p>
+          <button type="button" class="botao-continuar" data-acao="principal">Jogar</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===== Post-its ===== -->
+    <nav class="postits" aria-label="Atalhos">
+      <a class="postit postit-amarelo" href="src/html/capitulos.html"><b>Capítulos</b><small>todos os episódios</small></a>
+      <a class="postit postit-rosa" href="src/html/personagens.html"><b>Personagens</b><small>fichas e galeria</small></a>
+      <a class="postit postit-lilas" href="src/html/aparencia.html"><b>Minha aparência</b><small>cabelo e olhos</small></a>
+      <a class="postit postit-verde" href="src/html/configuracoes.html"><b>Configurações</b><small>música e texto</small></a>
+    </nav>
+
+    <!-- ===== Linha do tempo ===== -->
+    <section class="linha-tempo" aria-labelledby="titulo-linha">
+      <h2 class="titulo-secao" id="titulo-linha"><span aria-hidden="true">◷</span> Linha do tempo</h2>
+      <ol class="trilha" data-trilha></ol>
+    </section>
+
+    <!-- ===== Polaroids dos garotos ===== -->
+    <section class="coracoes" aria-labelledby="titulo-coracoes">
+      <h2 class="titulo-secao" id="titulo-coracoes"><span aria-hidden="true">♥</span> Quem mexe com o seu coração</h2>
+      <ul class="polaroids" data-coracoes></ul>
+      <p class="coracoes-nota">A afinidade sobe e desce com as suas escolhas em cada capítulo.</p>
+    </section>
+  </main>
+
+  <footer class="rodape-painel">&copy;2026 Se eu pudesse voltar...</footer>
+
+  <script src="src/javascript/comum/base.js"></script>
+  <script src="src/javascript/comum/estado.js"></script>
+  <script src="src/javascript/comum/musica.js"></script>
+  <script src="src/javascript/comum/avatar.js"></script>
+  <script src="src/javascript/dados/capitulos.js"></script>
+  <script src="src/javascript/dados/personagens.js"></script>
+  <script src="src/javascript/paginas/menu.js"></script>
+</body>
+</html>

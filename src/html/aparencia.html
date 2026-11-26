@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-raiz="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil · Se eu pudesse voltar...</title>
+  <link rel="icon" type="image/png" href="../../src/imagens/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../src/css/reset.css">
+  <link rel="stylesheet" href="../../src/css/base.css">
+  <link rel="stylesheet" href="../../src/css/aparencia.css">
+</head>
+<body class="pagina fundo-sala">
+  <a class="botao voltar-menu" href="../../index.html" data-so-perfil hidden>← Menu</a>
+
+  <main class="painel painel-aparencia">
+    <div class="aparencia-preview">
+      <div class="avatar avatar-grande" data-avatar-preview></div>
+    </div>
+    <div class="aparencia-controles">
+      <!-- textos trocados pelo aparencia.js: primeira vez (montar a personagem) ou perfil (alterar) -->
+      <p class="sobretitulo" data-sobretitulo>Perfil</p>
+      <h1 class="titulo-tela" data-titulo>Sua aparência</h1>
+      <div class="perfil-nome">
+        <span>Nome</span>
+        <strong data-nome></strong>
+        <small>O nome escolhido no cadastro não pode ser alterado.</small>
+      </div>
+      <div class="abas" role="tablist">
+        <button type="button" role="tab" data-parte="cabelo">Cabelo</button>
+        <button type="button" role="tab" data-parte="olhos">Olhos</button>
+      </div>
+      <p class="rotulo">Estilo</p>
+      <div class="grade-estilos" data-estilos></div>
+      <p class="rotulo" data-rotulo-cor>Cor</p>
+      <div class="grade-cores" data-cores></div>
+      <div class="acoes">
+        <span class="aviso-salvo" data-salvo role="status"></span>
+        <a class="botao" href="../../index.html" data-so-perfil hidden>Voltar</a>
+        <button type="button" class="botao botao-primario" data-acao="salvar">Salvar aparência</button>
+      </div>
+    </div>
+  </main>
+  <script src="../../src/javascript/comum/base.js"></script>
+  <script src="../../src/javascript/comum/estado.js"></script>
+  <script src="../../src/javascript/comum/musica.js"></script>
+  <script src="../../src/javascript/comum/avatar.js"></script>
+  <script src="../../src/javascript/paginas/aparencia.js"></script>
+</body>
+</html>

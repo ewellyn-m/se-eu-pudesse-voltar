@@ -1,0 +1,215 @@
+/* personagens.html — galeria */
+
+/* ---------- personagens ---------- */
+.pagina-personagens .abas {
+    margin-bottom: 1.2rem;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: minmax(230px, 300px) 1fr;
+    gap: 1.6rem;
+    min-height: 480px;
+}
+
+/* lista de rostos: só ela rola quando há muitos personagens (aba Outros).
+   contain: size faz a lista ter a altura do quadro do personagem grande, que fica parado. */
+.galeria-lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .6rem;
+    align-content: start;
+    contain: size;
+    overflow-y: auto;
+    overscroll-behavior: contain;   /* rolar a lista não arrasta a página junto */
+    padding: 2px .45rem 2px 2px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rosa) transparent;
+}
+
+.galeria-item {
+    --cor: var(--rosa);
+    background: linear-gradient(180deg, #fff, var(--fundo-2));
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: var(--raio);
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: border-color .2s, transform .2s var(--curva);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;          /* mostra a imagem inteira, sem cortar */
+    object-position: 50% 50%;
+    padding: 6px 6px 26px;        /* espaço embaixo para o nome não cobrir a foto */
+    transition: transform .4s var(--curva), filter .3s;
+    filter: saturate(.85);
+}
+
+.galeria-item span {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 1.4rem .6rem .45rem;
+    font-weight: 800;
+    font-size: .9rem;
+    color: #fff;
+    background: linear-gradient(transparent, color-mix(in srgb, var(--cor) 85%, transparent));
+}
+
+.galeria-item:hover img,
+.galeria-item[aria-current="true"] img {
+    transform: scale(1.04);
+    filter: none;
+}
+
+.galeria-item[aria-current="true"] {
+    border-color: var(--cor);
+}
+
+.galeria-item.bloqueado img,
+.detalhe-corpo.bloqueado img {
+    filter: brightness(0) opacity(.25);
+}
+
+.galeria-detalhe {
+    --cor: var(--rosa);
+    display: grid;
+    grid-template-columns: minmax(150px, 38%) 1fr;
+    gap: 1.4rem;
+    padding: 1.2rem;
+    border-radius: var(--raio);
+    background:
+        radial-gradient(ellipse at 20% 80%, color-mix(in srgb, var(--cor) 25%, transparent), transparent 65%),
+        var(--papel);
+    border: 1px solid var(--borda);
+}
+
+.detalhe-corpo {
+    height: 500px;                /* altura da foto grande: mude aqui para todos */
+    position: relative;
+}
+
+.detalhe-corpo img {
+    position: absolute;           /* presa dentro da caixa, nunca passa dos 500px */
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;          /* imagem inteira, sem cortar */
+    object-position: 50% 100%;    /* todos "pisando" no mesmo chão */
+    filter: drop-shadow(0 12px 20px rgba(88, 48, 58, .25));
+}
+
+.detalhe-retrato img {
+    border-radius: var(--raio);
+    place-self: start center;
+}
+
+.detalhe-texto {
+    display: grid;
+    gap: .8rem;
+    align-content: start;
+    font-size: .95rem;
+    color: var(--tinta-suave);
+}
+
+.detalhe-texto h2 {
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 2.4rem;
+    line-height: 1.1;
+    color: var(--tinta);
+    border-bottom: 2px solid var(--cor);
+    padding-bottom: .3rem;
+    justify-self: start;
+}
+
+.detalhe-papel {
+    margin-top: -.4rem;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--cor) 80%, var(--tinta));
+}
+
+.em-breve {
+    font-style: italic;
+    color: var(--tinta-fraca);
+}
+
+[data-alternar] {
+    cursor: pointer;
+}
+
+.detalhe-resumo {
+    font-style: italic;
+    color: var(--tinta-suave);
+}
+
+.gostos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .6rem;
+}
+
+.gostos p {
+    padding: .6rem .8rem;
+    border-radius: var(--raio-pequeno);
+    background: var(--fundo);
+}
+
+.gostos strong,
+.ficha dt {
+    display: block;
+    font-size: .7rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--cor);
+}
+
+.ficha {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: .5rem;
+}
+
+.ficha div {
+    padding: .5rem .7rem;
+    border-radius: var(--raio-pequeno);
+    border: 1px solid var(--borda);
+}
+
+.ficha dd {
+    font-weight: 700;
+    color: var(--tinta);
+}
+
+/* personagem ainda sem imagem: mostra a inicial */
+.sem-imagem {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 120px;
+    font-family: var(--fonte-titulo);
+    font-style: italic;
+    font-size: 3rem;
+    color: #fff;
+    background: linear-gradient(160deg, color-mix(in srgb, var(--cor) 60%, #fff), var(--cor));
+    border-radius: var(--raio);
+}
+
+@media (max-width: 760px) {
+    .galeria,
+    .galeria-detalhe { grid-template-columns: 1fr; }
+    .galeria-lista {
+        grid-template-columns: repeat(4, 1fr);
+        contain: none;
+        max-height: 230px;          /* no celular: duas fileiras de rostos, o resto rola */
+    }
+    .detalhe-corpo { height: 320px; }
+}

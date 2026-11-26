@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-raiz="../../" data-publica>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar · Se eu pudesse voltar...</title>
+  <link rel="icon" type="image/png" href="../../src/imagens/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Dancing+Script:wght@600;700&family=Fredoka:wght@500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../src/css/reset.css">
+  <link rel="stylesheet" href="../../src/css/base.css">
+  <link rel="stylesheet" href="../../src/css/entrar.css">
+</head>
+<!--
+  Tela de entrada, no estilo de site de jogo de paquera:
+  barra de login no topo, capa com os garotos e o botão JOGAR (abre o cadastro),
+  e logo abaixo a vitrine dos garotos (vem de dados/personagens.js, grupo "paquera").
+-->
+<body class="pagina-entrar">
+
+  <!-- ===== Barra de login (no celular vira uma janelinha aberta pelo botão "Entrar") ===== -->
+  <div class="barra-login" id="barra-login">
+    <form id="form-entrar" class="form-entrar" novalidate>
+      <span class="barra-titulo">Entrar:</span>
+      <label class="campo-barra">
+        <span class="sr">E-mail</span>
+        <input type="email" name="email" autocomplete="email" inputmode="email" placeholder="Digite seu email">
+        <small class="erro" data-erro="email"></small>
+      </label>
+      <label class="campo-barra">
+        <span class="sr">Senha</span>
+        <input type="password" name="senha" autocomplete="current-password" placeholder="Sua senha">
+        <small class="erro" data-erro="senha"></small>
+      </label>
+      <button type="submit" class="botao-ok">Jogar</button>
+      <button type="button" class="link-barra" data-ver="cadastro">Fazer cadastro</button>
+      <p class="aviso-conta" data-aviso role="alert"></p>
+      <button type="button" class="fechar-janela so-celular" data-fechar aria-label="Fechar">×</button>
+    </form>
+  </div>
+  <button type="button" class="abrir-login so-celular" data-ver="entrar">Entrar</button>
+
+  <!-- ===== Capa ===== -->
+  <section class="capa" id="inicio">
+    <div class="capa-fundo" aria-hidden="true"></div>
+
+    <h1 class="logo">
+      <span class="logo-linha1">Se eu pudesse</span>
+      <span class="logo-linha2">voltar<span class="logo-pontos">...</span></span>
+      <span class="logo-faixa">uma visual novel de gangue e paquera</span>
+      <span class="logo-coracao" aria-hidden="true">♥</span>
+    </h1>
+
+    <div class="capa-palco">
+      <aside class="bilhete">
+        <span class="clipe" aria-hidden="true"></span>
+        <p class="bilhete-texto">
+          Volte para o colégio, enfrente as gangues da cidade e viva uma
+          <strong>história de amor que muda com as suas escolhas!</strong>
+        </p>
+        <p class="bilhete-faixa">Uma segunda chance<br>para proteger quem você ama</p>
+      </aside>
+
+      <div class="trio-area">
+        <div class="trio" aria-hidden="true">
+          <img class="trio-lado trio-esq" src="../../src/imagens/personagens/takeo.png" alt="">
+          <img class="trio-lado trio-dir" src="../../src/imagens/personagens/blanke.png" alt="">
+          <img class="trio-meio" src="../../src/imagens/personagens/kaito.png" alt="">
+        </div>
+        <button type="button" class="botao-jogar" data-ver="cadastro">Jogar</button>
+      </div>
+    </div>
+
+    <a class="descer" href="#garotos" aria-label="Conhecer os garotos">Conheça os garotos <span aria-hidden="true">⌄</span></a>
+  </section>
+
+  <!-- ===== Vitrine dos garotos ===== -->
+  <section class="vitrine" id="garotos">
+    <div class="vitrine-fundo" aria-hidden="true"></div>
+    <div class="vitrine-conteudo">
+      <figure class="vitrine-corpo">
+        <img id="vitrine-corpo" src="../../src/imagens/personagens/kaito.png" alt="">
+        <span class="coracao-solto" aria-hidden="true">♥</span>
+      </figure>
+
+      <div class="caderno">
+        <h2 class="fita">Conquiste o seu garoto preferido e crie uma história única</h2>
+        <p class="caderno-texto">
+          <strong>Conheça garotos diferentes</strong>, converse com eles e descubra quem está por trás da fama de cada um.
+          Cada escolha muda o caminho da história e <strong>quem fica do seu lado</strong>.
+          Os capítulos têm caminhos diferentes: <strong>jogue de novo para descobrir todos.</strong>
+        </p>
+
+        <div class="ficha">
+          <span class="espiral" aria-hidden="true"></span>
+          <h3 class="ficha-nome" id="vitrine-nome">Kaito</h3>
+          <p class="ficha-texto" id="vitrine-texto"></p>
+          <div class="ficha-rostos" id="vitrine-rostos" role="tablist" aria-label="Escolha um garoto"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Como jogar ===== -->
+  <section class="passos">
+    <h2 class="fita fita-centro">Como funciona</h2>
+    <ol class="passos-lista">
+      <li><span class="passo-num">1</span><strong>Crie a sua personagem</strong><p>Escolha o cabelo, os olhos e o nome. Ela é você.</p></li>
+      <li><span class="passo-num">2</span><strong>Faça as suas escolhas</strong><p>Cada resposta aproxima ou afasta os garotos e muda o que acontece.</p></li>
+      <li><span class="passo-num">3</span><strong>Mude o futuro</strong><p>Você sabe o que vai acontecer. Será que consegue impedir?</p></li>
+    </ol>
+    <button type="button" class="botao-jogar botao-jogar-menor" data-ver="cadastro">Criar minha conta</button>
+  </section>
+
+  <footer class="rodape">&copy;2026 Se eu pudesse voltar...</footer>
+
+  <!-- ===== Cadastro (janela) ===== -->
+  <div class="janela" id="janela-cadastro" hidden>
+    <div class="janela-fundo" data-fechar></div>
+    <form id="form-cadastro" class="form-conta cartao-caderno" novalidate role="dialog" aria-modal="true" aria-labelledby="titulo-cadastro">
+      <span class="clipe" aria-hidden="true"></span>
+      <button type="button" class="fechar-janela" data-fechar aria-label="Fechar">×</button>
+      <h2 class="fita" id="titulo-cadastro">Crie a sua conta</h2>
+      <p class="aviso-conta" data-aviso role="alert"></p>
+      <label class="campo">
+        <span>Nome</span>
+        <input type="text" name="nome" maxlength="16" autocomplete="given-name" placeholder="Seu nome">
+        <small class="erro" data-erro="nome"></small>
+      </label>
+      <label class="campo">
+        <span>E-mail</span>
+        <input type="email" name="email" autocomplete="email" inputmode="email" placeholder="Digite seu email">
+        <small class="erro" data-erro="email"></small>
+      </label>
+      <div class="campos-lado">
+        <label class="campo">
+          <span>Senha</span>
+          <input type="password" name="senha" autocomplete="new-password" placeholder="Mínimo de 6">
+          <small class="erro" data-erro="senha"></small>
+        </label>
+        <label class="campo">
+          <span>Confirmar senha</span>
+          <input type="password" name="confirmar" autocomplete="new-password" placeholder="Repita">
+          <small class="erro" data-erro="confirmar"></small>
+        </label>
+      </div>
+      <label class="caixa-marcar">
+        <input type="checkbox" name="idade">
+        <span>Confirmo que tenho 16 anos ou mais.</span>
+      </label>
+      <small class="erro" data-erro="idade"></small>
+      <div class="acoes-conta">
+        <button type="submit" class="botao botao-primario">Criar conta</button>
+        <button type="button" class="botao" data-ver="entrar">Jogar</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="../../src/javascript/comum/base.js"></script>
+  <script src="../../src/javascript/comum/estado.js"></script>
+  <script src="../../src/javascript/dados/personagens.js"></script>
+  <script src="../../src/javascript/paginas/entrar.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-raiz="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quem é você? · Se eu pudesse voltar...</title>
+  <link rel="icon" type="image/png" href="../../src/imagens/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../src/css/reset.css">
+  <link rel="stylesheet" href="../../src/css/base.css">
+  <link rel="stylesheet" href="../../src/css/perfil.css">
+</head>
+<body class="pagina">
+  <a class="botao voltar-menu" href="../../index.html">← Menu</a>
+
+  <main class="painel painel-estreito">
+    <p class="sobretitulo">Novo jogo</p>
+    <h1 class="titulo-tela">Quem é você?</h1>
+    <form id="form-perfil" novalidate>
+      <label class="campo">
+        <span>Nome da protagonista</span>
+        <input type="text" name="nome" maxlength="16" autocomplete="off" placeholder="S/N — digite o seu nome">
+        <small class="erro" data-erro="nome"></small>
+      </label>
+      <label class="caixa-marcar">
+        <input type="checkbox" name="idade">
+        <span>Confirmo ter mais de 16 anos.</span>
+      </label>
+      <small class="erro" data-erro="idade"></small>
+      <div class="acoes">
+        <a class="botao" href="../../index.html">Voltar</a>
+        <button type="submit" class="botao botao-primario">Próximo</button>
+      </div>
+    </form>
+  </main>
+  <script src="../../src/javascript/comum/base.js"></script>
+  <script src="../../src/javascript/comum/estado.js"></script>
+  <script src="../../src/javascript/comum/musica.js"></script>
+  <script src="../../src/javascript/paginas/perfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+/* perfil.html — nome da protagonista */
+
+.painel-estreito {
+    animation: surgir .7s var(--curva) both;
+}

@@ -1,0 +1,179 @@
+/* aparencia.html — cabelo e olhos da protagonista */
+
+/* ---------- aparência ---------- */
+.painel-aparencia {
+    display: grid;
+    grid-template-columns: minmax(240px, 36%) 1fr;
+    gap: clamp(1rem, 3vw, 2.6rem);
+    padding: 0;
+    overflow: hidden;
+    /* altura fixa: trocar entre Cabelo e Olhos não muda o tamanho da tela */
+    height: min(92vh, 780px);
+}
+
+.aparencia-preview {
+    position: relative;
+    overflow: hidden;
+    min-height: 0;
+    /* fundo só atrás da personagem: o quarto dela, num tom médio (nem claro, nem escuro),
+       com uma luz suave atrás do corpo e uma sombra no chão */
+    background:
+        radial-gradient(ellipse 46% 6% at 50% 96%, rgba(40, 18, 34, .35), transparent 70%),
+        radial-gradient(ellipse 60% 55% at 50% 40%, rgba(255, 236, 244, .38), transparent 70%),
+        linear-gradient(180deg, rgba(122, 76, 108, .42), rgba(86, 52, 82, .55)),
+        url("../imagens/cenarios/quarto.png") center / cover no-repeat,
+        #8a6080;
+    border-right: 1px solid var(--borda);
+}
+
+/* corpo inteiro, da cabeça aos pés */
+.avatar-grande {
+    position: absolute;
+    left: 50%;
+    top: 3%;
+    height: 94%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 12px 24px rgba(88, 48, 58, .22));
+}
+
+.aparencia-controles {
+    padding: clamp(1.4rem, 3vw, 2.4rem) clamp(1.4rem, 3vw, 2.4rem) clamp(1.4rem, 3vw, 2rem) 0;
+    overflow: auto;
+    max-height: none;
+    height: 100%;
+    scrollbar-gutter: stable;
+}
+
+.grade-estilos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+    gap: .7rem;
+    /* sempre o espaço de duas linhas, tenha o estilo 3 ou 5 opções */
+    grid-auto-rows: 124px;
+    min-height: calc(124px * 2 + .7rem);
+    align-content: start;
+}
+
+.opcao-estilo {
+    display: grid;
+    gap: .45rem;
+    justify-items: center;
+    align-content: end;
+    min-height: 120px;
+    padding: .8rem .5rem .6rem;
+    border-radius: var(--raio);
+    background: var(--papel);
+    border: 1px solid var(--borda);
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--tinta-suave);
+    transition: border-color .2s, background .2s, transform .2s var(--curva), box-shadow .2s;
+}
+
+.opcao-estilo img {
+    max-height: 76px;
+    max-width: 92px;
+    object-fit: contain;
+}
+
+.opcao-estilo:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-leve);
+}
+
+.opcao-estilo[aria-pressed="true"] {
+    border-color: var(--destaque);
+    background: #fff3f3;
+    color: var(--tinta);
+    box-shadow: 0 0 0 3px rgba(214, 96, 108, .2);
+}
+
+/* nome da conta (só leitura) */
+.perfil-nome {
+    display: grid;
+    gap: .1rem;
+    margin: -.6rem 0 1rem;
+    padding: .7rem 1rem;
+    border-radius: var(--raio-pequeno);
+    background: var(--fundo);
+    border: 1px solid var(--borda);
+}
+
+.perfil-nome span {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--tinta-suave);
+}
+
+.perfil-nome strong {
+    font-size: 1.15rem;
+    color: var(--tinta);
+}
+
+.perfil-nome small {
+    font-size: .78rem;
+    color: var(--tinta-fraca);
+}
+
+.aviso-salvo {
+    align-self: center;
+    margin-right: auto;
+    font-weight: 700;
+    color: var(--destaque-escuro);
+}
+
+.grade-cores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7rem;
+}
+
+.amostra {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, .55), transparent 45%), var(--amostra);
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(88, 48, 58, .2);
+    transition: transform .2s var(--curva), box-shadow .2s;
+}
+
+.amostra:hover {
+    transform: scale(1.1);
+}
+
+.amostra[aria-pressed="true"] {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--destaque);
+}
+
+@media (max-width: 720px) {
+    .painel-aparencia {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .aparencia-preview {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        min-height: 0;
+        height: 52vh;
+        border-right: 0;
+        border-bottom: 1px solid var(--borda);
+    }
+
+    .avatar-grande {
+        height: 94%;
+        top: 3%;
+    }
+
+    .aparencia-controles {
+        padding: 0 1.2rem 1.4rem;
+        height: auto;
+    }
+
+    /* no celular cabem menos colunas: reserva três linhas */
+    .grade-estilos { min-height: calc(124px * 3 + 1.4rem); }
+}
