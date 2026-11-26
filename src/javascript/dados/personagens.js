@@ -180,7 +180,7 @@ const Personagens = {
     nome: "Ren Sakuma", grupo: "outros", cor: "#6f7a86",
     papel: "Aluno transferido. Líder da Matilha",
     retrato: IMG + "Ren.png", corpo: IMG + "Ren.png", sprite: IMG + "Ren.png",
-    roupas: { festival: IMG + "ren-festival.png" }
+    roupas: { festival: IMG + "ren-festival.png", fora: IMG + "ren-fora-escola-sem-fundo.png" }
   },
 
   yuto: {
@@ -312,7 +312,7 @@ const Cenarios = {
   "casa-takeo-noite": { img: CEN + "frente-casa-takeo.png", tom: "noite" }, // portão da casa do Takeo, à noite (capítulo 32)
   "quarto-hana":     { img: CEN + "quarto-hana.png" },                // quarto da Hana
   "predio-abandonado": { img: CEN + "galpao.png", tom: "noite" },      // prédio inacabado do pai do Ren, por fora (provisório)
-  "predio-abandonado-topo": { img: CEN + "Garagem.png", tom: "noite" } // oitavo andar sem teto (provisório)
+  "predio-abandonado-topo": { img: CEN + "predio-abandonado.png" }  // último andar do prédio abandonado, à noite
 };
 
 const Itens = {};

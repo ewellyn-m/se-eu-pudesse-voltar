@@ -11,6 +11,8 @@
  *    • Segunda na escola, um dia normal: aula, intervalo, educação física.
  *      Várias conversas com o Blake, sem envolver a Mio nem a Sayuri (dupla no laboratório,
  *      banco do intervalo, a corrida da educação física).
+ *    • Cenas com TODOS os meninos (qualquer rota): Takeo e o pedaço do gesso guardado · Ryuji e os cartões
+ *      do curso de bombeiro no corredor · Kaito e o bilhete na aula de história · o portão na saída com todos.
  *    • Bloco de rota à tarde.
  *    • À noite, a mãe sai para o plantão. O Ren está embaixo do prédio dela. "Desce."
  *    • Ela desce e vai com ele até um prédio abandonado, um esqueleto de concreto que nunca terminaram.
@@ -54,7 +56,23 @@ Roteiro.registrar("capitulo33", {
     c1_04: { quem: "mio", texto: "Prende pra mim? Eu acordei atrasada porque fiquei ouvindo a gravação da festa. Eu falei “ouvintes da calçada” onze vezes, SN, onze, eu contei.", proxima: "c1_05" },
     c1_05: { tipo: "narracao", texto: "A SN prende o cabelo dela no portão, enquanto a Mio narra os próprios erros de locução como se fosse comentarista de futebol.", proxima: "c1_06" },
     c1_06: { tipo: "narracao", sprite: "takeo:machucado", texto: "O Takeo passa com o gesso, que agora tem a flor da avó, o “melhoras” torto e mais umas doze assinaturas, uma delas escrita só “R.” com letra bonita demais.", proxima: "c1_07" },
-    c1_07: { quem: "takeo", sprite: "takeo:machucado", texto: "Foi a Reina. Ela disse que só ia colocar a inicial porque nome inteiro é muito compromisso.", proxima: "c1_08" },
+    c1_07: { quem: "takeo", sprite: "takeo:machucado", texto: "Foi a Reina. Ela disse que só ia colocar a inicial porque nome inteiro é muito compromisso.", proxima: "tk_01" },
+    // --- Takeo no portão (todas as rotas) ---
+    tk_01: { tipo: "narracao", sprite: "takeo:machucado", texto: "Ele estica o braço engessado na direção dela, meio sem jeito, e aponta com o queixo para um espaço em branco perto do cotovelo, do lado da flor da avó.", proxima: "tk_02" },
+    tk_02: { quem: "takeo", sprite: "takeo:machucado", texto: "Eu guardei esse pedaço. Não deixei ninguém escrever aí. O Victor tentou desenhar uma moto e eu fugi correndo, mancando, foi muito humilhante.", proxima: "tk_03" },
+    tk_03: { quem: "eu", texto: "Você guardou um pedaço do gesso pra mim?", proxima: "tk_04" },
+    tk_04: { quem: "takeo", sprite: "takeo:machucado", texto: "Guardei. Quer dizer, guardei pra quem pedisse primeiro, e você ia pedir, então dá no mesmo.", proxima: "tk_esc" },
+    tk_esc: { escolhas: [
+      { texto: "A. Desenhar um caqui pequenininho, com folhinha e tudo.", proxima: "tk_a1", pontos: { takeo: 2 }, flags: ["Caqui_gesso"] },
+      { texto: "B. Escrever “Propriedade do plantão. Devolver inteiro.”", proxima: "tk_b1", pontos: { takeo: 2 }, flags: ["Plantao_gesso"] },
+      { texto: "C. “Eu assino no dia que tirar. Aí fica de lembrança, e não de machucado.”", proxima: "tk_c1", pontos: { takeo: 2 }, flags: ["Assina_depois"] }
+    ]},
+    tk_a1: { tipo: "narracao", texto: "Ela pega a caneta da mão dele e desenha um caqui redondo, com uma folhinha torta em cima. Ele fica olhando para o desenho com a cara mais séria do mundo, e depois sorri tanto que o corte do lábio repuxa.", proxima: "tk_a2" },
+    tk_a2: { quem: "takeo", sprite: "takeo:machucado", texto: "A minha avó vai achar que você está me pedindo em casamento. Caqui lá em casa é coisa séria.", proxima: "c1_08" },
+    tk_b1: { tipo: "narracao", texto: "Ela escreve em letra de forma, apertando a caneta no gesso. Ele lê de cabeça para baixo, mexendo a boca sem som.", proxima: "tk_b2" },
+    tk_b2: { quem: "takeo", sprite: "takeo:machucado", texto: "Devolver inteiro. Então eu sou seu? Quer dizer, do plantão. É. Do plantão.", proxima: "c1_08" },
+    tk_c1: { tipo: "narracao", texto: "O Takeo fica parado um segundo, com o braço ainda esticado, e depois puxa o gesso de volta para perto do peito, como quem guarda uma coisa.", proxima: "tk_c2" },
+    tk_c2: { quem: "takeo", sprite: "takeo:machucado", texto: "Então eu vou cuidar dele direitinho até lá. Se alguém escrever nesse pedaço, eu passo a borracha. Gesso aceita borracha? Eu vou descobrir.", proxima: "c1_08" },
     c1_08: { tipo: "narracao", cenario: "sala-de-aula", transicao: "tempo", sprite: "ren", texto: "Na sala, o Ren já está sentado na carteira perto da porta, com o livro aberto e o café, exatamente como em todas as segundas. Ele não levanta os olhos quando ela entra, e ela também não olha para ele, e os dois fazem isso tão bem que parece combinado.", proxima: "c1_cam_cel" },
     c1_cam_cel: { caminhos: [
       { flag: "Salvou_Rei", proxima: "c1_rei" },
@@ -110,7 +128,31 @@ Roteiro.registrar("capitulo33", {
     c2_15: { quem: "professora", texto: "Muito bem. Blake, o relatório você escreve, porque eu quero ver você escrevendo alguma coisa esse bimestre.", proxima: "c2_16" },
     c2_16: { tipo: "narracao", texto: "O Blake olha para a SN com uma cara de desespero tão grande que ela tem que morder a bochecha por dentro para não rir.", proxima: "c2_17" },
     c2_17: { quem: "blake", texto: "Intervalo. No banco. Me ajuda com isso? Só com a primeira frase. A primeira frase é a pior.", proxima: "c2_18" },
-    c2_18: { quem: "eu", texto: "Só a primeira frase.", proxima: "c3_01" },
+    c2_18: { quem: "eu", texto: "Só a primeira frase.", proxima: "ry_01" },
+
+    /* =================== CENA 2.5 — O CORREDOR (Ryuji) =================== */
+    ry_01: { tipo: "narracao", cenario: "corredor", transicao: "tempo", sprite: "ryuji", texto: "No corredor, saindo do laboratório, o Ryuji aparece do lado dela com o jaleco ainda vestido, os óculos de proteção na testa e uma mancha azul na bochecha.", proxima: "ry_02" },
+    ry_02: { quem: "ryuji", texto: "A gente não explodiu nada. A Mio só ficou muito animada e a solução ficou azul. A professora disse que não era pra ficar azul. Eu achei bonito.", proxima: "ry_03" },
+    ry_03: { tipo: "narracao", texto: "Ele tira do bolso do jaleco um monte de cartõezinhos amassados, presos com um elástico, cheios de perguntas escritas à mão com a letra dele, que parece um eletrocardiograma.", proxima: "ry_04" },
+    ry_04: { quem: "ryuji", texto: "Teoria do curso de bombeiro. A prova tem parte escrita. Eu decorei tudo, mas eu só decoro se alguém me pergunta. Sozinho eu esqueço no meio. Me pergunta? Até a escada?", proxima: "ry_esc" },
+    ry_esc: { escolhas: [
+      { texto: "A. Pegar os cartões e perguntar, andando. Fazer cara de juíza séria.", proxima: "ry_a1", pontos: { ryuji: 2 }, flags: ["Quiz_Ryuji"] },
+      { texto: "B. “Só se, quando você passar, eu for a primeira que você carrega no colo. Pra treinar.”", proxima: "ry_b1", pontos: { ryuji: 3 }, flags: ["Carrega_primeiro"] },
+      { texto: "C. Tirar a mancha azul da bochecha dele com a manga. “Bombeiro não pode ter cara de experimento.”", proxima: "ry_c1", pontos: { ryuji: 2 }, flags: ["Mancha_azul"] }
+    ]},
+    ry_a1: { tipo: "narracao", texto: "Ela pega os cartões e lê o primeiro com voz de apresentadora de programa de televisão.", proxima: "ry_a2" },
+    ry_a2: { quem: "eu", texto: "Pergunta número um, valendo um pirulito do Victor: qual é a primeira coisa a fazer ao chegar num incêndio?", proxima: "ry_a3" },
+    ry_a3: { quem: "ryuji", texto: "Avaliar a cena! Ver se tem gente, ver por onde sai, ver se o prédio vai cair. E não sair correndo pra dentro igual herói de filme, que herói de filme morre no segundo ato.", proxima: "ry_a4" },
+    ry_a4: { tipo: "narracao", texto: "Ele acerta as onze perguntas até a escada, comemorando cada uma com um soquinho no ar, e na décima segunda ele erra de propósito só para ela ler de novo, mais devagar. Ela percebe e lê de novo assim mesmo.", proxima: "c3_01" },
+    ry_b1: { tipo: "narracao", texto: "O Ryuji para no meio do corredor. Os cartões quase caem da mão dele.", proxima: "ry_b2" },
+    ry_b2: { quem: "ryuji", texto: "No colo? Tipo, resgate? Com você? Você é pequena, eu carrego você e mais duas Mios.", proxima: "ry_b3" },
+    ry_b3: { quem: "eu", texto: "Eu peso mais do que pareço.", proxima: "ry_b4" },
+    ry_b4: { quem: "ryuji", texto: "Duvido. Fechado. Quando eu passar, primeira carregada oficial. Eu vou fazer certificado.", proxima: "ry_b5" },
+    ry_b5: { tipo: "narracao", texto: "Ele fala isso rindo, mas fica vermelho até a faixa da testa, e no resto do caminho até a escada ele esquece de pedir para ela fazer as perguntas.", proxima: "c3_01" },
+    ry_c1: { tipo: "narracao", texto: "Ela puxa a manga do moletom até a mão e esfrega a mancha azul da bochecha dele. Ele fica parado, de olho arregalado, deixando, sem respirar direito.", proxima: "ry_c2" },
+    ry_c2: { quem: "ryuji", texto: "...Saiu?", proxima: "ry_c3" },
+    ry_c3: { quem: "eu", texto: "Metade. Agora você está com cara de experimento que deu meio certo.", proxima: "ry_c4" },
+    ry_c4: { quem: "ryuji", texto: "Eu vou ficar com essa metade. Vai ser o meu amuleto pra prova.", proxima: "c3_01" },
 
     /* =================== CENA 3 — O BANCO =================== */
     // Cenário: pátio dos fundos, intervalo. Música: violão leve.
@@ -158,7 +200,26 @@ Roteiro.registrar("capitulo33", {
     // (todas as opções continuam aqui)
     c3_22: { tipo: "narracao", sprite: null, texto: "O sinal toca. O Blake guarda a lancheira, o caderno e as duas bananas que sobraram, e levanta.", proxima: "c3_23" },
     c3_23: { quem: "blake", texto: "A segunda frase eu faço sozinho. Se ficar ruim, você não fala nada.", proxima: "c3_24" },
-    c3_24: { quem: "eu", texto: "Combinado.", proxima: "c4_01" },
+    c3_24: { quem: "eu", texto: "Combinado.", proxima: "ka_01" },
+
+    /* =================== CENA 3.5 — O BILHETE (Kaito) =================== */
+    ka_01: { tipo: "narracao", cenario: "sala-de-aula", transicao: "tempo", legenda: "Aula de história", sprite: null, texto: "Na aula de história, o professor fala da revolução industrial com a empolgação de quem está lendo uma bula de remédio. No meio da explicação, um papel dobrado em quatro cai em cima do caderno dela, vindo da carteira de trás.", proxima: "ka_02" },
+    ka_02: { tipo: "narracao", texto: "Ela olha para trás. O Kaito está com o queixo apoiado na mão, olhando para o quadro com a cara mais inocente do mundo, como se nunca tivesse jogado nada em ninguém.", proxima: "ka_03" },
+    ka_03: { tipo: "narracao", texto: "Ela abre. Tem um desenho torto de uma tigela fumegando, com tanta cebolinha em cima que parece um arbusto, e embaixo, com a letra dele, apertada:", proxima: "ka_04" },
+    ka_04: { tipo: "narracao", efeito: "eco", texto: "“O tio quer saber se você vem provar o caldo de terça. Ele mudou a receita. Eu acho que ficou pior. Preciso de uma segunda opinião.”", proxima: "ka_esc" },
+    ka_esc: { escolhas: [
+      { texto: "A. Escrever embaixo: “Só se tiver cebolinha demais.” E jogar de volta por cima do ombro.", proxima: "ka_a1", pontos: { kaito: 2 }, flags: ["Bilhete_cebolinha"] },
+      { texto: "B. Desenhar do lado da tigela um capacete vermelho pequeno, com um sorriso. Devolver sem escrever nada.", proxima: "ka_b1", pontos: { kaito: 3 }, flags: ["Bilhete_capacete"] },
+      { texto: "C. Escrever “Presta atenção na aula, Kaito.” E devolver com cara séria.", proxima: "ka_c1", pontos: { kaito: 2 }, flags: ["Bilhete_aula"] }
+    ]},
+    ka_a1: { tipo: "narracao", texto: "Ela escreve, dobra e joga por cima do ombro sem olhar. Escuta o papel abrir lá atrás, e depois um barulho que parece uma risada engolida, daquelas que saem pelo nariz.", proxima: "ka_a2" },
+    ka_a2: { tipo: "narracao", texto: "Dois minutos depois, o papel volta. Embaixo da frase dela, ele escreveu só: “Fechado. Terça. Eu corto.”", proxima: "c4_01" },
+    ka_b1: { tipo: "narracao", texto: "Ela desenha o capacete com cuidado, com o sorrisinho torto, e devolve sem escrever nada. Lá atrás, o papel abre, e depois fica um silêncio muito comprido.", proxima: "ka_b2" },
+    ka_b2: { tipo: "narracao", texto: "Quando ela vira um pouco a cabeça, de lado, vê o Kaito guardando o bilhete dentro da capa do caderno, com muito cuidado, e não do jeito que se guarda papel de aula. Ele não devolve mais nada a aula inteira.", proxima: "c4_01" },
+    ka_c1: { tipo: "narracao", texto: "Ela escreve, dobra e devolve. Lá atrás, o papel abre. O Kaito solta uma risada alta, de verdade, no meio do silêncio da revolução industrial.", proxima: "ka_c2" },
+    ka_c2: { quem: "desconhecido", rotulo: "Professor de história", texto: "Algum problema com a máquina a vapor, senhor Kaito?", proxima: "ka_c3" },
+    ka_c3: { quem: "kaito", sprite: "kaito", texto: "Nenhum, professor. A máquina a vapor é ótima.", proxima: "ka_c4" },
+    ka_c4: { tipo: "narracao", sprite: null, texto: "Ele olha para a nuca dela pelo resto da aula. Ela sente. Ela não vira nem uma vez, e passa a aula inteira tentando não rir.", proxima: "c4_01" },
 
     /* =================== CENA 4 — EDUCAÇÃO FÍSICA =================== */
     // Cenário: quadra e vestiário, terceira e quarta aula (usa "patio-fundos" e "vestiario").
@@ -197,7 +258,34 @@ Roteiro.registrar("capitulo33", {
     c4_14: { tipo: "narracao", cenario: "vestiario", transicao: "tempo", sprite: null, texto: "No vestiário, depois, a Reina passa protetor de rosto na frente do espelho, a Akane prende o cabelo com um lápis, e a Hana anota o próprio tempo no caderno de gatinho, numa tabela nova chamada “Evolução física (ruim)”.", proxima: "c4_15" },
     c4_15: { quem: "reina", sprite: "reina", texto: "SN, você nem suou. Que ódio. Eu pareço uma esponja e você parece que acabou de sair do banho.", proxima: "c4_16" },
     c4_16: { quem: "eu", texto: "Eu suo por dentro.", proxima: "c4_17" },
-    c4_17: { quem: "reina", sprite: "reina", texto: "Isso não existe. Mas se existir, eu quero.", proxima: "r_cam" },
+    c4_17: { quem: "reina", sprite: "reina", texto: "Isso não existe. Mas se existir, eu quero.", proxima: "sd_01" },
+
+    /* =================== CENA 4.5 — O PORTÃO (todos) =================== */
+    sd_01: { roupa: "escolar", tipo: "narracao", cenario: "saida-colegio", transicao: "tempo", legenda: "Saída", sprite: null, texto: "Na saída, o portão vira aquela bagunça de segunda-feira. O Victor está encostado no muro com o pirulito de sempre, o Ryuji está tentando ligar a Relâmpago, que tossiu duas vezes e se recusou, o Takeo está brigando com a alça da mochila com uma mão só, e o Blake está parado do lado, quieto, como um poste com mochila.", proxima: "sd_02" },
+    sd_02: { quem: "victor", texto: "Gatinha... SN. Aceita um pirulito? É de morango. É o último. Eu estou abrindo mão do último pirulito de morango por você. Isso nunca aconteceu na história da humanidade.", proxima: "sd_03" },
+    sd_03: { quem: "ryuji", sprite: "ryuji", texto: "SN! Foto! Eu preciso de uma foto com a Relâmpago no portão da escola, pra provar pra ela que ela tem amigos e voltar a funcionar!", proxima: "sd_04" },
+    sd_04: { quem: "takeo", sprite: "takeo:machucado", texto: "Alguém fecha o zíper da minha mochila? É só isso. Eu não quero ajuda. Eu quero que alguém feche o zíper.", proxima: "sd_05" },
+    sd_05: { tipo: "narracao", sprite: "blake", texto: "O Blake não pede nada. Ele só olha para ela, e depois para os três, e levanta a sobrancelha, como quem pergunta “e agora?”.", proxima: "sd_esc" },
+    sd_esc: { escolhas: [
+      { texto: "A. Aceitar o último pirulito do Victor. “Eu vou guardar o palito. Prova histórica.”", proxima: "sd_a1", pontos: { victor: 2 }, flags: ["Ultimo_pirulito"] },
+      { texto: "B. Tirar a foto com o Ryuji em cima da Relâmpago, fazendo pose de piloto.", proxima: "sd_b1", pontos: { ryuji: 2 }, flags: ["Foto_Relampago"] },
+      { texto: "C. Fechar o zíper da mochila do Takeo e arrumar a alça no ombro bom dele.", proxima: "sd_c1", pontos: { takeo: 2 }, flags: ["Ziper_Takeo"] },
+      { texto: "D. Ficar do lado do Blake, cruzar os braços igual ele e assistir a bagunça.", proxima: "sd_d1", pontos: { blake: 2 }, flags: ["Poste_Blake"] }
+    ]},
+    sd_a1: { tipo: "narracao", sprite: null, texto: "Ela pega o pirulito. O Victor põe a mão no peito, faz uma reverência e finge que vai desmaiar de emoção no meio do portão, e dois alunos do primeiro ano param para olhar.", proxima: "sd_a2" },
+    sd_a2: { quem: "victor", texto: "Guardar o palito. Ela vai guardar o palito. Alguém anota a data. Eu vou contar isso pros meus netos.", proxima: "sd_06" },
+    sd_b1: { tipo: "narracao", sprite: "ryuji", texto: "Ela sobe na garupa da Relâmpago parada, coloca os óculos escuros que o Ryuji tira do bolso e faz pose de piloto de corrida. O Takeo tira a foto com uma mão, torta, e o Ryuji coloca de fundo de tela na mesma hora.", proxima: "sd_b2" },
+    sd_b2: { quem: "ryuji", texto: "Ficou perfeita. A Relâmpago está sorrindo. Olha. Ela está sorrindo.", proxima: "sd_b3" },
+    sd_b3: { tipo: "narracao", texto: "Ele vira a chave de novo, e a moto liga na primeira, roncando alto. O Ryuji grita que foi a foto. Ninguém tem coragem de discordar.", proxima: "sd_06" },
+    sd_c1: { tipo: "narracao", sprite: "takeo:machucado", texto: "Ela fecha o zíper, ajeita a alça no ombro bom dele e dá um tapinha na mochila, do jeito que a mãe dela faz. O Takeo fica parado, olhando para baixo, com as orelhas vermelhas.", proxima: "sd_c2" },
+    sd_c2: { quem: "takeo", sprite: "takeo:machucado", texto: "Obrigado. Eu ia conseguir sozinho. Em uns quarenta minutos.", proxima: "sd_06" },
+    sd_d1: { tipo: "narracao", sprite: "blake", texto: "Ela para do lado do Blake, cruza os braços igualzinho ele, e os dois ficam assistindo o Victor, o Ryuji e o Takeo como quem assiste a um programa de televisão ruim.", proxima: "sd_d2" },
+    sd_d2: { quem: "blake", texto: "Eles fazem isso todo dia.", proxima: "sd_d3" },
+    sd_d3: { quem: "eu", texto: "E você fica olhando todo dia?", proxima: "sd_d4" },
+    sd_d4: { quem: "blake", texto: "Todo dia. Hoje tem companhia. É melhor.", proxima: "sd_06" },
+    sd_06: { tipo: "narracao", sprite: "kaito", texto: "O Kaito sai por último, com a mochila num ombro só, passa pelo grupo e para do lado dela só o tempo de falar baixo, sem parar de andar.", proxima: "sd_07" },
+    sd_07: { quem: "kaito", texto: "Terça. Caldo. Não esquece.", proxima: "sd_08" },
+    sd_08: { tipo: "narracao", sprite: null, texto: "E segue em frente sem olhar para trás, como se não tivesse dito nada, e o Victor fica olhando dele para ela com o pirulito parado no meio da boca.", proxima: "r_cam" },
 
     /* =================== ROTA — SEGUNDA À TARDE =================== */
     r_cam: { caminhos: [
@@ -365,7 +453,7 @@ Roteiro.registrar("capitulo33", {
     c5_4c_3: { tipo: "pensamento", texto: "É verdade. Ele é um colega da escola. Ele também é o garoto que comprou um prédio pra despejar o tio do Kaito, mas isso não cabe no bilhete.", proxima: "c5_08" },
 
     // (todas as opções continuam aqui)
-    c5_08: { tipo: "narracao", cenario: "frente-casa-sn-noite", sprite: "ren", transicao: "tempo", texto: "Na calçada, ela para a uns quatro metros dele, a mesma distância que ele sempre deixa. Ele olha para ela, para o moletom, para o tênis, e por um segundo parece que vai dizer alguma coisa sobre isso. Não diz.", proxima: "c5_09" },
+    c5_08: { tipo: "narracao", cenario: "frente-casa-sn-noite", roupa: "fora", sprite: "ren", transicao: "tempo", texto: "Na calçada, ela para a uns quatro metros dele, a mesma distância que ele sempre deixa. Ele olha para ela, para o moletom, para o tênis, e por um segundo parece que vai dizer alguma coisa sobre isso. Não diz.", proxima: "c5_09" },
     c5_09: { quem: "ren", texto: "Vem.", proxima: "c5_10" },
     c5_10: { quem: "eu", texto: "Pra onde?", proxima: "c5_11" },
     c5_11: { tipo: "narracao", texto: "Ele não responde. Ele vira e começa a andar, devagar, sem olhar para trás, como quem tem certeza de que vai ser seguido.", proxima: "c5_12" },
@@ -398,14 +486,19 @@ Roteiro.registrar("capitulo33", {
     c6_18: { quem: "eu", texto: "Eu não lembro de você.", proxima: "c6_19" },
     c6_19: { quem: "ren", texto: "Eu sei. Eu lembro pelos dois.", proxima: "c6_20" },
     c6_20: { tipo: "narracao", texto: "Ele fala isso sem tristeza e sem raiva, como quem informa um resultado de prova. Depois fica quieto muito tempo, mexendo no peão branco com a ponta do dedo, para frente e para trás, sem tirar do lugar.", proxima: "c6_21" },
-    c6_21: { quem: "ren", texto: "Eu usava óculos. Grandes. Pesados, de armação marrom, que escorregavam no nariz. Eu andava com um tabuleiro dobrado embaixo do braço, pra todo lugar.", proxima: "c6_22" },
+    c6_21: { quem: "ren", texto: "Eu usava óculos. Grandes. Pesados, de armação marrom, que escorregavam no nariz. Eu andava com um tabuleiro dobrado embaixo do braço, pra todo lugar.", proxima: "m1_01" },
+    m1_01: { tipo: "narracao", efeito: "flashback", texto: "Um clarão, rápido, sem aviso. Uma lente grossa e redonda, tão grande que parece um aquário, e atrás dela um olho piscando devagar. Tudo visto de baixo, do tamanho de quem ainda não alcança o balcão da padaria.", proxima: "m1_02" },
+    m1_02: { tipo: "pensamento", texto: "Some antes que eu consiga segurar. Eu devia ter uns cinco anos. Eu não sei como eu sei disso, mas eu sei.", proxima: "c6_22" },
     c6_22: { quem: "ren", texto: "Na escola, me batiam por causa do tabuleiro. Em casa, me batiam porque eu apanhava na escola.", proxima: "c6_23" },
     c6_23: { tipo: "narracao", texto: "A SN não fala nada. O Ren também não olha para ela agora, olha para o tabuleiro, e a voz dele continua igual, baixa, sem subir nem descer, como se estivesse contando a história de outra pessoa.", proxima: "c6_24" },
     c6_24: { quem: "ren", texto: "Um dia, você sentou do meu lado. Ninguém sentava. Você pegou as peças e mexeu tudo errado. O cavalo andando reto. A torre pulando.", proxima: "c6_25" },
-    c6_25: { quem: "ren", texto: "Eu falei que estava errado. Você riu e falou que era o seu jeito de jogar. Que o seu cavalo era especial.", proxima: "c6_26" },
+    c6_25: { quem: "ren", texto: "Eu falei que estava errado. Você riu e falou que era o seu jeito de jogar. Que o seu cavalo era especial.", proxima: "m2_01" },
+    m2_01: { tipo: "narracao", efeito: "flashback", texto: "Outro pedaço, mais borrado ainda. A sensação de madeira lisa na palma da mão, uma peça pequena, branca, com uma crina esculpida. E a própria voz, fininha, de criança, rindo e dizendo alguma coisa que ela não consegue ouvir inteira.", proxima: "m2_02" },
+    m2_02: { tipo: "narracao", efeito: "eco", texto: "“...ele pode, porque ele é especial...”", proxima: "m2_03" },
+    m2_03: { tipo: "narracao", texto: "Ela pisca. O vento do oitavo andar volta, frio, e o Ren continua falando sem perceber nada, olhando para o tabuleiro.", proxima: "c6_26" },
     c6_26: { quem: "ren", texto: "Você não perguntou por que eu estava sozinho. Não perguntou do machucado no meu braço. Não perguntou dos óculos. Você só jogou comigo. Errado. A tarde inteira.", proxima: "c6_27" },
     c6_27: { tipo: "narracao", texto: "Ele para. Tira o dedo do peão. Fica olhando para a mão por um momento, como se estivesse surpreso de ter falado tanto.", proxima: "c6_28" },
-    c6_28: { tipo: "pensamento", texto: "Eu não lembro. Eu juro que eu não lembro. Mas o cavalo especial parece uma coisa que eu falaria. Parece muito uma coisa que eu falaria.", proxima: "c6_esc5" },
+    c6_28: { tipo: "pensamento", texto: "Eu não lembro dele. Eu não lembro de rosto, nem de lugar, nem de tarde inteira. Mas eu lembro de uma lente enorme e de uma peça de madeira na minha mão. E o cavalo especial era meu. Eu sei que era meu.", proxima: "c6_esc5" },
 
     // ▶ ESCOLHA 5 — O que perguntar
     c6_esc5: { escolhas: [
@@ -438,8 +531,14 @@ Roteiro.registrar("capitulo33", {
     c6_37: { tipo: "pensamento", texto: "Ele me trouxe até o oitavo andar de um prédio abandonado pra me contar que me conhece desde criança, que apanhava, que o pai não olhava pra ele. E deixou de fora tudo que importa. Onde. Por que eu sumi. Por que o Kaito. Por que o Takeo.", proxima: "c6_38" },
     c6_38: { tipo: "pensamento", texto: "Ele me deu as peças de canto. Guardou o rei.", proxima: "c6_39" },
     c6_39: { tipo: "narracao", texto: "Ela anda até ele. Para do lado do tabuleiro, a menos de um metro, mais perto do que ele já deixou alguém chegar, e ele não recua.", proxima: "c6_40" },
-    c6_40: { quem: "eu", texto: "Escuta, Ren. Eu sinto muito pelo menino de óculos. De verdade. Ninguém devia apanhar na escola e em casa.", proxima: "c6_41" },
-    c6_41: { quem: "eu", texto: "Mas o menino de óculos não é você. Você é o cara que manda doze pra cercar uma menina num fliperama e depois quebra a mão de um deles porque encostou nela.", proxima: "c6_42" },
+    c6_40: { quem: "eu", texto: "Sabe o que dizem, Ren? Que o sonho do oprimido é ser o opressor.", proxima: "c6_40b" },
+    c6_40b: { tipo: "narracao", texto: "E o Ren sorri. Não é o sorriso educado da sala de aula, nem o riso curto do tabuleiro, é um sorriso lento, de canto, de quem ouviu uma coisa que já sabia e gostou de ouvir dita em voz alta.", proxima: "c6_40c" },
+    c6_40c: { tipo: "pensamento", texto: "Ele sorriu. Eu falei a pior coisa que dava pra falar dele, e ele sorriu como se eu tivesse acertado a resposta de uma prova.", proxima: "c6_40d" },
+    c6_40d: { quem: "eu", texto: "Eu sinto muito por aquele menino de óculos, de verdade. Ninguém devia apanhar na escola e depois apanhar de novo em casa.", proxima: "c6_40e" },
+    c6_40e: { quem: "eu", texto: "Mas ele não existe mais. Quem existe é você.", proxima: "c6_40f" },
+    c6_40f: { tipo: "narracao", texto: "O sorriso dele some, devagar, como uma luz que alguém vai abaixando.", proxima: "c6_40g" },
+    c6_40g: { quem: "eu", texto: "E é você que escolhe quem você quer ser. Não o seu pai, não os meninos que te batiam, não aquele menino de óculos. Você.", proxima: "c6_41" },
+    c6_41: { quem: "eu", texto: "E até agora você escolheu ser o cara que manda doze pra cercar uma menina num fliperama e depois quebra a mão de um deles porque encostou nela.", proxima: "c6_42" },
     c6_42: { tipo: "narracao", texto: "Os olhos dele mexem um pouco quando ela fala da mão. Só isso. Ele não nega.", proxima: "c6_43" },
     c6_43: { quem: "eu", texto: "Então presta atenção, porque eu só vou falar uma vez.", proxima: "c6_esc6" },
 
@@ -469,10 +568,10 @@ Roteiro.registrar("capitulo33", {
 
     /* =================== CENA 7 — O CAVALO ESPECIAL =================== */
     // Cenário: quarto da SN, segunda, quase meia-noite. Música: caixinha de música, distorcida.
-    c7_01: { tipo: "narracao", cenario: "quarto-sn-noite", sprite: null, transicao: "tempo", legenda: "Segunda, 23h40 — Cena 7", texto: "Em casa, ela tranca a porta, apaga a luz e deita sem trocar de roupa, de moletom e tênis, em cima da coberta.", proxima: "c7_02" },
+    c7_01: { tipo: "narracao", cenario: "quarto-sn-noite", roupa: null, sprite: null, transicao: "tempo", legenda: "Segunda, 23h40 — Cena 7", texto: "Em casa, ela tranca a porta, apaga a luz e deita sem trocar de roupa, de moletom e tênis, em cima da coberta.", proxima: "c7_02" },
     c7_02: { tipo: "pensamento", texto: "Óculos grandes, de armação marrom. Um tabuleiro dobrado embaixo do braço. Um menino sozinho, com um machucado no braço, que ninguém perguntava de onde vinha.", proxima: "c7_03" },
     c7_03: { tipo: "pensamento", texto: "E uma menina que mexia as peças errado e dizia que o cavalo dela era especial.", proxima: "c7_04" },
-    c7_04: { tipo: "pensamento", texto: "Eu não lembro. Eu tenho vinte e oito anos por dentro, eu lembro do nome da minha professora do pré, do cheiro do sabonete da minha avó. Por que eu não lembro disso?", proxima: "c7_05" },
+    c7_04: { tipo: "pensamento", texto: "Só pedaços. Eu tinha uns cinco anos. Eu tenho vinte e oito por dentro, eu lembro do nome da minha professora do pré, do cheiro do sabonete da minha avó. Por que disso eu só tenho pedaços?", proxima: "c7_05" },
     c7_05: { tipo: "narracao", texto: "Ela fecha os olhos. O cansaço pesa. E, no meio do escuro, quase dormindo, uma coisa vem.", proxima: "c7_06" },
     c7_06: { tipo: "narracao", efeito: "flashback", texto: "Um pedaço. Pequeno, desfocado, como uma foto molhada. Um par de óculos enormes, de armação marrom, refletindo o sol. Uma mão pequena, a dela, segurando um cavalo de madeira branco e fazendo ele andar reto, pulando, rindo.", proxima: "c7_07" },
     c7_07: { tipo: "narracao", efeito: "flashback", texto: "E uma voz de mulher, de longe, chamando o nome dela. Uma voz que ela conhece e não consegue saber de onde. Uma voz com pressa.", proxima: "c7_08" },
