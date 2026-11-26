@@ -308,7 +308,9 @@ const Cenarios = {
   "frente-fliperama": { img: CEN + "beco.png" },                    // porta do fliperama fechado da Midorata, à noite (capítulo 31)
   "fliperama-midorata": { img: CEN + "fliperama.png", tom: "noite" }, // dentro do fliperama fechado (provisório)
   "cozinha-sn-noite": { img: CEN + "cozinha.png", tom: "noite" },
-  "patio-apreendidos": { img: CEN + "Garagem.png", tom: "entardecer" } // pátio de veículos apreendidos (provisório)
+  "patio-apreendidos": { img: CEN + "Garagem.png", tom: "entardecer" }, // pátio de veículos apreendidos (provisório)
+  "casa-takeo-noite": { img: CEN + "frente-casa-takeo.png", tom: "noite" }, // portão da casa do Takeo, à noite (capítulo 32)
+  "quarto-hana":     { img: CEN + "quarto.png", tom: "entardecer" }    // quarto da Hana (provisório)
 };
 
 const Itens = {};
