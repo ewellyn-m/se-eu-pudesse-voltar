@@ -27,8 +27,8 @@
  *    Ren, Sayuri, Homem de terno (o de anel), Kaito, Takeo, Blake, Ryuji, Victor, Hana, Mio.
  *
  *  CENÁRIOS
- *    Último andar do estacionamento / elevador → "estacionamento-topo" · Saída do shopping → "shopping"
- *    Calçada do shopping à noite → "rua-noite" · Praça de alimentação → "praca-alimentacao"
+ *    Último andar do estacionamento / elevador → "estacionamento-topo" · Saída do shopping → "frente-shopping"
+ *    Calçada do shopping à noite → "frente-shopping" · Praça de alimentação → "praca-alimentacao"
  *    Quarto da SN → "quarto-sn-noite" (sábado: "quarto-sn")
  *
  *  FLAGS DE CAPÍTULOS ANTERIORES USADAS (com caminhos)
@@ -43,7 +43,7 @@ Roteiro.registrar("capitulo29", {
 
     /* =================== CENA 1 — ÚLTIMO ANDAR =================== */
     // Cenário: último andar do estacionamento, sexta, 19h. Música: só vento. Depois uma nota grave.
-    c1_01: { roupa: null, tipo: "narracao", cenario: "estacionamento-topo", transicao: "tempo", legenda: "Sexta, 19h01 — Último andar", sprite: "ren", texto: "O vento passa pelo último andar sem teto. O Ren fica parado. As mãos nos bolsos. O peão preto entre os dedos de uma delas, aparecendo um pouco.", proxima: "c1_02" },
+    c1_01: { roupa: "fora", tipo: "narracao", cenario: "estacionamento-topo", transicao: "tempo", legenda: "Sexta, 19h01 — Último andar", sprite: "ren", texto: "O vento passa pelo último andar sem teto. O Ren fica parado. As mãos nos bolsos. O peão preto entre os dedos de uma delas, aparecendo um pouco.", proxima: "c1_02" },
     c1_02: { tipo: "narracao", texto: "Ele não fala mais nada depois do “boa noite”. Ele espera. Como no xadrez. Quem fala primeiro, mostra a jogada.", proxima: "c1_03" },
     c1_03: { tipo: "pensamento", texto: "Ele quer que eu fale. Que eu pergunte. Que eu grite. Ele trouxe a gente até aqui pra ver o que eu faço.", proxima: "c1_04" },
     c1_04: { tipo: "pensamento", texto: "Tudo bem. Eu também sei esperar.", proxima: "c1_esc1" },
@@ -139,7 +139,7 @@ Roteiro.registrar("capitulo29", {
     c2_3c_1: { tipo: "narracao", texto: "Ela fica. A Sayuri não fala também. O elevador desce. Quatro. Três. No dois, a Sayuri encosta a cabeça no ombro dela. Só até o térreo.", proxima: "c2_09" },
 
     // (todas as opções continuam aqui)
-    c2_09: { tipo: "narracao", cenario: "shopping", transicao: "tempo", texto: "Térreo. A porta abre. A Sayuri levanta primeiro. Arruma o cabelo. Endireita as costas. E sai sem olhar para trás. Na porta do shopping, ela para. Vira.", proxima: "c2_10" },
+    c2_09: { tipo: "narracao", cenario: "frente-shopping", transicao: "tempo", texto: "Térreo. A porta abre. A Sayuri levanta primeiro. Arruma o cabelo. Endireita as costas. E sai sem olhar para trás. Na porta do shopping, ela para. Vira.", proxima: "c2_10" },
     c2_10: { quem: "sayuri", sprite: "sayuri", texto: "Obrigada por ter vindo. Ninguém nunca foi comigo a lugar nenhum.", proxima: "c2_11" },
     c2_11: { tipo: "narracao", sprite: null, texto: "E vai embora. Pela calçada. Com o elástico preto no pulso.", proxima: "c2_cam1" },
     c2_cam1: { caminhos: [
@@ -164,9 +164,9 @@ Roteiro.registrar("capitulo29", {
       { flag: "Ultimo_andar_rota_fora", proxima: "rk_esperando" },
       { flag: "Contou_rota_quinta", proxima: "rk_esperando" }
     ], proxima: "rk_chegou" },
-    rk_esperando: { roupa: "fora", tipo: "narracao", cenario: "rua-noite", sprite: "kaito", texto: "Na calçada, do lado da saída da rampa, a moto preta. O Kaito sentado nela, de capacete na mão. Quando ela aparece, ele olha o relógio. Onze minutos e quarenta segundos. Ele não entrou.", proxima: "rk_esperando2" },
+    rk_esperando: { roupa: "fora", tipo: "narracao", cenario: "frente-shopping", sprite: "kaito", texto: "Na calçada, do lado da saída da rampa, a moto preta. O Kaito sentado nela, de capacete na mão. Quando ela aparece, ele olha o relógio. Onze minutos e quarenta segundos. Ele não entrou.", proxima: "rk_esperando2" },
     rk_esperando2: { quem: "kaito", sprite: "kaito", texto: "Vinte segundos. Faltavam vinte segundos. Eu já estava com o pé no chão.", proxima: "rk_01" },
-    rk_chegou: { roupa: "fora", tipo: "narracao", cenario: "rua-noite", sprite: "kaito", texto: "Na esquina do shopping, o ronco grave. A moto preta encosta na calçada. O Kaito. Ele não sabia de nada. Ele olha para ela, para o shopping, para ela.", proxima: "rk_chegou2" },
+    rk_chegou: { roupa: "fora", tipo: "narracao", cenario: "frente-shopping", sprite: "kaito", texto: "Na esquina do shopping, o ronco grave. A moto preta encosta na calçada. O Kaito. Ele não sabia de nada. Ele olha para ela, para o shopping, para ela.", proxima: "rk_chegou2" },
     rk_chegou2: { quem: "kaito", sprite: "kaito", texto: "A Mio disse que você tinha um compromisso às sete. Com a Sayuri. Eu passei. Por acaso. É caminho.", proxima: "rk_01" },
     rk_01: { tipo: "narracao", texto: "Ele vê o rosto dela. Para de falar. Desce da moto.", proxima: "rk_02" },
     rk_02: { quem: "kaito", sprite: "kaito", texto: "Ele estava lá.", proxima: "rk_03" },
@@ -197,7 +197,7 @@ Roteiro.registrar("capitulo29", {
     ], proxima: "rt_chegou" },
     rt_esperando: { roupa: "fora", tipo: "narracao", cenario: "praca-alimentacao", sprite: "takeo", texto: "Na praça de alimentação, perto da saída, o Takeo. Sentado numa mesa, com o celular na mão esquerda e a lixa na direita. O pedaço de madeira na frente dele está liso. Muito liso. Ele lixou demais.", proxima: "rt_esperando2" },
     rt_esperando2: { quem: "takeo", sprite: "takeo", texto: "Eu lixei tanto que agora é um espelho. Eu não liguei pra ninguém. Eu quase liguei. Três vezes.", proxima: "rt_01" },
-    rt_chegou: { roupa: "fora", tipo: "narracao", cenario: "shopping", sprite: "takeo", texto: "Na porta do shopping, o Takeo. Sem fôlego. Com a mochila nas costas e um pote de bolinho na mão. Ele não sabia de nada. Ele veio porque a Mio mandou mensagem: “Ela está com a Sayuri no shopping. Eu estou preocupada.”", proxima: "rt_01" },
+    rt_chegou: { roupa: "fora", tipo: "narracao", cenario: "frente-shopping", sprite: "takeo", texto: "Na porta do shopping, o Takeo. Sem fôlego. Com a mochila nas costas e um pote de bolinho na mão. Ele não sabia de nada. Ele veio porque a Mio mandou mensagem: “Ela está com a Sayuri no shopping. Eu estou preocupada.”", proxima: "rt_01" },
     rt_01: { tipo: "narracao", texto: "Ele vê o rosto dela. Para. Não pergunta nada. Abre o pote. Três bolinhos. Ele estende.", proxima: "rt_02" },
     rt_02: { tipo: "narracao", texto: "Ela olha para os três bolinhos. E não pega o de frango primeiro. Ela fica parada, olhando.", proxima: "rt_03" },
     rt_03: { quem: "takeo", sprite: "takeo", texto: "...Você não pegou o de frango. Você sempre pega o de frango primeiro. Desde os seis anos.", proxima: "rt_04" },
@@ -225,9 +225,9 @@ Roteiro.registrar("capitulo29", {
       { flag: "Ultimo_andar_rota_fora", proxima: "rb_esperando" },
       { flag: "Contou_rota_quinta", proxima: "rb_esperando" }
     ], proxima: "rb_chegou" },
-    rb_esperando: { roupa: "fora", tipo: "narracao", cenario: "rua-noite", sprite: "blake", texto: "Na porta da escada de incêndio do térreo, encostado na parede, o Blake. Com o celular na mão e o pé apoiado no primeiro degrau. Setenta e dois degraus. Ele não subiu nenhum.", proxima: "rb_esperando2" },
+    rb_esperando: { roupa: "fora", tipo: "narracao", cenario: "frente-shopping", sprite: "blake", texto: "Na porta da escada de incêndio do térreo, encostado na parede, o Blake. Com o celular na mão e o pé apoiado no primeiro degrau. Setenta e dois degraus. Ele não subiu nenhum.", proxima: "rb_esperando2" },
     rb_esperando2: { quem: "blake", sprite: "blake", texto: "Eu ouvi o carro descer a rampa. Eu contei os andares pelo barulho. Ele não parou no meio.", proxima: "rb_01" },
-    rb_chegou: { roupa: "fora", tipo: "narracao", cenario: "rua-noite", sprite: "blake", texto: "Na calçada, a moto preta fosca. O Blake, sentado nela, de braços cruzados. Ele não sabia de nada. Mas a Mio mandou mensagem no grupo: “Alguém sabe onde a SN está?” E ele veio. Sem falar com ninguém.", proxima: "rb_01" },
+    rb_chegou: { roupa: "fora", tipo: "narracao", cenario: "frente-shopping", sprite: "blake", texto: "Na calçada, a moto preta fosca. O Blake, sentado nela, de braços cruzados. Ele não sabia de nada. Mas a Mio mandou mensagem no grupo: “Alguém sabe onde a SN está?” E ele veio. Sem falar com ninguém.", proxima: "rb_01" },
     rb_01: { tipo: "narracao", texto: "Ele vê ela sair. Olha para o rosto dela. Não pergunta nada. Ele só tira o casaco e coloca nos ombros dela. Ela não está com frio. Ele coloca mesmo assim.", proxima: "rb_02" },
     rb_02: { quem: "blake", sprite: "blake", texto: "Quem?", proxima: "rb_03" },
     rb_03: { quem: "eu", texto: "O Ren.", proxima: "rb_04" },
@@ -247,16 +247,16 @@ Roteiro.registrar("capitulo29", {
     rb_b2: { tipo: "narracao", texto: "Eles ficam assim na calçada. Ela segurando a manga. Ele olhando a rua. Até ela soltar. Ele espera ela soltar. Ele não solta primeiro.", proxima: "r_fim" },
     rb_c1: { quem: "blake", sprite: "blake", texto: "São oito da noite. Eles estão de pijama.", proxima: "rb_c2" },
     rb_c2: { quem: "eu", texto: "Melhor ainda.", proxima: "rb_c3" },
-    rb_c3: { tipo: "narracao", cenario: "casa-blake", transicao: "tempo", texto: "Vinte minutos depois, ela está na sala do Blake, de casaco emprestado, com dois meninos de pijama de dinossauro pendurados nela. O Blake faz a voz de dinossauro. Ela ri. Ela esquece do último andar por meia hora.", proxima: "r_fim" },
+    rb_c3: { tipo: "narracao", cenario: "casa-blake-noite", transicao: "tempo", texto: "Vinte minutos depois, ela está na sala do Blake, de casaco emprestado, com dois meninos de pijama de dinossauro pendurados nela. O Blake faz a voz de dinossauro. Ela ri. Ela esquece do último andar por meia hora.", proxima: "r_fim" },
 
     // ---------- Rota Ryuji ----------
     rr_cam: { caminhos: [
       { flag: "Ultimo_andar_rota_fora", proxima: "rr_esperando" },
       { flag: "Contou_rota_quinta", proxima: "rr_esperando" }
     ], proxima: "rr_chegou" },
-    rr_esperando: { roupa: "fora", tipo: "narracao", cenario: "rua-noite", sprite: "ryuji", texto: "Na saída da rampa, a moto amarela, estacionada torta. O Ryuji em cima dela, com o walkie-talkie de porquinho colado na orelha. Quando ela aparece, ele fala no walkie-talkie, mesmo ela estando a cinco metros.", proxima: "rr_esperando2" },
+    rr_esperando: { roupa: "fora", tipo: "narracao", cenario: "frente-shopping", sprite: "ryuji", texto: "Na saída da rampa, a moto amarela, estacionada torta. O Ryuji em cima dela, com o walkie-talkie de porquinho colado na orelha. Quando ela aparece, ele fala no walkie-talkie, mesmo ela estando a cinco metros.", proxima: "rr_esperando2" },
     rr_esperando2: { quem: "ryuji", sprite: "ryuji", texto: "Câmbio. Ela saiu. Está inteira. Câmbio. Repito. Inteira. Ninguém precisa da minha mãe hoje. Câmbio.", proxima: "rr_01" },
-    rr_chegou: { roupa: "fora", tipo: "narracao", cenario: "shopping", sprite: "ryuji", texto: "Na porta do shopping, a moto amarela freia tão rápido que derrapa. O Ryuji pula. Ele não sabia de nada. Mas o jornal ouviu da Mio, que ouviu da Hana, que não falou nada mas fez uma cara.", proxima: "rr_01" },
+    rr_chegou: { roupa: "fora", tipo: "narracao", cenario: "frente-shopping", sprite: "ryuji", texto: "Na porta do shopping, a moto amarela freia tão rápido que derrapa. O Ryuji pula. Ele não sabia de nada. Mas o jornal ouviu da Mio, que ouviu da Hana, que não falou nada mas fez uma cara.", proxima: "rr_01" },
     rr_01: { tipo: "narracao", texto: "Ele vê o rosto dela. A piada que ele ia fazer morre na boca. Ele fica parado na frente dela, com o walkie-talkie na mão.", proxima: "rr_02" },
     rr_02: { quem: "ryuji", sprite: "ryuji", texto: "Fala uma coisa. Qualquer coisa. Pra eu saber que você está aqui.", proxima: "rr_03" },
     rr_03: { quem: "eu", texto: "Relâmpago.", proxima: "rr_04" },
@@ -282,9 +282,9 @@ Roteiro.registrar("capitulo29", {
       { flag: "Ultimo_andar_rota_fora", proxima: "rv_esperando" },
       { flag: "Contou_rota_quinta", proxima: "rv_esperando" }
     ], proxima: "rv_chegou" },
-    rv_esperando: { roupa: "fora", tipo: "narracao", cenario: "rua-noite", sprite: "victor", texto: "Na saída da rampa, a moto cheia de adesivo. Ligada. Soltando estalo. Pá. O Victor em cima dela, sem pirulito. Ele mastigou o palito inteiro de nervoso.", proxima: "rv_esperando2" },
+    rv_esperando: { roupa: "fora", tipo: "narracao", cenario: "frente-shopping", sprite: "victor", texto: "Na saída da rampa, a moto cheia de adesivo. Ligada. Soltando estalo. Pá. O Victor em cima dela, sem pirulito. Ele mastigou o palito inteiro de nervoso.", proxima: "rv_esperando2" },
     rv_esperando2: { quem: "victor", sprite: "victor", texto: "O carro preto desceu. O de anel me viu. Ele fez o sinal da cruz. Juro. Ele fez o sinal da cruz.", proxima: "rv_01" },
-    rv_chegou: { roupa: "fora", tipo: "narracao", cenario: "rua-noite", sprite: "victor", texto: "Na esquina do shopping, um estalo. Pá. A moto cheia de adesivo. O Victor não sabia de nada. Mas estava descarregando batata quando viu o carro preto passar na avenida do shopping, e largou o caminhão no meio da doca.", proxima: "rv_01" },
+    rv_chegou: { roupa: "fora", tipo: "narracao", cenario: "frente-shopping", sprite: "victor", texto: "Na esquina do shopping, um estalo. Pá. A moto cheia de adesivo. O Victor não sabia de nada. Mas estava descarregando batata quando viu o carro preto passar na avenida do shopping, e largou o caminhão no meio da doca.", proxima: "rv_01" },
     rv_01: { tipo: "narracao", texto: "Ele desce da moto. Anda até ela. Olha ela de cima a baixo. Procurando machucado. Não acha nenhum.", proxima: "rv_02" },
     rv_02: { quem: "victor", sprite: "victor", texto: "Fala que você bateu nele. Pelo menos um pouco. Fala que você dobrou alguma coisa.", proxima: "rv_cam2" },
     rv_cam2: { caminhos: [
@@ -301,7 +301,7 @@ Roteiro.registrar("capitulo29", {
       { texto: "B. Levantar o mindinho. “Voltei. Inteira. Regra cumprida.”", proxima: "rv_b1", pontos: { victor: 3 }, flags: ["Mindinho_voltei"] },
       { texto: "C. “Victor. Você largou o caminhão no meio da doca? Volta lá. Eu vou junto. Eu carrego.”", proxima: "rv_c1", pontos: { victor: 2 }, flags: ["Caminhao_noite"] }
     ]},
-    rv_a1: { tipo: "narracao", cenario: "beco-mercado", transicao: "tempo", texto: "Quarenta minutos depois, ela está na mesa de plástico do quintal, com um prato de feijoada do tamanho de uma calota. A mãe do Victor do lado. Não perguntando nada. Só colocando mais farofa toda vez que o prato esvazia.", proxima: "rv_a2" },
+    rv_a1: { tipo: "narracao", cenario: "quintal-victor-noite", transicao: "tempo", texto: "Quarenta minutos depois, ela está na mesa de plástico do quintal, com um prato de feijoada do tamanho de uma calota. A mãe do Victor do lado. Não perguntando nada. Só colocando mais farofa toda vez que o prato esvazia.", proxima: "rv_a2" },
     rv_a2: { quem: "desconhecido", rotulo: "Mãe do Victor", texto: "Come. Quem enfrenta gente ruim volta com fome. Eu sei. Eu já enfrentei muita gente ruim.", proxima: "r_fim" },
     rv_b1: { tipo: "narracao", texto: "Ele olha para o mindinho dela. Engata o dele. Aperta. Forte demais. Ela deixa.", proxima: "rv_b2" },
     rv_b2: { quem: "victor", sprite: "victor", texto: "Regra cumprida. Agora você tem direito a um pirulito. De morango. Eu comprei outro. Juros.", proxima: "r_fim" },

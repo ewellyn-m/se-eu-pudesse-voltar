@@ -31,7 +31,7 @@
  *  CENÁRIOS
  *    Portão → "saida-colegio" · Sala → "sala-de-aula" · Corredor/banco → "corredor" · Biblioteca → "clube-leitura"
  *    Pátio/quadra → "patio-fundos" · Farmácia/padaria → "rua-padaria-noite"
- *    Entrada do shopping → "shopping" · Último andar do estacionamento → "estacionamento-topo" (provisório)
+ *    Entrada do shopping → "frente-shopping" · Último andar do estacionamento → "estacionamento-topo" (provisório)
  *    Quarto da SN → "quarto-sn-noite"
  *
  *  FLAGS DE CAPÍTULOS ANTERIORES USADAS (com caminhos)
@@ -477,7 +477,7 @@ Roteiro.registrar("capitulo28", {
 
     /* =================== CENA 4 — ÚLTIMO ANDAR =================== */
     // Cenário: estacionamento do shopping, último andar, sexta, 18h58 (usa "beco-mercado"). Música: corta. Só vento.
-    c4_01: { tipo: "narracao", cenario: "shopping", transicao: "tempo", legenda: "Sexta, 18h40 — Cena 4", sprite: null, texto: "Seis e quarenta. A entrada do shopping. Do lado da loja de relógio, onde ela viu o homem de terno segurando o braço da Sayuri, semanas atrás.", proxima: "c4_02" },
+    c4_01: { roupa: "fora", tipo: "narracao", cenario: "frente-shopping", transicao: "tempo", legenda: "Sexta, 18h40 — Cena 4", sprite: null, texto: "Seis e quarenta. A entrada do shopping. Do lado da loja de relógio, onde ela viu o homem de terno segurando o braço da Sayuri, semanas atrás.", proxima: "c4_02" },
     c4_02: { tipo: "narracao", sprite: "sayuri", texto: "A Sayuri já está lá. Sem o laço rosa. Com o cabelo preso de qualquer jeito, um moletom grande demais e o elástico preto no pulso. Ela vê a SN chegar. Não sorri. Mas endireita as costas.", proxima: "c4_03" },
     c4_03: { quem: "sayuri", sprite: "sayuri", texto: "Você ainda pode ir embora.", proxima: "c4_04" },
     c4_04: { quem: "eu", texto: "Você também.", proxima: "c4_05" },

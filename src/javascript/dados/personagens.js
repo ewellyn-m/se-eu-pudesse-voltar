@@ -37,7 +37,7 @@ const Personagens = {
     nome: "Reina", grupo: "amigos", cor: "#e590b5",
     papel: "A garota mais popular do colégio",
     retrato: IMG + "Reina-Retrato.png", corpo: IMG + "reina.png", sprite: IMG + "reina.png",
-    roupas: { festival: IMG + "Reina-festival.png", pijama: IMG + "reina-pijama-sem-fundo.png" },
+    roupas: { festival: IMG + "Reina-festival.png", pijama: IMG + "reina-pijama-sem-fundo.png", fora: IMG + "reina-fora-da-escola-sem-fundo.png" },
     descricao: "Reina é uma garota confiante, inteligente e independente, conhecida por sua beleza e popularidade na escola. Apesar de parecer apenas uma aluna elegante e tranquila, esconde um grande segredo: é a líder de uma das gangues mais poderosas da cidade a Lirio negro. Forte, estratégica e respeitada por seus membros, Reina mantém sua vida como líder completamente separada da escola. Ela é apaixonada por Takeo e vê SN como sua principal rival romântica. Competitiva e provocadora, costuma implicar com SN, mas não é cruel e, com o tempo, passa a respeitá-la.",
     ficha: { "Altura": "1,60 cm", "Peso": "47 kg", "Aniversário": "18 de Dezembro", "Futuro:": "Desconhecido" }
   },
@@ -102,7 +102,7 @@ const Personagens = {
     nome: "Sayuri", grupo: "outros", cor: "#c96898",
     papel: "Fazia bullying com a SN",
     retrato: IMG + "sayuri-Retrato.png", corpo: IMG + "sayuri.png", sprite: IMG + "sayuri.png",
-    roupas: { festival: IMG + "sayuri-festival.png", semlaco: IMG + "sayuri-sem-laco.png" },  // sem laço: fundo tirado de sayuri-sem-laço.png
+    roupas: { festival: IMG + "sayuri-festival.png", semlaco: IMG + "sayuri-sem-laco.png", fora: IMG + "sayuri-fora-da-escola.png" },  // sem laço: fundo tirado de sayuri-sem-laço.png
     descricao: "Sayuri tem 16 anos é colega de turma da protagonista. Está sempre com o rabo de cavalo alto, o laço rosa e as unhas pintadas da mesma cor da caneta que usa nos bilhetes. Popular e sempre acompanhada de duas amigas que riem de tudo o que ela diz, ela foi quem inventou o apelido Fantasma e é a responsável pelo bullying que a protagonista sofre desde o primeiro ano: sapatos cheios de lixo, cadernos jogados na piscina e risadas sempre que ela entra na sala. Sayuri só se sente forte quando tem alguém para humilhar. Por isso, quando a protagonista para de abaixar a cabeça, ela começa a planejar uma vingança.",
     ficha: { "Altura": "1,62 cm", "Peso": "50 kg", "Aniversário": "—", "Futuro:": "Desconhecido" }
   },
@@ -295,7 +295,11 @@ const Cenarios = {
   "sala-sn-chuva":   { img: CEN + "sala-de-estar.jpg", tom: "noite", clima: "chuva" },
   "sala-sn-escuro":  { img: CEN + "sala-de-estar.jpg", tom: "noite", clima: "chuva" }, // sem luz, só vela (capítulo 24)
   "frente-casa-sn-tarde": { img: CEN + "frente-casa-sn.png", tom: "entardecer" }, // esquina do prédio da SN, fim de tarde (capítulo 25)
-  "casa-blake":      { img: CEN + "casa-takeo-sala.png" },          // casa do Blake (provisório até ter imagem própria)
+  "casa-blake":      { img: CEN + "casa-blake-festa.png" },         // casa do Blake (festa dos gêmeos)
+  "casa-blake-noite": { img: CEN + "casa-blake-festa.png", tom: "noite" },
+  "quintal-victor":  { img: CEN + "quintal-casa-victor.png" },      // quintal / oficina do Victor
+  "quintal-victor-noite": { img: CEN + "quintal-casa-victor.png", tom: "noite" },
+  "frente-shopping": { img: CEN + "frente-shopping.png" },          // entrada do shopping, à noite
   "cozinha-blake":   { img: CEN + "cozinha.png", tom: "entardecer" }, // cozinha do Blake (provisório)
   "estacionamento-topo": { img: CEN + "Garagem.png" }, // último andar do estacionamento do shopping
   "quarto-sn":       { img: CEN + "quarto.png" }                  // epílogo, aos 16

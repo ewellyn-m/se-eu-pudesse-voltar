@@ -35,8 +35,8 @@
  *  CENÁRIOS
  *    Bicicletário → "bicicletario" · Sala → "sala-de-aula"
  *    Estacionamento do mercado → "beco-mercado" · Quintal da avó do Takeo → "casa-takeo"
- *    Casa do Blake → "casa-blake" / "cozinha-blake" (provisório) · Quartel dos bombeiros → "patio-fundos" (provisório)
- *    Quintal do Victor → "beco-mercado" · Quarto da SN → "quarto-sn-noite"
+ *    Casa do Blake → "casa-blake" / "cozinha-blake" (cozinha provisória) · Quartel dos bombeiros → "patio-fundos" (provisório)
+ *    Quintal do Victor → "quintal-victor" · Quarto da SN → "quarto-sn-noite"
  *
  *  FLAGS DE CAPÍTULOS ANTERIORES USADAS (com caminhos)
  *    Ofereceu_ajuda_Sayuri, Elastico_Sayuri.
@@ -271,7 +271,7 @@ Roteiro.registrar("capitulo27", {
 
     /* =================== ROTA VICTOR — A OFICINA DO QUINTAL =================== */
     // Cenário: quintal da casa do Victor (usa "beco-mercado"). Música: violão malandro, depois calmo.
-    rv_01: { roupa: "fora", tipo: "narracao", cenario: "beco-mercado", transicao: "tempo", legenda: "Rota Victor — A oficina do quintal", sprite: null, texto: "A casa do Victor fica no fim de uma rua de terra. O quintal é de cimento rachado, com um varal, um tanque, um pé de limão e, embaixo de uma lona azul amarrada em dois postes, a oficina. Uma moto velha desmontada. Caixa de ferramenta. Um rádio de pilha tocando samba.", proxima: "rv_02" },
+    rv_01: { roupa: "fora", tipo: "narracao", cenario: "quintal-victor", transicao: "tempo", legenda: "Rota Victor — A oficina do quintal", sprite: null, texto: "A casa do Victor fica no fim de uma rua de terra. O quintal é de cimento rachado, com um varal, um tanque, um pé de limão e, embaixo de uma lona azul amarrada em dois postes, a oficina. Uma moto velha desmontada. Caixa de ferramenta. Um rádio de pilha tocando samba.", proxima: "rv_02" },
     rv_02: { tipo: "narracao", texto: "O Caramelo vem correndo da casa, pula nela com as quatro patas e quica de volta. Igual no lago. E, atrás do Caramelo, de avental, com um pano de prato no ombro, uma mulher pequena, de cabelo preso, com a cara do Victor.", proxima: "rv_03" },
     rv_03: { quem: "desconhecido", rotulo: "Mãe do Victor", texto: "Então é você. A professora do banco da vergonha. Entra, minha filha. Senta. Come. Você está magra. Ele disse que você era forte. Forte não pode ser magra.", proxima: "rv_04" },
     rv_04: { tipo: "narracao", texto: "Ela é puxada para dentro. Sentada numa mesa de plástico. Na frente dela, aparece um prato de feijoada do tamanho de uma calota. A mãe do Victor senta na frente dela. E fica olhando ela comer.", proxima: "rv_05" },
