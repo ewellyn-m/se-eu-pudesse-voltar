@@ -104,7 +104,7 @@ Roteiro.registrar("capitulo40", {
     c2_08: { quem: "eu", texto: "Eu sei, mãe.", proxima: "c2_09" },
     c2_09: { quem: "mae", texto: "Eu sei que você sabe. Você sempre soube coisa demais pra sua idade.", proxima: "c2_10" },
     c2_10: { tipo: "narracao", texto: "Ela fala isso sem perceber o que falou, e dá um beijo na testa da filha, e vai embora. A SN fica parada na frente do espelho.", proxima: "c2_11" },
-    c2_11: { tipo: "pensamento", texto: "Eu sei coisa demais pra minha idade porque eu tenho vinte e oito. Eu já fui em festa assim. Muitas. Eu já fui a pessoa que passou mal e a que cuidou de quem passou mal.", proxima: "c2_12" },
+    c2_11: { tipo: "pensamento", texto: "Eu sei coisa demais pra minha idade porque eu tenho vinte e oito. Mas festa assim eu nunca fui. Nem uma. Na outra vida eu só estudei. Enquanto todo mundo ia, eu ficava em casa com o livro aberto. Eu sei o que fazer porque eu li, não porque eu vivi.", proxima: "c2_12" },
     c2_12: { tipo: "pensamento", texto: "Hoje eu vou ser a que cuida de todo mundo. Dos meus.", proxima: "mh_01" },
     // --- A Mio e a Hana se arrumam na casa da SN ---
     mh_01: { roupa: "festa", sprite: null, tipo: "narracao", transicao: "tempo", legenda: "19h40", texto: "Dez minutos depois que a mãe sai, a campainha toca. Três vezes seguidas, do jeito da Mio. Ela abre a porta e as duas entram como uma enchente.", proxima: "mh_02" },
