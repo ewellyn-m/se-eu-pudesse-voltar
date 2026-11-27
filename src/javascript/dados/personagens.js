@@ -317,8 +317,8 @@ const Cenarios = {
   "casa-reina-noite": { img: CEN + "sala-reina.png", tom: "noite" },       // sala da Reina, festa (capítulo 40)
   "festa-reina":     { img: CEN + "festa.png" },                      // festa na casa da Reina (capítulo 40)
   "frente-casa-reina-noite": { img: CEN + "frente-casa-reina.png", tom: "noite" }, // portão e varanda da Reina, à noite
-  "piscina-reina":   { img: CEN + "frente-casa-reina.png", tom: "noite" },  // piscina da Reina (provisório: troque por piscina-reina.png)
-  "jardim-reina":    { img: CEN + "frente-casa-reina.png", tom: "noite" },  // jardim da Reina com luzinhas (provisório: troque por jardim-reina.png)
+  "piscina-reina":   { img: CEN + "festa-jardim.png" },               // piscina da Reina, festa (capítulo 40)
+  "jardim-reina":    { img: CEN + "festa-jardim.png" },               // jardim da Reina, festa (capítulo 40)
   "banheiro-reina":  { img: CEN + "banheiro-escola.png", tom: "noite" },    // banheiro de cima da Reina (provisório: troque por banheiro-reina.png)
   "escadaria-escola": { img: CEN + "escadaria-escola.png" },          // escada do bloco B
   "armario":         { img: CEN + "armario.png" },                    // armário de limpeza do bloco C
