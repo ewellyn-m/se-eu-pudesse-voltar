@@ -254,12 +254,13 @@ Roteiro.registrar("capitulo40", {
 
     // ▶ ESCOLHA — O Ren viu
     rn_esc: { escolhas: [
-      { texto: "A. “Eu não preciso de você pra ele acreditar em mim.”", proxima: "rn_a1", pontos: { desvio: 1 }, flags: ["Nao_preciso_Ren"] },
+      { texto: "A. “Obrigada, Ren. De verdade. Mas não precisa.”", proxima: "rn_a1", pontos: { desvio: 1 }, flags: ["Obrigada_Ren"] },
       { texto: "B. “Não quero nada seu. Quer me ajudar? Devolve a lojinha do tio do Kaito.”", proxima: "rn_b1", pontos: { desvio: 1 }, flags: ["Lojinha_Ren"] },
       { texto: "C. “Você não vai falar nada. E você não vai fazer nada com ela. Nada.”", proxima: "rn_c1", pontos: { desvio: 1 }, flags: ["Nada_com_Serena"] }
     ]},
-    rn_a1: { quem: "eu", texto: "Eu não preciso de você pra ele acreditar em mim. Se ele acreditar, vai ser porque ele me conhece. Não porque o Ren da carteira da porta mandou.", proxima: "rn_a2" },
-    rn_a2: { tipo: "narracao", texto: "Ele fica parado. O rosto não muda. Mas ela vê, rápido, alguma coisa encolher dentro dele, como quem oferece a única coisa que tem e vê ela ser recusada.", proxima: "rn_10" },
+    rn_a1: { quem: "eu", texto: "Obrigada, Ren. De verdade. Mas não precisa. Se ele acreditar em mim, eu quero que seja porque ele me conhece. Não porque alguém viu.", proxima: "rn_a2" },
+    rn_a2: { tipo: "narracao", texto: "Ele fica parado. Ele esperava outro “sai daqui”, e veio um obrigada. O rosto não muda, mas os ombros dele descem um pouco, como quem solta um peso que nem sabia que estava segurando.", proxima: "rn_a3" },
+    rn_a3: { quem: "ren", texto: "...Tá.", proxima: "rn_10" },
     rn_b1: { quem: "eu", texto: "Eu não quero nada seu. Nem ajuda, nem testemunha. Quer me ajudar? Devolve a lojinha do tio do Kaito. Vinte e três dias, Ren. O tio fica olhando a parede do aviso de noite.", proxima: "rn_b2" },
     rn_b2: { quem: "ren", texto: "O rei, não.", proxima: "rn_b3" },
     rn_b3: { quem: "eu", texto: "Então não tem conversa. Sai.", proxima: "rn_10" },
