@@ -383,7 +383,7 @@ const Capitulos = [
     subtitulo: "",
     pagina: "src/html/capitulo40.html",
     capa: "src/imagens/cenarios/sala-reina.png",
-    descricao: "A avó viajou, a casa é da Reina, a Serena trouxe ponche e ninguém dorme em quarto vazio."
+    descricao: "A avó viajou, a casa é da Reina, a Serena se molhou de ponche e ninguém dorme em quarto vazio."
   }
 ];
 
