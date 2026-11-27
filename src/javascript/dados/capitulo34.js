@@ -42,8 +42,8 @@ Roteiro.registrar("capitulo34", {
 
     /* =================== CENA 1 — O HALL =================== */
     // Cenário: quarto e hall do prédio da SN, terça cedo. Música: leve, manhã.
-    c1_01: { roupa: "escolar", tipo: "narracao", cenario: "quarto-sn", transicao: "tempo", legenda: "Terça, 6h40 — Cena 1", sprite: null, texto: "Terça-feira. Ela acordou com o barulho da mãe chegando do plantão e não conseguiu mais dormir, então está pronta às seis e quarenta, de uniforme, com o cabelo preso e a cabeça ainda no oitavo andar daquele prédio sem parede.", proxima: "c1_02" },
-    c1_02: { tipo: "narracao", texto: "O celular vibra. Não é o número das fotos. É o Kaito.", proxima: "c1_03" },
+    c1_01: { roupa: "escolar", tipo: "narracao", cenario: "quarto-sn", transicao: "tempo", legenda: "Terça, 6h40 — Cena 1", sprite: null, texto: "Terça-feira. Ela acordou com o barulho da mãe chegando do plantão e não conseguiu mais dormir, então está pronta às seis e quarenta, de uniforme, com o cabelo solto e a cabeça ainda no oitavo andar daquele prédio sem parede.", proxima: "c1_02" },
+    c1_02: { tipo: "narracao", texto: "O celular vibra. É o Kaito.", proxima: "c1_03" },
     c1_03: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Tô embaixo. Trouxe a moto. Desce que eu te levo, o tio mandou um pão de queijo e ele esfria rápido.", proxima: "c1_04" },
     c1_04: { tipo: "pensamento", texto: "Ele chegou dez minutos mais cedo que todo dia. Ele nunca chega mais cedo. Ele chega exatamente às sete, como um relógio de capacete.", proxima: "c1_05" },
     c1_05: { tipo: "narracao", cenario: "frente-casa-sn", transicao: "tempo", sprite: "kaito", texto: "Ela desce as escadas do prédio e chega no hall. Do hall até a porta da rua, tem três degraus de granito, e lá embaixo, no pé deles, ele está encostado na parede do lado da caixa de correio, de jaqueta por cima do uniforme, com o capacete vermelho dela pendurado no braço, como em todas as manhãs, e um saquinho de papel na mão, ainda com fumacinha saindo.", proxima: "c1_06" },
