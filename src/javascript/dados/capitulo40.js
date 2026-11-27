@@ -110,7 +110,7 @@ Roteiro.registrar("capitulo40", {
     c2_11: { tipo: "pensamento", texto: "Eu sei coisa demais pra minha idade porque eu tenho vinte e oito. Eu já fui em festa assim. Muitas. Eu já fui a pessoa que passou mal e a pessoa que segurou o cabelo.", proxima: "c2_12" },
     c2_12: { tipo: "pensamento", texto: "Hoje eu vou ser a que segura o cabelo.", proxima: "mh_01" },
     // --- A Mio e a Hana se arrumam na casa da SN ---
-    mh_01: { sprite: null, tipo: "narracao", transicao: "tempo", legenda: "19h40", texto: "Dez minutos depois que a mãe sai, a campainha toca. Três vezes seguidas, do jeito da Mio. Ela abre a porta e as duas entram como uma enchente.", proxima: "mh_02" },
+    mh_01: { roupa: "festival", sprite: null, tipo: "narracao", transicao: "tempo", legenda: "19h40", texto: "Dez minutos depois que a mãe sai, a campainha toca. Três vezes seguidas, do jeito da Mio. Ela abre a porta e as duas entram como uma enchente.", proxima: "mh_02" },
     mh_02: { tipo: "narracao", sprite: "mio", texto: "A Mio, com uma mochila enorme nas costas, uma bolsa de maquiagem do tamanho de uma caixa de ferramentas e a coroa de papelão já na cabeça. A Hana, atrás, com a prancheta embaixo do braço.", proxima: "mh_03" },
     mh_03: { quem: "mio", texto: "Ninguém vai pra primeira festa grande do ano sem preparação. Isso é operação de guerra. Hana, lê o cronograma.", proxima: "mh_04" },
     mh_04: { quem: "hana", sprite: "hana", texto: "Dezenove e quarenta: chegada. Vinte horas: cabelo. Vinte e dez: maquiagem. Vinte e vinte: foto. Vinte e vinte e cinco: saída. Tem dez minutos de margem pra crise.", proxima: "mh_05" },
