@@ -21,7 +21,7 @@ const Personagens = {
     nome: "Mio", grupo: "amigos", cor: "#e0a74a",
     papel: "Melhor amiga de infância",
     retrato: IMG + "Mio-Retrato.png", corpo: IMG + "mio.png", sprite: IMG + "mio.png",
-    roupas: { festival: IMG + "mio-kimoto-festival.png", fantasma: IMG + "mio-fantasma.png", shopping: IMG + "mio-shopping.png", fora: IMG + "mio-fora-escola-sem-fundo.png" },
+    roupas: { festa: IMG + "Mio-festa-sem-fundo.png", festival: IMG + "mio-kimoto-festival.png", fantasma: IMG + "mio-fantasma.png", shopping: IMG + "mio-shopping.png", fora: IMG + "mio-fora-escola-sem-fundo.png" },
     descricao: "Mio é uma garota extremamente animada e espontânea, conhecida por ser a alegria do grupo. Ela não se preocupa com o que os outros pensam e demonstra sua personalidade sem medo de julgamentos. É amiga de infância da protagonista e sempre esteve ao seu lado. As duas se conheceram ainda crianças, quando alguns valentões roubaram e amassaram um desenho da protagonista, e Mio foi a única que decidiu defendê-la. Por morarem perto, elas cresceram juntas e frequentaram a mesma escola durante a infância. Leal e protetora, Mio está sempre disposta a defender quem ama. Apesar de toda a sua confiança, ela fica um pouco diferente quando o assunto é Blake, por quem secretamente tem uma queda.",
     ficha: { "Altura": "1,70 cm", "Peso": "52 kg", "Aniversário": "10 de Novembro", "Futuro:": "Desconhecido" }
   },
@@ -29,7 +29,7 @@ const Personagens = {
     nome: "Hana", grupo: "amigos", cor: "#8f9ad0",
     papel: "Amiga do clube de leitura",
     retrato: IMG + "Hana-Retrato.png", corpo: IMG + "ameni.png", sprite: IMG + "ameni.png",
-    roupas: { festival: IMG + "hana-festival.png", shopping: IMG + "hana-shopping-sem-fundo.png", fora: IMG + "hana-fora-escola-sem-fundo.png" },
+    roupas: { festa: IMG + "Hana-festa.png", festival: IMG + "hana-festival.png", shopping: IMG + "hana-shopping-sem-fundo.png", fora: IMG + "hana-fora-escola-sem-fundo.png" },
     descricao: "Hana é uma garota reservada, tímida e observadora. Ela prefere ouvir a falar e costuma ficar um pouco sem jeito quando recebe muita atenção. Apesar de seu jeito quieto, é inteligente, perspicaz e percebe facilmente detalhes que os outros deixam passar. Hana conheceu SN na adolescência, quando as duas entraram para o mesmo clube na escola, e aos poucos se tornaram amigas próximas. Embora não faça parte do grupo mais extrovertido, ela é alguém em quem SN pode confiar. Por trás de sua timidez, Hana também tem um lado divertido que poucos conhecem e é apaixonada por karaokê, onde costuma deixar a vergonha de lado.",
     ficha: { "Altura": "1,51 cm", "Peso": "42 kg", "Aniversário": "07 de Fevereiro", "Futuro:": "Desconhecido" }
   },
@@ -37,7 +37,7 @@ const Personagens = {
     nome: "Reina", grupo: "amigos", cor: "#e590b5",
     papel: "A garota mais popular do colégio",
     retrato: IMG + "Reina-Retrato.png", corpo: IMG + "reina.png", sprite: IMG + "reina.png",
-    roupas: { festival: IMG + "Reina-festival.png", pijama: IMG + "reina-pijama-sem-fundo.png", fora: IMG + "reina-fora-da-escola-sem-fundo.png" },
+    roupas: { festa: IMG + "Reina-festa-sem-fundo.png", festival: IMG + "Reina-festival.png", pijama: IMG + "reina-pijama-sem-fundo.png", fora: IMG + "reina-fora-da-escola-sem-fundo.png" },
     descricao: "Reina é uma garota confiante, inteligente e independente, conhecida por sua beleza e popularidade na escola. Apesar de parecer apenas uma aluna elegante e tranquila, esconde um grande segredo: é a líder de uma das gangues mais poderosas da cidade a Lirio negro. Forte, estratégica e respeitada por seus membros, Reina mantém sua vida como líder completamente separada da escola. Ela é apaixonada por Takeo e vê SN como sua principal rival romântica. Competitiva e provocadora, costuma implicar com SN, mas não é cruel e, com o tempo, passa a respeitá-la.",
     ficha: { "Altura": "1,60 cm", "Peso": "47 kg", "Aniversário": "18 de Dezembro", "Futuro:": "Desconhecido" }
   },
@@ -47,7 +47,7 @@ const Personagens = {
     nome: "Takeo", grupo: "paquera", cor: "#e08a5a",
     papel: "O amigo de infancia",
     retrato: IMG + "Takeo-Retrato.png", corpo: IMG + "takeo.png", sprite: IMG + "takeo.png",
-    roupas: { festival: IMG + "takeo-festival.png", fora: IMG + "takeo-fora-escola-sem-fundo.png", machucado: IMG + "takeo-machucado-31-sem-fundo.png" },  // machucado: capítulos 31-32 (use sprite "takeo:machucado"),
+    roupas: { festa: IMG + "Takeo-festa-sem-fundo.png", festival: IMG + "takeo-festival.png", fora: IMG + "takeo-fora-escola-sem-fundo.png", machucado: IMG + "takeo-machucado-31-sem-fundo.png" },  // machucado: capítulos 31-32 (use sprite "takeo:machucado"),
     descricao: "Takeo é um rapaz gentil e determinado. Ele é amigo de infância da protagonista, com quem se conhece desde os seis anos, e sempre foi apaixonado por ela. Quando criança, costumava apanhar dos valentões da escola por defender os mais fracos e nunca desistir do que acreditava ser certo. Ele não suporta ver alguém sozinho e está sempre tentando se aproximar de pessoas isoladas. Takeo faz parte da gangue Black Dragons e é um dos amigos mais próximos de Blake.",
     ficha: { "Altura": "1,72 cm", "Peso": "58 kg", "Aniversário": "14 de Março", "Futuro:": "Morreu protegendo alguem..." }
   },
@@ -56,7 +56,7 @@ const Personagens = {
    nome: "Kaito", grupo: "paquera", cor: "#1b25a8",
     papel: "Garoto do parquinho",
     retrato: IMG + "Kaito-Retrato.png", corpo: IMG + "kaito.png", sprite: IMG + "kaito.png",
-    roupas: { festival: IMG + "kaito-festival.png", cap9: IMG + "kaito-cap9.png", fora: IMG + "kaito-fora-da-escola-sem-fundo.png" },  // fora: à noite, fora da escola (cap. 12 em diante)
+    roupas: { festa: IMG + "Kaito-festa.png", festival: IMG + "kaito-festival.png", cap9: IMG + "kaito-cap9.png", fora: IMG + "kaito-fora-da-escola-sem-fundo.png" },  // fora: à noite, fora da escola (cap. 12 em diante)
     descricao: "Kaito é o líder dos Black Dragons e o rapaz mais forte da gangue. Nunca foi derrotado por ninguém, exceto pela protagonista, quando eram crianças. Ele é respeitado por todos e costuma manter uma postura séria e intimidadora, passando a impressão de ser alguém difícil de se aproximar. Apesar disso, Kaito é gentil, protetor e odeia injustiças. Mora com o avô, que é a única família com quem vive atualmente. Seu braço direito é Blake, em quem confia completamente. Kaito deseja criar uma nova geração de delinquentes e construir um grupo que siga seus próprios ideais, sem se submeter às regras dos outros.",
     ficha: { "Altura": "1,77 cm", "Peso": "60 kg", "Aniversário": "28 de Dezembro", "Futuro:": "Desconhecido" }
   },
@@ -65,7 +65,7 @@ const Personagens = {
     nome: "Blake", grupo: "paquera", cor: "#c9a95c",
     papel: "Deliquente tatuado",
     retrato: IMG + "Blanke-Retrato.png", corpo: IMG + "blanke.png", sprite: IMG + "blanke.png",
-    roupas: { festival: IMG + "blake-festival.png", shopping: IMG + "blake-shopping-sem-fundo.png", fora: IMG + "blake-fora-escola.png" },
+    roupas: { festa: IMG + "Blake-festa.png", festival: IMG + "blake-festival.png", shopping: IMG + "blake-shopping-sem-fundo.png", fora: IMG + "blake-fora-escola.png" },
     descricao: "Blake é o chefe da 1ª divisão dos Black Dragons, melhor amigo e braço direito de Kaito. É o rapaz mais alto da escola e de toda a gangue, com uma aparência intimidadora e um olhar que parece dizer “não mexa comigo”. Apesar da fama de valentão, Blake é uma pessoa gentil e leal. É o único que realmente consegue entender Kaito e também quem consegue fazê-lo manter os pés no chão e evitar problemas.",
     ficha: { "Altura": "1,90 cm", "Peso": "71 kg", "Aniversário": "18 de Abril", "Futuro:": "Desconhecido" }
   },
@@ -74,7 +74,7 @@ const Personagens = {
     nome: "Ryuji", grupo: "paquera", cor: "#c0573f",
     papel: "O encrenqueiro",
     retrato: IMG + "Ryuji-Retrato.png", corpo: IMG + "Ryuji.png", sprite: IMG + "Ryuji.png",
-    roupas: { festival: IMG + "ryuji-festival.png", shopping: IMG + "ryuji-shopping.png", fora: IMG + "ryuji-fora-escola.png" },
+    roupas: { festa: IMG + "Ryuji-festa.png", festival: IMG + "ryuji-festival.png", shopping: IMG + "ryuji-shopping.png", fora: IMG + "ryuji-fora-escola.png" },
     descricao: "Ryuji é um rapaz debochado e irônico, conhecido por viver se metendo em encrenca na escola. Seu passatempo favorito parece ser ficar de castigo. Apesar da pose de durão e do jeito provocador, ele é uma pessoa prestativa e está sempre disposto a ajudar os amigos quando precisam. Ryuji é membro dos Black Dragons e costuma ser um dos responsáveis por transformar qualquer situação simples em uma confusão.",
     ficha: { "Altura": "1,81 cm", "Peso": "76 kg", "Aniversário": "02 de Setembro", "Futuro:": "Desconhecido" }
   },
@@ -83,7 +83,7 @@ const Personagens = {
     nome: "Victor", grupo: "paquera", cor: "#8a6f5e",
     papel: "Fantasma",
     retrato: IMG + "Victor-Retrato.png", corpo: IMG + "victor.png", sprite: IMG + "victor.png",
-    roupas: { festival: IMG + "victor-festival.png", cap9: IMG + "victor-cap9.png" },
+    roupas: { festa: IMG + "Victor-festa.png", festival: IMG + "victor-festival.png", cap9: IMG + "victor-cap9.png" },
     descricao: "Victor é um rapaz reservado e difícil de conhecer. Ele quase nunca aparece na escola e prefere ficar sozinho, evitando chamar atenção ou criar vínculos com outras pessoas. Por trás de seu jeito distante, existem problemas familiares que o fazem se afastar cada vez mais da vida escolar. Apesar de parecer indiferente, Victor é observador e guarda muito mais sentimentos do que demonstra.",
     ficha: { "Altura": "1,78 cm", "Peso": "70 kg", "Aniversário": "30 de Janeiro", "Futuro:": "Desconhecido" }
   },
@@ -94,6 +94,7 @@ const Personagens = {
     nome: "Serena", grupo: "outros", cor: "#a14141",
     papel: "",
     retrato: IMG + "serena-Retrato.png", corpo: IMG + "serena.png", sprite: IMG + "serena.png",
+    roupas: { festa: IMG + "Serena-festa.png" },
     descricao: "",
     ficha: { "Altura": "1,69 cm", "Peso": "47 kg", "Aniversário": "13 de Agosto", "Futuro:": "Desconhecido" }
   },
@@ -143,7 +144,7 @@ const Personagens = {
     nome: "Akane", grupo: "outros", cor: "#5b4a6e",
     papel: "Braço direito da Reina no Lírio Negro",
     retrato: IMG + "Akane.png", corpo: IMG + "Akane.png", sprite: IMG + "Akane.png",
-    roupas: { escolar: IMG + "akane-escolar-sem-fundo.png", fora: IMG + "akane-fora-escola-sem-fundo.png" }   // uniforme da escola (fundo tirado de akane-escolar.png); use roupa: "escolar" no capítulo
+    roupas: { festa: IMG + "Akane-festa-sem-fundo.png", escolar: IMG + "akane-escolar-sem-fundo.png", fora: IMG + "akane-fora-escola-sem-fundo.png" }   // uniforme da escola (fundo tirado de akane-escolar.png); use roupa: "escolar" no capítulo
   },
 
   avo_takeo: {
@@ -180,7 +181,7 @@ const Personagens = {
     nome: "Ren Sakuma", grupo: "outros", cor: "#6f7a86",
     papel: "Aluno transferido. Líder da Matilha",
     retrato: IMG + "Ren.png", corpo: IMG + "Ren.png", sprite: IMG + "Ren.png",
-    roupas: { festival: IMG + "ren-festival.png", fora: IMG + "ren-fora-escola-sem-fundo.png" }
+    roupas: { festa: IMG + "Ren-festa.png", festival: IMG + "ren-festival.png", fora: IMG + "ren-fora-escola-sem-fundo.png" }
   },
 
   yuto: {
@@ -314,6 +315,7 @@ const Cenarios = {
   "quarto-hana":     { img: CEN + "quarto-hana.png" },                // quarto da Hana
   "quarto-mio":      { img: CEN + "quarto.png", tom: "entardecer" },  // quarto da Mio (provisório: troque por quarto-mio.png)
   "casa-reina-noite": { img: CEN + "sala-reina.png", tom: "noite" },       // sala da Reina, festa (capítulo 40)
+  "festa-reina":     { img: CEN + "festa.png" },                      // festa na casa da Reina (capítulo 40)
   "frente-casa-reina-noite": { img: CEN + "frente-casa-reina.png", tom: "noite" }, // portão e varanda da Reina, à noite
   "piscina-reina":   { img: CEN + "frente-casa-reina.png", tom: "noite" },  // piscina da Reina (provisório: troque por piscina-reina.png)
   "jardim-reina":    { img: CEN + "frente-casa-reina.png", tom: "noite" },  // jardim da Reina com luzinhas (provisório: troque por jardim-reina.png)
@@ -334,6 +336,7 @@ const Fotos = {
   "victor-sn-34": { img: CEN + "victor-sn-34.png", formato: "cg" },
   "blake-sn-34": { img: CEN + "blake-sn-34.png", formato: "cg" },
   "sn-festival": { img: IMG + "Sn-festival.png", fundo: CEN + "festival.png" },
+  "sn-festa": { img: IMG + "Sm-festa.png", fundo: CEN + "festa.png" },   // a SN arrumada pra festa da Reina (capítulo 40)
   caramelo: { img: IMG + "caramelo.png" },                                   // a foto já tem fundo próprio
   "takeo-sn": { img: IMG + "foto-takeo-sn.png", formato: "horizontal" },
   "sn-pijama": { img: IMG + "sn-pijama.png", fundo: CEN + "quarto-reina.png" }   // noite na casa da Reina (capítulo 16)       // álbum da avó do Takeo (capítulo 13); foto deitada

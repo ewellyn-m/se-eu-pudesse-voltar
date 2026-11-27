@@ -110,7 +110,7 @@ Roteiro.registrar("capitulo40", {
     c2_11: { tipo: "pensamento", texto: "Eu sei coisa demais pra minha idade porque eu tenho vinte e oito. Eu já fui em festa assim. Muitas. Eu já fui a pessoa que passou mal e a pessoa que segurou o cabelo.", proxima: "c2_12" },
     c2_12: { tipo: "pensamento", texto: "Hoje eu vou ser a que segura o cabelo.", proxima: "mh_01" },
     // --- A Mio e a Hana se arrumam na casa da SN ---
-    mh_01: { roupa: "festival", sprite: null, tipo: "narracao", transicao: "tempo", legenda: "19h40", texto: "Dez minutos depois que a mãe sai, a campainha toca. Três vezes seguidas, do jeito da Mio. Ela abre a porta e as duas entram como uma enchente.", proxima: "mh_02" },
+    mh_01: { roupa: "festa", sprite: null, tipo: "narracao", transicao: "tempo", legenda: "19h40", texto: "Dez minutos depois que a mãe sai, a campainha toca. Três vezes seguidas, do jeito da Mio. Ela abre a porta e as duas entram como uma enchente.", proxima: "mh_02" },
     mh_02: { tipo: "narracao", sprite: "mio", texto: "A Mio, com uma mochila enorme nas costas, uma bolsa de maquiagem do tamanho de uma caixa de ferramentas e a coroa de papelão já na cabeça. A Hana, atrás, com a prancheta embaixo do braço.", proxima: "mh_03" },
     mh_03: { quem: "mio", texto: "Ninguém vai pra primeira festa grande do ano sem preparação. Isso é operação de guerra. Hana, lê o cronograma.", proxima: "mh_04" },
     mh_04: { quem: "hana", sprite: "hana", texto: "Dezenove e quarenta: chegada. Vinte horas: cabelo. Vinte e dez: maquiagem. Vinte e vinte: foto. Vinte e vinte e cinco: saída. Tem dez minutos de margem pra crise.", proxima: "mh_05" },
@@ -137,7 +137,7 @@ Roteiro.registrar("capitulo40", {
     c2_15: { quem: "reina", texto: "Você veio! Entra! Tem ponche na cozinha, tem pizza na sala, tem piscina, tem o Takeo, que eu não convidei especialmente, ele veio porque todo mundo veio.", proxima: "c2_16" },
     c2_16: { quem: "eu", texto: "Claro. Todo mundo.", proxima: "c2_17" },
     c2_17: { quem: "reina", texto: "Todo mundo. Inclusive ele. Por acaso. Totalmente por acaso.", proxima: "c2_18" },
-    c2_18: { cenario: "casa-reina-noite", tipo: "narracao", sprite: null, texto: "Lá dentro, a sala enorme virou pista de dança. O piano de cauda da avó, no canto, tem uma placa feita à mão pela Hana: “NÃO COLOQUE COPO EM CIMA. É DA AVÓ.” Na cozinha, uma tigela gigante de ponche vermelho, e, do lado, uns meninos do terceiro ano abrindo garrafas que não são de suco.", proxima: "c2_19" },
+    c2_18: { cenario: "festa-reina", tipo: "narracao", sprite: null, texto: "Lá dentro, a sala enorme virou pista de dança. O piano de cauda da avó, no canto, tem uma placa feita à mão pela Hana: “NÃO COLOQUE COPO EM CIMA. É DA AVÓ.” Na cozinha, uma tigela gigante de ponche vermelho, e, do lado, uns meninos do terceiro ano abrindo garrafas que não são de suco.", proxima: "c2_19" },
     c2_19: { tipo: "narracao", sprite: "hana", texto: "A Hana já foi direto para a porta da cozinha com a prancheta, anotando quem entra e quem sai, e quem pegou o quê, como uma fiscal de aeroporto.", proxima: "c2_20" },
     c2_20: { quem: "hana", texto: "Você já bebeu água? Bebe água. Eu coloquei garrafa de água em todos os cômodos. Tem uma coluna na tabela só pra água.", proxima: "c2_21" },
     c2_21: { tipo: "narracao", sprite: "mio", texto: "A Mio, do lado dela, tira o microfone de brinquedo rosa da mochila, ajeita a coroa de papelão na cabeça e acende o microfone.", proxima: "c2_22" },
@@ -165,18 +165,18 @@ Roteiro.registrar("capitulo40", {
 
     /* =================== CENA 3 — OS CINCO =================== */
     // Cenário: sala e piscina da casa da Reina. Música: festa, alta.
-    c3_01: { tipo: "narracao", cenario: "casa-reina-noite", transicao: "tempo", legenda: "21h — Cena 3", sprite: "victor", texto: "O Victor entra primeiro, de camisa social de novo, com mais um botão a menos do que no sábado, de braços abertos, cumprimentando gente que ele não conhece como se fossem primos.", proxima: "c3_02" },
+    c3_01: { tipo: "narracao", cenario: "festa-reina", transicao: "tempo", legenda: "21h — Cena 3", sprite: "victor", texto: "O Victor entra primeiro, de camisa social de novo, com mais um botão a menos do que no sábado, de braços abertos, cumprimentando gente que ele não conhece como se fossem primos.", proxima: "c3_02" },
     c3_02: { quem: "victor", texto: "Boa noite, gatinhas! Boa noite, gatinhos! Boa noite, planta! A planta está bêbada? Por que a planta está cheirando a ponche?", proxima: "c3_03" },
     c3_03: { tipo: "narracao", sprite: "ryuji", texto: "O Ryuji entra atrás, com o capacete amarelo ainda na cabeça, porque esqueceu de tirar, e uma caixa de pizza extra que ninguém pediu.", proxima: "c3_04" },
     c3_04: { tipo: "narracao", sprite: "blake", texto: "O Blake entra atrás dele, abaixando a cabeça para passar na porta, com a chave da moto na mão e um fardo de garrafa de água nas costas. Ele coloca o fardo no chão da cozinha sem falar nada. A Hana, da porta, olha para o fardo como quem vê um anjo.", proxima: "c3_05" },
     c3_05: { quem: "blake", texto: "Eu não vou beber. Eu dirijo. Eu levo quem precisar.", proxima: "c3_06" },
     c3_06: { quem: "hana", sprite: "hana", texto: "Blake. Você é a pessoa mais responsável que já existiu. Eu vou criar uma coluna com o seu nome.", proxima: "c3_07" },
-    c3_07: { tipo: "narracao", sprite: "takeo:machucado", texto: "O Takeo já estava lá, sentado no sofá, com o gesso no colo e um copo de suco de laranja na mão, porque ele chegou às sete e meia, antes de todo mundo, para ajudar a Reina a pendurar as luzinhas no jardim.", proxima: "c3_08" },
-    c3_08: { quem: "takeo", sprite: "takeo:machucado", texto: "A Reina me ligou às cinco. Ela disse que eu era o único que ela conhecia que sabia usar escada. Eu tenho um braço só. Eu pendurei as luzinhas com um braço só.", proxima: "c3_09" },
+    c3_07: { tipo: "narracao", sprite: "takeo", texto: "O Takeo já estava lá, sentado no sofá, com o gesso no colo e um copo de suco de laranja na mão, porque ele chegou às sete e meia, antes de todo mundo, para ajudar a Reina a pendurar as luzinhas no jardim.", proxima: "c3_08" },
+    c3_08: { quem: "takeo", sprite: "takeo", texto: "A Reina me ligou às cinco. Ela disse que eu era o único que ela conhecia que sabia usar escada. Eu tenho um braço só. Eu pendurei as luzinhas com um braço só.", proxima: "c3_09" },
     c3_09: { tipo: "narracao", sprite: "kaito", texto: "E por último, o Kaito, com o cabelo meio molhado. Ele para na porta da sala. Olha em volta. A música, a gente, as luzes. Ele nunca gostou de festa. Ela sabe. Ele procura alguma coisa com os olhos, no meio da sala cheia.", proxima: "c3_10" },
     c3_10: { tipo: "narracao", texto: "Acha ela. E para de procurar.", proxima: "c3_11" },
     c3_11: { tipo: "narracao", texto: "Ele atravessa a sala. No meio do caminho, três meninas do segundo ano param ele para falar alguma coisa. Ele responde com uma palavra cada uma, sem parar de andar, sem tirar os olhos dela. Chega.", proxima: "c3_12" },
-    c3_12: { quem: "kaito", texto: "...Você passou rímel.", proxima: "c3_13" },
+    c3_12: { foto: "sn-festa", quem: "kaito", texto: "...Você passou rímel.", proxima: "c3_13" },
     c3_13: { quem: "eu", texto: "A Mio já anunciou no microfone.", proxima: "c3_14" },
     c3_14: { quem: "kaito", texto: "Eu ouvi. Do portão.", proxima: "c3_15" },
     c3_15: { tipo: "narracao", texto: "Ele fica parado na frente dela, olhando, sem falar mais nada. Ela fica parada também. A música alta em volta deles. Alguém esbarra no ombro dele e empurra ele um passo mais perto dela. Ele não volta o passo.", proxima: "c3_16" },
@@ -203,7 +203,7 @@ Roteiro.registrar("capitulo40", {
     rn_15: { tipo: "narracao", texto: "Ele abre a boca. Fecha. É a segunda vez que ela vê o Ren sem resposta. Ele olha para a casa, para as janelas acesas, para as luzinhas tortas do jardim. Depois para ela.", proxima: "rn_16" },
     rn_16: { quem: "ren", texto: "...Boa festa.", proxima: "rn_17" },
     rn_17: { sprite: null, tipo: "narracao", texto: "Ele vira e vai embora pela calçada, devagar, com as mãos nos bolsos. Mas, dessa vez, na esquina, antes de virar, ele para. Olha para trás. Para a casa cheia. Fica olhando um tempo, como quem olha para uma coisa que poderia ter sido dele. E depois vira a esquina.", proxima: "rn_18" },
-    rn_18: { tipo: "narracao", cenario: "casa-reina-noite", transicao: "tempo", sprite: null, texto: "Ela volta para dentro pela porta de vidro. Ninguém percebeu que ela saiu, só o Kaito, que está no mesmo lugar, olhando para a porta, esperando.", proxima: "c3_cam_mb" },
+    rn_18: { tipo: "narracao", cenario: "festa-reina", transicao: "tempo", sprite: null, texto: "Ela volta para dentro pela porta de vidro. Ninguém percebeu que ela saiu, só o Kaito, que está no mesmo lugar, olhando para a porta, esperando.", proxima: "c3_cam_mb" },
     c3_cam_mb: { caminhos: [
       { flag: "Rota_Kaito", proxima: "mb_01" }
     ], proxima: "c3_21" },
@@ -288,7 +288,7 @@ Roteiro.registrar("capitulo40", {
 
     /* =================== CENA 5 — O BANHEIRO (Serena) =================== */
     // Cenário: banheiro do andar de cima (usa "apartamento"). Música: abafada, de longe.
-    c5_01: { tipo: "narracao", cenario: "casa-reina-noite", transicao: "tempo", legenda: "23h40 — Cena 5", sprite: null, texto: "No andar de cima, o corredor está mais quieto. A música chega abafada, pelo chão. Na frente de uma porta branca, uma das amigas da Serena está sentada no chão, de maquiagem borrada, batendo na porta com a palma da mão, sem força.", proxima: "c5_02" },
+    c5_01: { tipo: "narracao", cenario: "festa-reina", transicao: "tempo", legenda: "23h40 — Cena 5", sprite: null, texto: "No andar de cima, o corredor está mais quieto. A música chega abafada, pelo chão. Na frente de uma porta branca, uma das amigas da Serena está sentada no chão, de maquiagem borrada, batendo na porta com a palma da mão, sem força.", proxima: "c5_02" },
     c5_02: { quem: "desconhecido", rotulo: "Amiga da Serena", texto: "Serena, abre. Abre, por favor. Ela bebeu três copos do ponche do terceiro ano. Ela nunca bebe. Ela não abre.", proxima: "c5_03" },
     c5_03: { tipo: "narracao", texto: "Do outro lado da porta, um barulho. Uma tosse. Depois um choro baixo. Depois outro barulho, que a SN, com vinte e oito anos por dentro, reconhece na hora.", proxima: "c5_04" },
     c5_04: { tipo: "pensamento", texto: "Ela está vomitando. Sozinha. Trancada. Bêbada pela primeira vez na vida. No banheiro da casa de outra pessoa. Na festa onde o menino que ela gosta está lá embaixo.", proxima: "c5_05" },
@@ -374,15 +374,15 @@ Roteiro.registrar("capitulo40", {
 
     /* =================== CENA 6 — VERDADE OU DESAFIO =================== */
     // Cenário: sala da Reina, meia-noite. Música: mais baixa, de madrugada.
-    c6_01: { tipo: "narracao", cenario: "casa-reina-noite", transicao: "tempo", legenda: "Meia-noite — Cena 6", sprite: null, texto: "Meia-noite. A festa diminuiu. Metade das pessoas foi embora. Na sala, no tapete enorme da avó, uns quinze sentados em roda, com uma garrafa de refrigerante vazia no meio. A Mio no comando, de coroa de papelão, com o microfone rosa.", proxima: "c6_02" },
+    c6_01: { tipo: "narracao", cenario: "festa-reina", transicao: "tempo", legenda: "Meia-noite — Cena 6", sprite: null, texto: "Meia-noite. A festa diminuiu. Metade das pessoas foi embora. Na sala, no tapete enorme da avó, uns quinze sentados em roda, com uma garrafa de refrigerante vazia no meio. A Mio no comando, de coroa de papelão, com o microfone rosa.", proxima: "c6_02" },
     c6_02: { quem: "mio", sprite: "mio", texto: "Verdade ou desafio! A garrafa escolhe quem pergunta e quem responde! Quem não responder, pula na piscina! O Victor e o Ryuji já estão molhados, então pra eles não vale!", proxima: "c6_03" },
     c6_03: { tipo: "narracao", sprite: null, texto: "Na roda: a Mio, a Hana, a Reina, a Akane, o Takeo, o Kaito, o Blake, o Ryuji enrolado numa toalha, o Victor de roupa seca do Blake, que fica enorme nele, e uns outros do segundo ano. A SN senta entre a Mio e o Kaito.", proxima: "c6_04" },
     c6_04: { tipo: "narracao", texto: "A garrafa gira. Para na Reina, que pergunta. E no Takeo, que responde. A sala inteira faz “uuuuh”.", proxima: "c6_05" },
     c6_05: { quem: "reina", sprite: "reina", texto: "Takeo. Verdade. Você veio na festa por causa de quem?", proxima: "c6_06" },
-    c6_06: { tipo: "narracao", sprite: "takeo:machucado", texto: "O Takeo fica vermelho até o gesso. Olha para a Reina. Olha para a SN, do outro lado da roda. Olha para a Reina de novo.", proxima: "c6_07" },
-    c6_07: { quem: "takeo", sprite: "takeo:machucado", texto: "...Porque você me ligou às cinco e disse que precisava de alguém que soubesse usar escada.", proxima: "c6_08" },
+    c6_06: { tipo: "narracao", sprite: "takeo", texto: "O Takeo fica vermelho até o gesso. Olha para a Reina. Olha para a SN, do outro lado da roda. Olha para a Reina de novo.", proxima: "c6_07" },
+    c6_07: { quem: "takeo", sprite: "takeo", texto: "...Porque você me ligou às cinco e disse que precisava de alguém que soubesse usar escada.", proxima: "c6_08" },
     c6_08: { quem: "reina", sprite: "reina", texto: "Isso não é verdade. Isso é logística.", proxima: "c6_09" },
-    c6_09: { quem: "takeo", sprite: "takeo:machucado", texto: "É uma verdade logística.", proxima: "c6_10" },
+    c6_09: { quem: "takeo", sprite: "takeo", texto: "É uma verdade logística.", proxima: "c6_10" },
     c6_10: { tipo: "narracao", sprite: null, texto: "A roda ri. A Reina joga uma almofada nele. Ele pega com a mão boa e abraça a almofada, rindo, e a Reina, ela vê, fica vermelha também, olhando para ele abraçado na almofada que ela jogou.", proxima: "c6_11" },
     c6_11: { tipo: "narracao", texto: "A garrafa gira. Para no Victor, que pergunta. E na SN, que responde.", proxima: "c6_12" },
     c6_12: { sprite: "victor", quem: "victor", texto: "Gatinha... SN. Verdade ou desafio?", proxima: "c6_esc7" },
@@ -421,7 +421,7 @@ Roteiro.registrar("capitulo40", {
     c6_7c_4: { quem: "eu", texto: "Eu pulei porque estava calor.", proxima: "c6_13" },
 
     // (todas as opções continuam aqui)
-    c6_13: { cenario: "casa-reina-noite", tipo: "narracao", sprite: null, texto: "A garrafa gira mais umas vezes. A Akane confessa que tem medo de borboleta. A Hana confessa que tem uma tabela com o nome de todos os meninos da escola e uma nota de zero a dez para cada um, mas se recusa a mostrar. O Blake, quando é a vez dele, escolhe desafio só para não ter que falar, e é desafiado a cantar, e canta, com a voz grave, uma música de ninar que a mãe dele cantava para os gêmeos. A sala inteira fica em silêncio.", proxima: "c6_14" },
+    c6_13: { cenario: "festa-reina", tipo: "narracao", sprite: null, texto: "A garrafa gira mais umas vezes. A Akane confessa que tem medo de borboleta. A Hana confessa que tem uma tabela com o nome de todos os meninos da escola e uma nota de zero a dez para cada um, mas se recusa a mostrar. O Blake, quando é a vez dele, escolhe desafio só para não ter que falar, e é desafiado a cantar, e canta, com a voz grave, uma música de ninar que a mãe dele cantava para os gêmeos. A sala inteira fica em silêncio.", proxima: "c6_14" },
     c6_14: { tipo: "narracao", texto: "Às duas da manhã, a roda se desmancha. As pessoas vão indo embora. O Blake começa a levar gente de táxi, um grupo de cada vez. A Mio dorme no sofá com a coroa de papelão torta. A Hana revisa a prancheta. O jardim, lá fora, ainda tem as luzinhas acesas.", proxima: "c6_15" },
     c6_15: { tipo: "narracao", texto: "A SN sai para o jardim para respirar. E, quase na mesma hora, alguém sai também, atrás dela.", proxima: "r_cam" },
 
@@ -479,9 +479,9 @@ Roteiro.registrar("capitulo40", {
     mb_19: { quem: "mensagem", rotulo: "Mensagem — Mio", texto: "COM MUITOS GESTOS.", proxima: "r_fim" },
 
     // ---------- Rota Takeo ----------
-    rt_01: { tipo: "narracao", cenario: "jardim-reina", transicao: "tempo", legenda: "2h — Jardim", sprite: "takeo:machucado", texto: "É o Takeo, mancando, com o gesso apoiado no peito. Ele para do lado dela, embaixo das luzinhas que ele mesmo pendurou.", proxima: "rt_02" },
-    rt_02: { quem: "takeo", sprite: "takeo:machucado", texto: "Eu pendurei essas. Com um braço. A Reina segurou a escada. Ela segurou tão forte que os dedos dela ficaram brancos.", proxima: "rt_03" },
-    rt_03: { quem: "takeo", sprite: "takeo:machucado", texto: "Na verdade ou desafio. Você falou no meu ouvido. Ou não falou. Eu não sei se você ia falar. Mas eu fiquei pensando a noite inteira no que você ia falar se fosse eu.", proxima: "rt_04" },
+    rt_01: { tipo: "narracao", cenario: "jardim-reina", transicao: "tempo", legenda: "2h — Jardim", sprite: "takeo", texto: "É o Takeo, mancando, com o gesso apoiado no peito. Ele para do lado dela, embaixo das luzinhas que ele mesmo pendurou.", proxima: "rt_02" },
+    rt_02: { quem: "takeo", sprite: "takeo", texto: "Eu pendurei essas. Com um braço. A Reina segurou a escada. Ela segurou tão forte que os dedos dela ficaram brancos.", proxima: "rt_03" },
+    rt_03: { quem: "takeo", sprite: "takeo", texto: "Na verdade ou desafio. Você falou no meu ouvido. Ou não falou. Eu não sei se você ia falar. Mas eu fiquei pensando a noite inteira no que você ia falar se fosse eu.", proxima: "rt_04" },
     rt_04: { tipo: "narracao", texto: "Ele fala isso olhando para as luzinhas, e não para ela. A Reina dançou com ele três músicas. Ela viu. Ele dançou como quem tem um braço só e não liga.", proxima: "rt_esc" },
     rt_esc: { escolhas: [
       { texto: "A. Falar no ouvido dele agora. “Eu voltei de muito longe por sua causa.”", proxima: "rt_a1", pontos: { takeo: 4 }, flags: ["Voltei_longe_Takeo"] },
@@ -490,15 +490,15 @@ Roteiro.registrar("capitulo40", {
     ]},
     rt_a1: { tipo: "narracao", texto: "Ela se aproxima. Fica na ponta do pé. Fala no ouvido dele, baixo: “Eu voltei de muito longe por sua causa. Um dia eu te conto como.”", proxima: "rt_a2" },
     rt_a2: { tipo: "narracao", texto: "O Takeo fica parado. Ela volta para o chão. Ele olha para ela com aquela cara de quem pesquisa jornal velho, de quem sabe que tem uma história escrita em algum lugar e ainda não achou.", proxima: "rt_a3" },
-    rt_a3: { quem: "takeo", sprite: "takeo:machucado", texto: "...Eu vou esperar. Eu sou bom em esperar. E em pesquisar. Mas essa eu vou esperar você contar.", proxima: "r_fim" },
+    rt_a3: { quem: "takeo", sprite: "takeo", texto: "...Eu vou esperar. Eu sou bom em esperar. E em pesquisar. Mas essa eu vou esperar você contar.", proxima: "r_fim" },
     rt_b1: { quem: "eu", texto: "Você dançou com a Reina três músicas.", proxima: "rt_b2" },
     rt_b2: { tipo: "narracao", texto: "O Takeo fica vermelho. Muito vermelho.", proxima: "rt_b3" },
-    rt_b3: { quem: "takeo", sprite: "takeo:machucado", texto: "Ela pediu. Ela pediu três vezes. Ela disse que era briga limpa. Eu não sei o que é briga limpa. Eu acho que eu estou no meio de uma briga e ninguém me explicou as regras.", proxima: "rt_b4" },
+    rt_b3: { quem: "takeo", sprite: "takeo", texto: "Ela pediu. Ela pediu três vezes. Ela disse que era briga limpa. Eu não sei o que é briga limpa. Eu acho que eu estou no meio de uma briga e ninguém me explicou as regras.", proxima: "rt_b4" },
     rt_b4: { quem: "eu", texto: "Você está no meio, Takeo. Bem no meio.", proxima: "rt_b5" },
-    rt_b5: { quem: "takeo", sprite: "takeo:machucado", texto: "...Eu sou bom em ficar no meio do caminho. Mas não desse jeito.", proxima: "r_fim" },
+    rt_b5: { quem: "takeo", sprite: "takeo", texto: "...Eu sou bom em ficar no meio do caminho. Mas não desse jeito.", proxima: "r_fim" },
     rt_c1: { tipo: "narracao", texto: "Ela pega a mão boa dele. Coloca a outra mão dela no ombro dele, do lado do gesso, com cuidado. E começa a balançar, devagar, sem música, no meio do jardim.", proxima: "rt_c2" },
     rt_c2: { tipo: "narracao", texto: "O Takeo fica duro no começo. Depois relaxa. Coloca a mão do gesso, desajeitada, nas costas dela. E os dois dançam assim, sem música, só com os grilos e o filtro da piscina, embaixo das luzinhas que ele pendurou com um braço só.", proxima: "rt_c3" },
-    rt_c3: { quem: "takeo", sprite: "takeo:machucado", texto: "...Isso é melhor que as três com a Reina. Não conta pra ela.", proxima: "r_fim" },
+    rt_c3: { quem: "takeo", sprite: "takeo", texto: "...Isso é melhor que as três com a Reina. Não conta pra ela.", proxima: "r_fim" },
 
     // ---------- Rota Blake ----------
     rb_01: { tipo: "narracao", cenario: "jardim-reina", transicao: "tempo", legenda: "2h — Jardim", sprite: "blake", texto: "É o Blake, com a chave da moto na mão e a camiseta molhada de suor de carregar gente para o táxi a noite inteira. Ele para do lado dela, embaixo das luzinhas.", proxima: "rb_02" },
