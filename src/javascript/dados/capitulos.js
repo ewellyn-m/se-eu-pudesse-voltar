@@ -339,15 +339,24 @@ const Capitulos = [
     pagina: "src/html/capitulo35.html",
     capa: "src/imagens/cenarios/portao-escola.png",
     descricao: "Um segundo no hall que ninguém comenta. E uma menina do segundo ano que quer saber o que você é dele."
+  },
+  {
+    id: "capitulo36",
+    numero: 36,
+    titulo: "Bacia hidrográfica",
+    subtitulo: "",
+    pagina: "src/html/capitulo36.html",
+    capa: "src/imagens/cenarios/clube-de-leitura.png",
+    descricao: "Dez páginas para amanhã, um yakisoba sem cenoura e um lápis partido ao meio."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 36,
-  titulo: "Capítulo 36",
-  capa: "src/imagens/cenarios/quarto.png",
-  descricao: "Um segundo. Ainda."
+  numero: 37,
+  titulo: "Capítulo 37",
+  capa: "src/imagens/cenarios/frente-casa-sn.png",
+  descricao: "Amanhã. Sete horas. No hall. Eu falo."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);
