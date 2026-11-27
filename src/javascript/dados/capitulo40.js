@@ -184,7 +184,26 @@ Roteiro.registrar("capitulo40", {
     c3_17: { tipo: "narracao", sprite: "hana", texto: "No meio da lenta, a Mio empurra a Hana para o lado do piano, com o microfone de brinquedo rosa na mão dela. A Hana fica vermelha, abraça a prancheta, olha para a Mio com ódio puro. E canta. “Depois da Chuva”. A mesma do karaokê. A casa inteira fica em silêncio.", proxima: "c3_18" },
     c3_18: { tipo: "narracao", sprite: null, texto: "No silêncio, a SN olha em volta. E vê, no canto da sala, perto da porta de vidro que dá para o jardim, encostado na parede, sozinho, sem copo na mão, o Ren.", proxima: "c3_19" },
     c3_19: { sprite: "ren", tipo: "narracao", texto: "Ele não está olhando para a Hana. Não está olhando para o piano. Está olhando para ela. E, quando percebe que ela viu, ele não desvia. Fica olhando. Depois olha para o Kaito, do lado dela. E depois olha para a porta.", proxima: "c3_20" },
-    c3_20: { sprite: null, tipo: "narracao", texto: "Quando a Hana termina de cantar e a casa inteira aplaude, a SN olha de novo para o canto. Ele não está mais lá. A porta de vidro está aberta, balançando com o vento do jardim.", proxima: "c3_cam_mb" },
+    c3_20: { sprite: null, tipo: "narracao", texto: "Quando a Hana termina de cantar e a casa inteira aplaude, a SN olha de novo para o canto. Ele não está mais lá. A porta de vidro está aberta, balançando com o vento do jardim.", proxima: "rn_01" },
+    // --- A SN vai atrás do Ren (todas as rotas) ---
+    rn_01: { tipo: "pensamento", texto: "Não. Dessa vez ele não vai embora primeiro sem ouvir.", proxima: "rn_02" },
+    rn_02: { tipo: "narracao", cenario: "frente-casa-reina-noite", transicao: "tempo", sprite: null, texto: "Ela sai pela porta de vidro, atravessa o jardim com as luzinhas, e alcança ele no portão lateral da casa, já na calçada, com as mãos nos bolsos, de costas para a festa.", proxima: "rn_03" },
+    rn_03: { quem: "eu", texto: "Ren.", proxima: "rn_04" },
+    rn_04: { sprite: "ren", tipo: "narracao", texto: "Ele para. Não vira logo. Fica um segundo parado, como quem não esperava ser seguido, e depois vira, devagar. Atrás dela, a música da festa chega abafada pelo jardim.", proxima: "rn_05" },
+    rn_05: { quem: "eu", texto: "Você veio, ficou uma música no canto, e está indo embora. De novo. Igual no prédio. Igual na sala. Você sempre vai embora primeiro.", proxima: "rn_06" },
+    rn_06: { tipo: "narracao", texto: "Ele não responde. Ela respira fundo. E fala, devagar, olhando nos olhos dele, sem levantar a voz.", proxima: "rn_07" },
+    rn_07: { quem: "eu", texto: "Você não é mais o menino de óculos que ficou trinta e um dias na chuva. Você não é o mesmo de antes, Ren.", proxima: "rn_08" },
+    rn_08: { quem: "eu", texto: "Hoje você pode fazer amizade com quem você quiser. Pode entrar nessa festa e conversar com qualquer pessoa. Pode namorar com quem você quiser. Ninguém mais vai rir do seu tabuleiro.", proxima: "rn_09" },
+    rn_09: { quem: "eu", texto: "Você não precisa mais ter medo de chegar perto das pessoas. Ninguém vai te deixar sozinho numa praça por ser quem você é.", proxima: "rn_10" },
+    rn_10: { tipo: "narracao", texto: "O rosto dele não muda. Mas a mão dele, dentro do bolso, aperta. Ela vê o tecido do casaco esticar.", proxima: "rn_11" },
+    rn_11: { quem: "eu", texto: "Mas se você continuar agindo assim, comprando prédio, mandando gente no escuro, olhando de longe e indo embora, você só vai afastar todo mundo que está perto de você. Até não sobrar ninguém. E aí você vai estar sozinho de novo. Só que dessa vez a culpa vai ser sua.", proxima: "rn_12" },
+    rn_12: { tipo: "narracao", texto: "Silêncio. Um carro passa na rua, devagar, com o farol batendo no rosto dele por um segundo. Lá dentro, a casa inteira aplaude alguma coisa.", proxima: "rn_13" },
+    rn_13: { quem: "ren", texto: "Eu não tenho medo.", proxima: "rn_14" },
+    rn_14: { quem: "eu", texto: "Então por que você fica sempre no canto?", proxima: "rn_15" },
+    rn_15: { tipo: "narracao", texto: "Ele abre a boca. Fecha. É a segunda vez que ela vê o Ren sem resposta. Ele olha para a casa, para as janelas acesas, para as luzinhas tortas do jardim. Depois para ela.", proxima: "rn_16" },
+    rn_16: { quem: "ren", texto: "...Boa festa.", proxima: "rn_17" },
+    rn_17: { sprite: null, tipo: "narracao", texto: "Ele vira e vai embora pela calçada, devagar, com as mãos nos bolsos. Mas, dessa vez, na esquina, antes de virar, ele para. Olha para trás. Para a casa cheia. Fica olhando um tempo, como quem olha para uma coisa que poderia ter sido dele. E depois vira a esquina.", proxima: "rn_18" },
+    rn_18: { tipo: "narracao", cenario: "casa-reina-noite", transicao: "tempo", sprite: null, texto: "Ela volta para dentro pela porta de vidro. Ninguém percebeu que ela saiu, só o Kaito, que está no mesmo lugar, olhando para a porta, esperando.", proxima: "c3_cam_mb" },
     c3_cam_mb: { caminhos: [
       { flag: "Rota_Kaito", proxima: "mb_01" }
     ], proxima: "c3_21" },
@@ -199,7 +218,7 @@ Roteiro.registrar("capitulo40", {
     mb_08: { tipo: "pensamento", texto: "O Blake pediu. Sozinho. Sem ninguém empurrar. Desde a Sayuri, desde a biblioteca, desde o bracelete com a letra B. Ele pediu.", proxima: "mb_09" },
     mb_09: { tipo: "narracao", sprite: "kaito", texto: "Do lado dela, o Kaito também está olhando. Ele fica um tempo quieto. Depois fala, baixo, só para ela.", proxima: "mb_10" },
     mb_10: { quem: "kaito", texto: "Quatrocentos e treze a zero. Hoje ele ganhou uma.", proxima: "c3_21" },
-    c3_21: { tipo: "pensamento", texto: "Ele veio. Ele ficou uma música. Ele não bebeu, não falou com ninguém. Ele só veio olhar. E foi embora.", proxima: "c3_22" },
+    c3_21: { tipo: "pensamento", texto: "Ele veio. Ele ficou uma música. Ele não bebeu, não falou com ninguém. Ele só veio olhar. E foi embora. Mas, na esquina, ele olhou pra trás.", proxima: "c3_22" },
     c3_22: { tipo: "pensamento", texto: "“Se eu falar, você vai embora de novo.” Mas é ele que sempre vai embora primeiro.", proxima: "c4_01" },
 
     /* =================== CENA 4 — A PISCINA (Ryuji e Victor) =================== */
@@ -605,8 +624,10 @@ Roteiro.registrar("capitulo40", {
  *  • SERENA: bebeu três copos do ponche do terceiro ano, trancou no banheiro, vomitou. A SN segurou o cabelo,
  *    limpou o rosto, ficou. "Obrigada por segurar o meu cabelo." Ela contou que o Kaito foi educado no portão.
  *    O Blake chamou táxi e pagou. Trégua (não amizade ainda): "Eu ainda acho que você é baixinha demais pra ele."
- *  • O REN veio. Ficou no canto, sem copo, uma música (Hana cantando "Depois da Chuva"). Olhou pra ela, pro Kaito,
- *    e saiu pela porta de vidro. Sem xadrez, sem mensagem.
+ *  • O REN veio. Ficou no canto, sem copo, uma música (Hana cantando "Depois da Chuva"). Saiu pela porta de vidro.
+ *    A SN foi atrás até o portão: "Você não é o mesmo de antes... pode fazer amizade e namorar com quem quiser...
+ *    não precisa ter medo de chegar perto... mas se continuar assim, só vai afastar todo mundo." Ren: "Eu não tenho medo."
+ *    / "Então por que você fica sempre no canto?" / "...Boa festa." Na esquina, ele olhou pra trás pra casa cheia.
  *  • RYUJI: meia lata, poeta da lua ("dourada de luz"). Pulou na piscina pra "resgatar" o Victor na parte rasa.
  *    Rota Ryuji: declarou "sem lata" no jardim.
  *  • VICTOR: caiu na piscina sóbrio. Verdade: "quem você salvaria primeiro de um incêndio?" (a SN: a Hana, por
