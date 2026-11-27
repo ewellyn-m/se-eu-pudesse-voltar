@@ -321,15 +321,24 @@ const Capitulos = [
     pagina: "src/html/capitulo33.html",
     capa: "src/imagens/cenarios/Garagem.png",
     descricao: "Uma segunda normal. Até as nove da noite, quando chega uma mensagem com uma palavra só: \"Desce.\""
+  },
+  {
+    id: "capitulo34",
+    numero: 34,
+    titulo: "Dia do inspetor",
+    subtitulo: "",
+    pagina: "src/html/capitulo34.html",
+    capa: "src/imagens/cenarios/corredor.jpg",
+    descricao: "Um inspetor geral, um cachorro fugido, um armário pequeno demais e um chão molhado. E cinco meninos no mesmo dia."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 34,
-  titulo: "Capítulo 34",
+  numero: 35,
+  titulo: "Capítulo 35",
   capa: "src/imagens/cenarios/quarto.png",
-  descricao: "\"Vem, a gente tem que ir. Agora. Larga isso aí.\""
+  descricao: "Digitando... e nada."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);
