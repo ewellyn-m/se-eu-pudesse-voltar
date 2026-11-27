@@ -348,15 +348,24 @@ const Capitulos = [
     pagina: "src/html/capitulo36.html",
     capa: "src/imagens/cenarios/clube-de-leitura.png",
     descricao: "Dez páginas para amanhã, um yakisoba sem cenoura e um lápis partido ao meio."
+  },
+  {
+    id: "capitulo37",
+    numero: 37,
+    titulo: "Gotas de chocolate",
+    subtitulo: "",
+    pagina: "src/html/capitulo37.html",
+    capa: "src/imagens/cenarios/cozinha.png",
+    descricao: "Quatro e meia da manhã, farinha no teto e sete cookies tortos. São meus."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 37,
-  titulo: "Capítulo 37",
-  capa: "src/imagens/cenarios/frente-casa-sn.png",
-  descricao: "Amanhã. Sete horas. No hall. Eu falo."
+  numero: 38,
+  titulo: "Capítulo 38",
+  capa: "src/imagens/cenarios/esquina-loja-de-lamen.png",
+  descricao: "Sábado. A lojinha abre às dez. O forno é de verdade."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);
