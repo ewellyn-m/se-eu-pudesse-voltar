@@ -58,7 +58,7 @@ Roteiro.registrar("capitulo38", {
     c1_mae_teto: { quem: "mae", texto: "Hm. Ontem ele limpou o teto muito bem. Melhor que você. Diz pra ele que ele está liberado de lavar louça aqui pro resto da vida.", proxima: "c1_11" },
     c1_11: { quem: "mae", texto: "Leva um casaco. E não deixa ele te ensinar a cortar cebola. Você vai cortar o dedo.", proxima: "c1_12" },
     c1_12: { cenario: "frente-casa-sn", transicao: "tempo", sprite: null, tipo: "narracao", texto: "O celular vibra. “Tô embaixo, desce.” Ela desce os três degraus do hall devagar, pisando em cima da fita preta, com a farinha abraçada no peito.", proxima: "c1_13" },
-    c1_13: { tipo: "narracao", sprite: "kaito", texto: "Hoje ele não está de uniforme. Está de jaqueta preta, camiseta branca e calça jeans, com o cabelo meio molhado, como quem saiu do banho com pressa. Ela nunca viu ele sem uniforme num dia de sol. Ela fica parada no último degrau um segundo a mais do que precisa.", proxima: "c1_14" },
+    c1_13: { tipo: "narracao", sprite: "kaito", texto: "Ele está no pé dos três degraus, com o capacete vermelho no braço e o cabelo meio molhado, como quem saiu do banho com pressa. Ela fica parada no último degrau um segundo a mais do que precisa.", proxima: "c1_14" },
     c1_14: { quem: "kaito", texto: "...Você trouxe farinha.", proxima: "c1_15" },
     c1_15: { quem: "eu", texto: "Fechada. E uma tesoura. Pra abrir.", proxima: "c1_16" },
     c1_16: { tipo: "narracao", texto: "Ele olha para a tesoura na mão dela. Depois para ela. E ri, de verdade, com os dentes, do jeito que ele quase nunca ri.", proxima: "c1_17" },
