@@ -312,6 +312,7 @@ const Cenarios = {
   "patio-apreendidos": { img: CEN + "Garagem.png", tom: "entardecer" }, // pátio de veículos apreendidos (provisório)
   "casa-takeo-noite": { img: CEN + "frente-casa-takeo.png", tom: "noite" }, // portão da casa do Takeo, à noite (capítulo 32)
   "quarto-hana":     { img: CEN + "quarto-hana.png" },                // quarto da Hana
+  "quarto-mio":      { img: CEN + "quarto.png", tom: "entardecer" },  // quarto da Mio (provisório: troque por quarto-mio.png)
   "escadaria-escola": { img: CEN + "escadaria-escola.png" },          // escada do bloco B
   "armario":         { img: CEN + "armario.png" },                    // armário de limpeza do bloco C
   "predio-abandonado": { img: CEN + "galpao.png", tom: "noite" },      // prédio inacabado do pai do Ren, por fora (provisório)

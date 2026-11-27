@@ -366,15 +366,24 @@ const Capitulos = [
     pagina: "src/html/capitulo38.html",
     capa: "src/imagens/cenarios/loja-lamen.png",
     descricao: "Doze minutos na frente do forno, um timer, um Ryuji e um torneio na lan house."
+  },
+  {
+    id: "capitulo39",
+    numero: 39,
+    titulo: "Um mês inteiro",
+    subtitulo: "",
+    pagina: "src/html/capitulo39.html",
+    capa: "src/imagens/cenarios/sala-de-aula.jpg",
+    descricao: "Um bento de três andares, suco de uva e trinta e um dias de chuva."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 39,
-  titulo: "Capítulo 39",
-  capa: "src/imagens/cenarios/frente-casa-sn.png",
-  descricao: "Faltou um centímetro. Um centímetro se resolve."
+  numero: 40,
+  titulo: "Capítulo 40",
+  capa: "src/imagens/cenarios/quarto.png",
+  descricao: "Eu conheço esse cheiro, e eu não sei de onde."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);
