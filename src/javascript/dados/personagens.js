@@ -204,6 +204,7 @@ const Personagens = {
   midorata: { nome: "Membro da Midorata", cor: "#3f5a3a", sprite: IMG + "membro-midorata.png" },
   amiga_victor: { nome: "Menina na porta", cor: "#b07aa8", sprite: IMG + "amiga-victor.png" },  // figurante do capítulo 9 (fliperama)
   professora: { nome: "Professora", cor: "#5c6f8a", sprite: IMG + "professora-quimica.png" },   // professora de química (fundo tirado de professora-de-queimica.png)
+  diretora: { nome: "Diretora", cor: "#6a5a7a", sprite: IMG + "diretora.png" },   // diretora da escola (capítulo 34)
   zelador: { nome: "Zelador", cor: "#7a7368", sprite: IMG + "zelador.png" },
   avo: { nome: "Avó", cor: "#8a4a5a", sprite: IMG + "avó-da-sn.png" },   // avó da SN (mãe da mãe)
   amiga_sayuri: { nome: "Amiga da Sayuri", cor: "#c48aa0", sprite: IMG + "amiga-sayuri.png" },
@@ -311,6 +312,8 @@ const Cenarios = {
   "patio-apreendidos": { img: CEN + "Garagem.png", tom: "entardecer" }, // pátio de veículos apreendidos (provisório)
   "casa-takeo-noite": { img: CEN + "frente-casa-takeo.png", tom: "noite" }, // portão da casa do Takeo, à noite (capítulo 32)
   "quarto-hana":     { img: CEN + "quarto-hana.png" },                // quarto da Hana
+  "escadaria-escola": { img: CEN + "escadaria-escola.png" },          // escada do bloco B
+  "armario":         { img: CEN + "armario.png" },                    // armário de limpeza do bloco C
   "predio-abandonado": { img: CEN + "galpao.png", tom: "noite" },      // prédio inacabado do pai do Ren, por fora (provisório)
   "predio-abandonado-topo": { img: CEN + "predio-abandonado.png" }  // último andar do prédio abandonado, à noite
 };
@@ -319,6 +322,11 @@ const Itens = {};
 
 /* Fotos rápidas no meio da cena (campo "foto" do roteiro): personagem com o cenário atrás */
 const Fotos = {
+  // cenas especiais (formato "cg"): a imagem aparece grande e fecha quando a cena acaba
+  "kaito-sn-34": { img: CEN + "kaito-sn-34.png", formato: "cg" },
+  "takeo-sn-34": { img: CEN + "takeo-sn-34.png", formato: "cg" },
+  "victor-sn-34": { img: CEN + "victor-sn-34.png", formato: "cg" },
+  "blake-sn-34": { img: CEN + "blake-sn-34.png", formato: "cg" },
   "sn-festival": { img: IMG + "Sn-festival.png", fundo: CEN + "festival.png" },
   caramelo: { img: IMG + "caramelo.png" },                                   // a foto já tem fundo próprio
   "takeo-sn": { img: IMG + "foto-takeo-sn.png", formato: "horizontal" },

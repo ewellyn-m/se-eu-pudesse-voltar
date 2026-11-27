@@ -118,6 +118,22 @@
     border-bottom-width: 36px;
 }
 
+/* Cena especial (Fotos com formato: "cg"): a imagem aparece grande, reta, e fecha quando a cena acaba */
+.item.foto.cg {
+    width: auto;
+    height: min(72%, 680px);
+    max-width: 92%;
+    aspect-ratio: auto;
+    object-fit: contain;
+    border: 8px solid #fffaf7;
+    border-radius: 6px;
+    top: 40%;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, .55);
+}
+.item.foto.cg.visivel {
+    transform: translate(-50%, -50%) scale(1);
+}
+
 .area-clique {
     position: absolute;
     inset: 0;

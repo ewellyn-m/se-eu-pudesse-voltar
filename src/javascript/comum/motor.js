@@ -226,12 +226,14 @@ const Motor = (() => {
     if (foto) {
       el.item.classList.add("foto");
       el.item.classList.toggle("horizontal", foto.formato === "horizontal");
+      el.item.classList.toggle("cg", foto.formato === "cg");
       el.item.style.backgroundImage = foto.fundo ? `url("${foto.fundo}")` : "";
       el.item.src = foto.img;
       el.item.classList.add("visivel");
     } else if (cena.item) {
       el.item.classList.remove("foto");
       el.item.classList.remove("horizontal");
+      el.item.classList.remove("cg");
       el.item.style.backgroundImage = "";
       el.item.src = Itens[cena.item];
       el.item.classList.add("visivel");
