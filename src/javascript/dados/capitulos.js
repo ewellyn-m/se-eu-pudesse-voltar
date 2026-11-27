@@ -375,15 +375,24 @@ const Capitulos = [
     pagina: "src/html/capitulo39.html",
     capa: "src/imagens/cenarios/sala-de-aula.jpg",
     descricao: "Um bento de três andares, suco de uva e trinta e um dias de chuva."
+  },
+  {
+    id: "capitulo40",
+    numero: 40,
+    titulo: "Casa grande demais",
+    subtitulo: "",
+    pagina: "src/html/capitulo40.html",
+    capa: "src/imagens/cenarios/sala-reina.png",
+    descricao: "A avó viajou, a casa é da Reina e a festa vai até o céu clarear."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 40,
-  titulo: "Capítulo 40",
-  capa: "src/imagens/cenarios/quarto.png",
-  descricao: "Eu conheço esse cheiro, e eu não sei de onde."
+  numero: 41,
+  titulo: "Capítulo 41",
+  capa: "src/imagens/cenarios/frente-casa-reina.png",
+  descricao: "Eu voltei doze anos. Eu também estou esperando alguém?"
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);

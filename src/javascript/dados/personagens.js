@@ -313,6 +313,11 @@ const Cenarios = {
   "casa-takeo-noite": { img: CEN + "frente-casa-takeo.png", tom: "noite" }, // portão da casa do Takeo, à noite (capítulo 32)
   "quarto-hana":     { img: CEN + "quarto-hana.png" },                // quarto da Hana
   "quarto-mio":      { img: CEN + "quarto.png", tom: "entardecer" },  // quarto da Mio (provisório: troque por quarto-mio.png)
+  "casa-reina-noite": { img: CEN + "sala-reina.png", tom: "noite" },       // sala da Reina, festa (capítulo 40)
+  "frente-casa-reina-noite": { img: CEN + "frente-casa-reina.png", tom: "noite" }, // portão e varanda da Reina, à noite
+  "piscina-reina":   { img: CEN + "frente-casa-reina.png", tom: "noite" },  // piscina da Reina (provisório: troque por piscina-reina.png)
+  "jardim-reina":    { img: CEN + "frente-casa-reina.png", tom: "noite" },  // jardim da Reina com luzinhas (provisório: troque por jardim-reina.png)
+  "banheiro-reina":  { img: CEN + "banheiro-escola.png", tom: "noite" },    // banheiro de cima da Reina (provisório: troque por banheiro-reina.png)
   "escadaria-escola": { img: CEN + "escadaria-escola.png" },          // escada do bloco B
   "armario":         { img: CEN + "armario.png" },                    // armário de limpeza do bloco C
   "predio-abandonado": { img: CEN + "galpao.png", tom: "noite" },      // prédio inacabado do pai do Ren, por fora (provisório)
