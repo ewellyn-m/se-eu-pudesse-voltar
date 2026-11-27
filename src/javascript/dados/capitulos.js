@@ -357,15 +357,24 @@ const Capitulos = [
     pagina: "src/html/capitulo37.html",
     capa: "src/imagens/cenarios/cozinha.png",
     descricao: "Quatro e meia da manhã, farinha no teto e sete cookies tortos. São meus."
+  },
+  {
+    id: "capitulo38",
+    numero: 38,
+    titulo: "Forno de verdade",
+    subtitulo: "",
+    pagina: "src/html/capitulo38.html",
+    capa: "src/imagens/cenarios/loja-lamen.png",
+    descricao: "Doze minutos na frente do forno, um timer, um Ryuji e um torneio na lan house."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 38,
-  titulo: "Capítulo 38",
-  capa: "src/imagens/cenarios/esquina-loja-de-lamen.png",
-  descricao: "Sábado. A lojinha abre às dez. O forno é de verdade."
+  numero: 39,
+  titulo: "Capítulo 39",
+  capa: "src/imagens/cenarios/frente-casa-sn.png",
+  descricao: "Faltou um centímetro. Um centímetro se resolve."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);
