@@ -46,11 +46,7 @@ Roteiro.registrar("capitulo40", {
   cenas: {
 
     /* =================== CENA 1 — O ANÚNCIO =================== */
-    c1_01: { roupa: "escolar", tipo: "narracao", cenario: "frente-casa-sn", transicao: "tempo", legenda: "Terça, 7h — Cena 1", sprite: "kaito", texto: "Terça-feira. Sete horas. Ela desce os três degraus da fita preta, e ele está lá, e fecha a fivela do capacete embaixo do queixo dela, devagar, como agora faz todo dia.", proxima: "c1_02" },
-    c1_02: { quem: "kaito", texto: "Você dormiu mal.", proxima: "c1_03" },
-    c1_03: { quem: "eu", texto: "Eu sonhei com um cheiro. Um perfume de flor. Eu conheço e não lembro de onde.", proxima: "c1_04" },
-    c1_04: { tipo: "narracao", texto: "Ele fica olhando para ela com os dedos ainda na fivela. Alguma coisa passa pelo rosto dele, rápida, como uma lembrança que ele também não consegue segurar. Depois some.", proxima: "c1_05" },
-    c1_05: { quem: "kaito", texto: "...Quando lembrar, me fala.", proxima: "o1_08" },
+    c1_01: { roupa: "escolar", tipo: "narracao", cenario: "frente-casa-sn", transicao: "tempo", legenda: "Terça, 7h — Cena 1", sprite: "kaito", texto: "Terça-feira. Sete horas. Ela desce os três degraus da fita preta, e ele está lá, e fecha a fivela do capacete embaixo do queixo dela, devagar, como agora faz todo dia.", proxima: "o1_08" },
     o1_08: { tipo: "narracao", cenario: "patio-fundos", transicao: "tempo", legenda: "Intervalo", sprite: "reina", texto: "No intervalo, no muro do bebedouro, a Reina sobe em cima do muro. Literalmente. De uniforme, com os sapatos caros, em pé, com as mãos na cintura, como quem vai fazer um discurso de presidente.", proxima: "o1_09" },
     o1_09: { quem: "reina", texto: "Atenção! A minha avó viajou hoje às seis da manhã! Com o grupo da terceira idade da igreja! Quatro dias! Praia! Ela levou três chapéus e um maiô de oncinha!", proxima: "o1_10" },
     o1_10: { quem: "reina", texto: "Amanhã é feriado! A casa é minha! Festa! Hoje! Oito da noite! Todo mundo! Piscina aberta! Eu pago tudo! Meus pais não olham a fatura!", proxima: "o1_11" },
@@ -240,12 +236,8 @@ Roteiro.registrar("capitulo40", {
     c5_09: { quem: "kaito", texto: "Eu odeio não ter visto. Eu sempre vejo tudo. Hoje eu estava de costas, e agora tem uma coisa na minha cabeça que eu não sei de onde veio.", proxima: "c5_10" },
     c5_10: { quem: "eu", texto: "Veio dela. Ela colocou aí.", proxima: "c5_11" },
     c5_11: { quem: "kaito", texto: "...Então eu vou tirar. Devagar. Mas eu vou.", proxima: "c5_12" },
-    c5_12: { tipo: "narracao", texto: "Eles ficam um tempo em silêncio, olhando o jardim lá embaixo. Ele conta da lojinha, que agora são vinte e três dias, e que o tio não fala disso mas fica olhando a parede do aviso de noite. Ela conta, sem contar tudo, que tem um menino de óculos na cabeça dela, um menino de uma vida que ela não lembra direito.", proxima: "c5_13" },
-    c5_13: { quem: "kaito", texto: "Menino de óculos?", proxima: "c5_14" },
-    c5_14: { quem: "eu", texto: "Uma lembrança. De quando eu tinha uns cinco anos. Pedaços.", proxima: "c5_15" },
-    c5_15: { tipo: "narracao", texto: "O Kaito fica parado. Muito parado. Ele abre a boca para falar alguma coisa e fecha. Ela vê. Ele também tem pedaços. Mas ele não fala dos dele.", proxima: "c5_16" },
-    c5_16: { quem: "kaito", texto: "...Às vezes a gente lembra de quem a gente era antes. E às vezes é melhor não lembrar de tudo de uma vez.", proxima: "c5_17" },
-    c5_17: { tipo: "narracao", texto: "Ele fala isso olhando para o jardim, e encosta o ombro no dela, e deixa. Depois de um tempo, ele levanta.", proxima: "c5_18" },
+    c5_12: { tipo: "narracao", texto: "Eles ficam um tempo em silêncio, olhando o jardim lá embaixo. Ele conta da lojinha, que agora são vinte e três dias, e que o tio não fala disso mas fica olhando a parede do aviso de noite.", proxima: "c5_17" },
+    c5_17: { tipo: "narracao", texto: "Ele fica olhando para o jardim, e encosta o ombro no dela, e deixa. Depois de um tempo, ele levanta.", proxima: "c5_18" },
     c5_18: { quem: "kaito", texto: "Eu vou pegar água pra você. Da garrafa fechada do Blake. Não sai daqui.", proxima: "c5_19" },
     c5_19: { tipo: "narracao", sprite: null, texto: "Ele vai. Ela fica sozinha na varanda, sentada no chão, encostada na parede, olhando as luzinhas lá embaixo. Um minuto. E aí ela ouve a porta de vidro da varanda abrir atrás dela. Devagar. Sem barulho de chaveiro.", proxima: "rn_01" },
 
