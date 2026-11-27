@@ -330,15 +330,24 @@ const Capitulos = [
     pagina: "src/html/capitulo34.html",
     capa: "src/imagens/cenarios/corredor.jpg",
     descricao: "Um inspetor geral, um cachorro fugido, um armário pequeno demais e um chão molhado. E cinco meninos no mesmo dia."
+  },
+  {
+    id: "capitulo35",
+    numero: 35,
+    titulo: "Serena",
+    subtitulo: "",
+    pagina: "src/html/capitulo35.html",
+    capa: "src/imagens/cenarios/portao-escola.png",
+    descricao: "Um segundo no hall que ninguém comenta. E uma menina do segundo ano que quer saber o que você é dele."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 35,
-  titulo: "Capítulo 35",
+  numero: 36,
+  titulo: "Capítulo 36",
   capa: "src/imagens/cenarios/quarto.png",
-  descricao: "Digitando... e nada."
+  descricao: "Um segundo. Ainda."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);

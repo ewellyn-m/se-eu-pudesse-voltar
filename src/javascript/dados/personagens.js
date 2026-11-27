@@ -90,7 +90,7 @@ const Personagens = {
 
   /* ---------- fora do capítulo 1 ---------- */
 
-  Serena: {
+  serena: {
     nome: "Serena", grupo: "outros", cor: "#a14141",
     papel: "",
     retrato: IMG + "serena-Retrato.png", corpo: IMG + "serena.png", sprite: IMG + "serena.png",
