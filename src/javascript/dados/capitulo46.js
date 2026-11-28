@@ -203,7 +203,7 @@ Roteiro.registrar("capitulo46", {
     c4_20: { sprite: "mio", quem: "mio", texto: "Número seis! Ela é da minha sala! Ninguém sabia que ela ia se inscrever! Nem eu! A Akane!", proxima: "c4_21" },
     c4_21: { sprite: "akane", tipo: "narracao", texto: "A Akane sobe no palco. Pequena. Com as mãos tremendo no microfone. A quadra faz aquele silêncio educado de quem não espera muita coisa. O Takeo aperta um botão. Uma música lenta começa a tocar.", proxima: "c4_22" },
     c4_22: { tipo: "narracao", texto: "E a Akane canta. E a quadra inteira para.", proxima: "c4_23" },
-    c4_23: { tipo: "narracao", texto: "A voz dela é limpa, grande, maior do que ela, como se viesse de uma pessoa muito mais alta. Ninguém conversa. Ninguém tira foto. A menina das colheres coloca a mão no peito. A Mio, no canto do palco, fica com a boca aberta. O Ren, na arquibancada, levanta os olhos do livro.", proxima: "c4_24" },
+    c4_23: { tipo: "narracao", texto: "A voz dela é limpa, grande, maior do que ela, como se viesse de uma pessoa muito mais alta. Ninguém conversa. Ninguém tira foto. A menina das colheres coloca a mão no peito. A Mio, no canto do palco, fica com a boca aberta. Só o Ren, na arquibancada, não olha para o palco. Ele está olhando para a SN.", proxima: "c4_24" },
     c4_24: { tipo: "narracao", texto: "Quando ela acaba, tem um segundo de silêncio. E depois a quadra inteira levanta.", proxima: "c4_25" },
     c4_25: { tipo: "pensamento", texto: "A Akane. A Akane quieta, que senta do lado do Ren e nunca fala nada. Ela estava guardando isso esse tempo todo.", proxima: "c4_26" },
     c4_26: { sprite: "mio", quem: "mio", texto: "Eu... eu estou chorando no microfone, desculpa. Gente. GENTE. A Akane!", proxima: "c4_27" },
@@ -303,10 +303,8 @@ Roteiro.registrar("capitulo46", {
     c6_23: { tipo: "pensamento", texto: "Mas a escola inteira viu ele subir. E a escola inteira tem foto dela no ombro dele. Amanhã ninguém vai lembrar que ele não cantou. Só vão lembrar da foto.", proxima: "c6_24" },
     c6_24: { tipo: "pensamento", texto: "Ela ganhou essa. Sem falar uma palavra pra mim. Ela ganhou.", proxima: "c6_25" },
     c6_25: { quem: "mio", sprite: "mio", texto: "E... o vencedor da Feira de Talentos, pela votação dos professores... é a AKANE!", proxima: "c6_26" },
-    c6_26: { tipo: "narracao", sprite: "akane", texto: "A quadra levanta de novo. A Akane sobe no palco tremendo, chorando, segurando um troféu de plástico dourado que alguém comprou na papelaria. Ela olha para a plateia, procurando alguém. Acha. A SN segue o olhar dela até a arquibancada.", proxima: "c6_27" },
-    c6_27: { sprite: "ren", tipo: "narracao", texto: "O Ren. Em pé, na última fila da arquibancada, com o livro fechado debaixo do braço. Ele não está aplaudindo. Mas ele faz que sim, uma vez, devagar, para a Akane. E a Akane sorri para ele como se aquele sim valesse mais que o troféu.", proxima: "c6_28" },
-    c6_28: { tipo: "pensamento", texto: "...Desde quando a Akane e o Ren?", proxima: "c6_29" },
-    c6_29: { sprite: null, tipo: "narracao", texto: "Ela não tem tempo de pensar nisso. O celular vibra no bolso.", proxima: "c6_30" },
+    c6_26: { tipo: "narracao", sprite: "akane", texto: "A quadra levanta de novo. A Akane sobe no palco tremendo, chorando, segurando um troféu de plástico dourado que alguém comprou na papelaria. A quadra inteira aplaude. A SN aplaude também, de pé, com cuidado para não bater palma forte demais.", proxima: "c6_29" },
+    c6_29: { sprite: null, tipo: "narracao", texto: "O celular vibra no bolso.", proxima: "c6_30" },
     c6_30: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Eu fui pro estacionamento. Eu não aguento a quadra agora.", proxima: "c6_31" },
     c6_31: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Eu falei pra ela que foi a última vez. No palco. Eu falei baixo. Eu não sei se ela ouviu.", proxima: "c6_32" },
     c6_32: { tipo: "pensamento", texto: "Ela ouviu. Ela sempre ouve. Ela só escolhe o que vai lembrar.", proxima: "c7_01" },
@@ -434,7 +432,7 @@ Roteiro.registrar("capitulo46", {
     f_04: { tipo: "pensamento", texto: "E a Serena no palco, com a cabeça no ombro dele, e a escola inteira gritando “casal”. Ela não precisou me falar nada. Ela só subiu num palco e esperou ele não saber dizer não.", proxima: "f_05" },
     f_05: { tipo: "pensamento", texto: "Ele subiu. Ele não cantou. Ele procurou por mim. Ele tirou ela do ombro. Ele desceu sozinho.", proxima: "f_06" },
     f_06: { tipo: "pensamento", texto: "Eu não sei se isso conta como perder ou como ganhar. Eu acho que conta como ele ainda não ter decidido.", proxima: "f_07" },
-    f_07: { tipo: "narracao", texto: "Ela vira de lado. Lembra da Akane procurando alguém na arquibancada. Lembra do Ren fazendo que sim, devagar, uma vez. E pensa, antes de dormir, que tem muita coisa acontecendo na escola que ela não está vendo.", proxima: "ep_fim" },
+    f_07: { tipo: "narracao", texto: "Ela vira de lado. Lembra da Akane com o troféu de plástico, chorando. Lembra da cadeira virando estrela-do-mar. E dorme antes de terminar a lista.", proxima: "ep_fim" },
 
     // Fim do Capítulo 46 (crie a entrada "capitulo46" em dados/capitulos.js).
     ep_fim: { fim: "capitulo46" }
@@ -450,7 +448,7 @@ Roteiro.registrar("capitulo46", {
  *    ESTÁ NA ATA!" — "A ata não existe. Eu inventei agora. De nada." O Blake e a Hana viram a mão dela (rota Blake).
  *  • Nº 4 — RYUJINI (mágico) + BLAKE (assistente de lenço vermelho, "contrato num guardanapo"). Não desapareceu: "...Eu desapareci?"
  *  • Nº 5 — VICTOR: imitações (inspetor, professora, tio da cantina, Ryuji no bebedouro, Caramelo). Cara do Caramelo só pra ela.
- *  • Nº 6 — AKANE canta e VENCE. Ela procurou o REN na arquibancada; ele fez que sim. "Desde quando a Akane e o Ren?"
+ *  • Nº 6 — AKANE canta e VENCE.
  *  • Nº 12 — DUETO: a SERENA inscreveu "Serena & Kaito" sem perguntar. "Eu não me inscrevi." / "Você não vai me deixar sozinha
  *    no palco, vai?" A quadra gritou o nome dele. ELE SUBIU. Não cantou, não pegou a mão dela, ficou procurando a SN na plateia.
  *    No fim, a Serena encostou a cabeça no ombro dele (fotos, "CASAL!", "BEIJA!"). Ele tirou ela do ombro, falou baixo que
