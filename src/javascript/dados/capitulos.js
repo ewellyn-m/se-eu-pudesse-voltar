@@ -447,15 +447,24 @@ const Capitulos = [
     pagina: "src/html/capitulo47.html",
     capa: "src/imagens/cenarios/frente-casa-sn.png",
     descricao: "Um ultimato às sete, um armário torto e um pedido feito longe da escola."
+  },
+  {
+    id: "capitulo48",
+    numero: 48,
+    titulo: "Arranhões",
+    subtitulo: "",
+    pagina: "src/html/capitulo48.html",
+    capa: "src/imagens/cenarios/lanhouse.png",
+    descricao: "Três meninos arranhados, um líder sem nenhum arranhão e uma calçada vazia."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 48,
-  titulo: "Capítulo 48",
-  capa: "src/imagens/cenarios/quarto.png",
-  descricao: "Sábado. Quase não é resposta."
+  numero: 49,
+  titulo: "Capítulo 49",
+  capa: "src/imagens/cenarios/frente-casa-sn.png",
+  descricao: "Domingo. Sete da noite. A resposta inteira."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);

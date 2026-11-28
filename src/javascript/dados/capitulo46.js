@@ -299,21 +299,21 @@ Roteiro.registrar("capitulo46", {
     c6_19: { tipo: "narracao", sprite: null, texto: "A quadra explode. “AAAAWN.” Assobios. Alguém grita “CASAL!”. Outra pessoa grita “BEIJA!”. As amigas da Serena tiram foto atrás de foto. O flash pisca. O Kaito fica parado, com a Serena no ombro, com a cara de quem está sendo atropelado em câmera lenta.", proxima: "c6_20" },
     c6_20: { tipo: "narracao", texto: "Ele tira a Serena do ombro. Devagar. Sem empurrar. Só tira, segurando ela pelos dois braços e colocando ela em pé, como quem endireita uma placa. Fala alguma coisa baixo, que ninguém ouve. E desce do palco sozinho, pela lateral, sem olhar para ninguém.", proxima: "c6_21" },
     c6_21: { tipo: "narracao", texto: "A Serena fica no palco sozinha. Sorrindo. Acenando. Como se tivesse sido o plano desde o começo. E talvez tenha sido.", proxima: "c6_22" },
-    c6_22: { tipo: "pensamento", texto: "Ele subiu. Ele não cantou. Ele não pegou a mão dela. Ele tirou ela do ombro. Ele desceu sozinho.", proxima: "c6_23" },
-    c6_23: { tipo: "pensamento", texto: "Mas a escola inteira viu ele subir. E a escola inteira tem foto dela no ombro dele. Amanhã ninguém vai lembrar que ele não cantou. Só vão lembrar da foto.", proxima: "c6_24" },
-    c6_24: { tipo: "pensamento", texto: "Ela ganhou essa. Sem falar uma palavra pra mim. Ela ganhou.", proxima: "c6_25" },
+    c6_22: { tipo: "pensamento", texto: "Ele subiu. Ele não cantou. Ele não pegou a mão dela, mas ainda assim, ele subiu", proxima: "c6_23" },
+    c6_23: { tipo: "pensamento", texto: "A escola inteira viu ele subir. E a escola inteira tem foto dela no ombro dele. Amanhã ninguém vai lembrar que ele não cantou. Só vão lembrar da foto.", proxima: "c6_24" },
+    c6_24: { tipo: "pensamento", texto: "Ela ganhou essa, sem falar uma palavra pra mim. Ela ganhou...", proxima: "c6_25" },
     c6_25: { quem: "mio", sprite: "mio", texto: "E... o vencedor da Feira de Talentos, pela votação dos professores... é a AKANE!", proxima: "c6_26" },
-    c6_26: { tipo: "narracao", sprite: "akane", texto: "A quadra levanta de novo. A Akane sobe no palco tremendo, chorando, segurando um troféu de plástico dourado que alguém comprou na papelaria. A quadra inteira aplaude. A SN aplaude também, de pé, com cuidado para não bater palma forte demais.", proxima: "c6_29" },
+    c6_26: { tipo: "narracao", sprite: "akane", texto: "A quadra levanta de novo. A Akane sobe no palco tremendo, segurando um troféu de plástico dourado que alguém comprou na papelaria. A quadra inteira aplaude. A SN aplaude também, de pé, com cuidado para não bater palma forte demais.", proxima: "c6_29" },
     c6_29: { sprite: null, tipo: "narracao", texto: "O celular vibra no bolso.", proxima: "c6_30" },
     c6_30: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Eu fui pro estacionamento. Eu não aguento a quadra agora.", proxima: "c6_31" },
     c6_31: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Eu falei pra ela que foi a última vez. No palco. Eu falei baixo. Eu não sei se ela ouviu.", proxima: "c6_32" },
-    c6_32: { tipo: "pensamento", texto: "Ela ouviu. Ela sempre ouve. Ela só escolhe o que vai lembrar.", proxima: "c7_01" },
+    c6_32: { tipo: "pensamento", texto: "Ela ouviu. Ela sempre ouve, ela só escolhe o que vai lembrar.", proxima: "c7_01" },
 
     /* =================== CENA 7 — DEPOIS DA FEIRA =================== */
     c7_01: { tipo: "narracao", cenario: "saida-colegio", transicao: "tempo", legenda: "Saída — Cena 7", sprite: null, texto: "Na saída, todo mundo está falando de três coisas. A Akane. O Blake que não desapareceu. E o casal do dueto. Ela ouve “casal do dueto” sete vezes até chegar no portão. Ela conta.", proxima: "c7_02" },
     c7_02: { tipo: "narracao", texto: "Ninguém fala da mesa de ferro. A mesa de ferro já virou licitação.", proxima: "c7_03" },
     c7_03: { tipo: "narracao", sprite: "kaito", texto: "Do outro lado da rua, a moto. O Kaito sentado nela, sem capacete, olhando para o chão. Sozinho. A Serena não está em nenhum lugar. As amigas dela também não.", proxima: "c7_04" },
-    c7_04: { tipo: "narracao", texto: "Ele levanta a cabeça quando ela sai. Não levanta da moto. Não estende o capacete. Ele só olha. Com a cara de quem perdeu alguma coisa e não sabe onde.", proxima: "c7_esc6" },
+    c7_04: { tipo: "narracao", texto: "Ele levanta a cabeça quando ela sai. Não levanta da moto. Não estende o capacete. Ele só olha, com a cara de quem perdeu alguma coisa e não sabe onde.", proxima: "c7_esc6" },
 
     // ▶ ESCOLHA 6 — Depois da feira
     c7_esc6: { escolhas: [
@@ -345,19 +345,19 @@ Roteiro.registrar("capitulo46", {
 
     // ---------- Rota Kaito ----------
     rk_01: { roupa: null, tipo: "narracao", cenario: "quarto-sn-noite", transicao: "tempo", legenda: "Quinta, 22h", sprite: null, texto: "Dez da noite. A rede de fofoca está cheia de foto. A Serena com a cabeça no ombro dele. Em todos os ângulos. Ela não abre nenhuma. Mas vê as miniaturas passando, uma atrás da outra.", proxima: "rk_02" },
-    rk_02: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Eu não sei cantar. Mas eu vou te falar uma coisa que eu ia cantar, se eu soubesse.", proxima: "rk_03" },
+    rk_02: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Oi...", proxima: "rk_03" },
     rk_03: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "No palco, eu fiquei procurando você o tempo inteiro. Você estava numa cadeira quebrando. Foi a única coisa que eu vi a música inteira.", proxima: "rk_esc" },
     rk_esc: { escolhas: [
       { texto: "A. “Eu vi você procurando.”", proxima: "rk_a1", pontos: { kaito: 3 }, flags: ["Vi_procurando"] },
       { texto: "B. “A escola inteira viu ela no seu ombro. Ninguém viu você procurando.”", proxima: "rk_b1", pontos: { kaito: 2 }, flags: ["Ninguem_viu"] },
-      { texto: "C. “Fala mais alto da próxima vez, Kaito. Pra ela. Não pra mim.”", proxima: "rk_c1", pontos: { kaito: 3 }, flags: ["Fala_alto"] }
+      { texto: "C. “Pelo jeito você ja tomou sua decisão”", proxima: "rk_c1", pontos: { kaito: 3 }, flags: ["Fala_alto"] }
     ]},
     rk_a1: { quem: "mensagem", rotulo: "Mensagem — SN", texto: "Eu vi você procurando.", proxima: "rk_a2" },
     rk_a2: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Então valeu alguma coisa. Pelo menos uma pessoa viu o que aconteceu de verdade.", proxima: "r_fim" },
     rk_b1: { quem: "mensagem", rotulo: "Mensagem — SN", texto: "A escola inteira viu ela no seu ombro. Ninguém viu você procurando.", proxima: "rk_b2" },
     rk_b2: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Eu sei. Eu fico deixando ela escrever a história, e eu só fico parado do lado. Eu tenho que parar de ficar parado.", proxima: "r_fim" },
-    rk_c1: { quem: "mensagem", rotulo: "Mensagem — SN", texto: "Fala mais alto da próxima vez, Kaito. Pra ela. Não pra mim.", proxima: "rk_c2" },
-    rk_c2: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Tá. Mais alto. Pra ela. Amanhã. Eu prometo. E eu estou parando de prometer coisa que eu não faço. Então dessa vez é sério.", proxima: "r_fim" },
+    rk_c1: { quem: "mensagem", rotulo: "Mensagem — SN", texto: "Pelo jeito você ja tomou sua decisão", proxima: "rk_c2" },
+    rk_c2: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Amanhã...", proxima: "r_fim" },
 
     // ---------- Rota Takeo ----------
     rt_01: { roupa: null, tipo: "narracao", cenario: "quarto-sn-noite", transicao: "tempo", legenda: "Quinta, 20h", sprite: null, texto: "Às oito, o Takeo manda uma mensagem.", proxima: "rt_02" },
@@ -427,11 +427,11 @@ Roteiro.registrar("capitulo46", {
     /* =================== FIM =================== */
     // (todas as rotas continuam aqui)
     r_fim: { roupa: null, tipo: "narracao", cenario: "quarto-sn-noite", transicao: "tempo", legenda: "Quinta, 23h30", sprite: null, texto: "Quase meia-noite. Ela faz a lista de novo, no escuro.", proxima: "f_02" },
-    f_02: { tipo: "pensamento", texto: "Uma mesa de ferro. Uma cadeira de plástico. Um pedaço do muro do bebedouro. Um menino do segundo ano com uma cambalhota, ou de bunda no chão, ou sem entender nada.", proxima: "f_03" },
+    f_02: { tipo: "pensamento", texto: "Uma mesa de ferro. Uma cadeira de plástico. Um pedaço do muro do bebedouro. Um menino do segundo ano com um vitoria falsa", proxima: "f_03" },
     f_03: { tipo: "pensamento", texto: "A Akane canta. O Blake não desaparece. A Hana inventa uma ata. A Mio chora no microfone.", proxima: "f_04" },
     f_04: { tipo: "pensamento", texto: "E a Serena no palco, com a cabeça no ombro dele, e a escola inteira gritando “casal”. Ela não precisou me falar nada. Ela só subiu num palco e esperou ele não saber dizer não.", proxima: "f_05" },
-    f_05: { tipo: "pensamento", texto: "Ele subiu. Ele não cantou. Ele procurou por mim. Ele tirou ela do ombro. Ele desceu sozinho.", proxima: "f_06" },
-    f_06: { tipo: "pensamento", texto: "Eu não sei se isso conta como perder ou como ganhar. Eu acho que conta como ele ainda não ter decidido.", proxima: "f_07" },
+    f_05: { tipo: "pensamento", texto: "Ele subiu...", proxima: "f_06" },
+    f_06: { tipo: "pensamento", texto: "Isso doi tanto...", proxima: "f_07" },
     f_07: { tipo: "narracao", texto: "Ela vira de lado. Lembra da Akane com o troféu de plástico, chorando. Lembra da cadeira virando estrela-do-mar. E dorme antes de terminar a lista.", proxima: "ep_fim" },
 
     // Fim do Capítulo 46 (crie a entrada "capitulo46" em dados/capitulos.js).

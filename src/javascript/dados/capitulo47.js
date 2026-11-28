@@ -47,7 +47,7 @@ Roteiro.registrar("capitulo47", {
     c1_02: { tipo: "pensamento", texto: "“Então decide.” Eu falei. Atrás da árvore, olhando na cara dele. E ele decidiu. Ele subiu.", proxima: "c1_03" },
     c1_03: { tipo: "pensamento", texto: "Ele subiu no palco com ela, depois de eu falar aquilo. Na frente da escola inteira. Ele ouviu, entendeu, e subiu mesmo assim.", proxima: "c1_04" },
     c1_04: { tipo: "pensamento", texto: "E ontem à noite eu fiquei deitada procurando desculpa pra ele. “Ele não cantou.” “Ele tirou ela do ombro.” Eu fiquei fazendo lista de desculpa. Como uma boba.", proxima: "c1_05" },
-    c1_05: { tipo: "pensamento", texto: "Chega. Eu tenho vinte e oito anos. Eu não vou ficar catando migalha de menino de moto.", proxima: "c1_06" },
+    c1_05: { tipo: "pensamento", texto: "Chega. Eu não vou ficar catando migalha...", proxima: "c1_06" },
     c1_06: { tipo: "narracao", texto: "Ela se arruma rápido. Desce às sete em ponto. Nem antes, nem depois. E ele está lá.", proxima: "c1_07" },
     c1_07: { roupa: "escolar", tipo: "narracao", cenario: "frente-casa-sn", transicao: "tempo", legenda: "Sexta, 7h", sprite: "kaito", texto: "No pé dos três degraus, com o capacete vermelho no braço. Com cara de quem não dormiu. Com cara de quem ensaiou alguma coisa a noite inteira e vai errar na primeira frase.", proxima: "c1_08" },
     c1_08: { quem: "kaito", texto: "SN, ontem, eu...", proxima: "c1_09" },
