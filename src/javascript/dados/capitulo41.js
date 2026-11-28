@@ -222,7 +222,27 @@ Roteiro.registrar("capitulo41", {
     c6_03: { tipo: "narracao", texto: "O Kaito fica parado, olhando para a moto, com uma cara estranha. Quando a SN chega, ele coloca o capacete nela, fecha a fivela. Mais rápido que de manhã. Os dedos não ficam no pescoço.", proxima: "c6_04" },
     c6_04: { tipo: "narracao", texto: "No primeiro sinal vermelho, ele não coloca a mão em cima da mão dela. No segundo, ele fala, sem virar a cabeça.", proxima: "c6_05" },
     c6_05: { quem: "kaito", texto: "A Serena disse uma coisa. Na saída.", proxima: "c6_06" },
-    c6_06: { quem: "eu", texto: "O quê?", proxima: "c6_07" },
+    c6_06: { quem: "eu", texto: "O quê?", proxima: "c6_cam_g" },
+    c6_cam_g: { caminhos: [
+      { flag: "Obrigada_Ren", proxima: "c6_07g" }
+    ], proxima: "c6_07" },
+
+    // Se o Kaito encontrou o Ren na varanda (ela foi gentil com o Ren)
+    c6_07g: { quem: "kaito", texto: "Que você e o Ren ficaram sozinhos na varanda muito tempo antes de eu subir. Que ela viu da escada. Que você estava sorrindo pra ele.", proxima: "c6_08g" },
+    c6_08g: { tipo: "pensamento", texto: "Eu não estava sorrindo. Eu falei obrigada. Ela pegou a única coisa gentil que eu fiz a noite inteira e virou do avesso. Ele viu o Ren lá, com os próprios olhos. Ela não precisou contar nada. Ela só colocou um “muito tempo” e um “sorrindo” em cima.", proxima: "c6_camg2" },
+    c6_camg2: { caminhos: [
+      { flag: "Contou_Ren_viu", proxima: "c6_sabia" }
+    ], proxima: "c6_eg1" },
+    c6_eg1: { quem: "kaito", texto: "Eu te perguntei na varanda. Você disse que ele já estava indo embora. Você não falou o que ele queria.", proxima: "c6_eg2" },
+    c6_eg2: { tipo: "narracao", texto: "Ele não fala com raiva. Ele fala baixo, olhando para o sinal vermelho, como quem coloca uma peça de quebra-cabeça e vê que não encaixa.", proxima: "c6_egesc" },
+    c6_egesc: { escolhas: [
+      { texto: "A. “Ele viu o que ela fez com o ponche. Ofereceu contar pra todo mundo. Eu disse obrigada, mas que não precisava. Foi isso que ela viu: eu falando obrigada.”", proxima: "c6_6a_2", pontos: { kaito: 3 }, flags: ["Contou_Ren_depois"] },
+      { texto: "B. “Eu não quis estragar a noite. Foi só isso.”", proxima: "c6_6b_2", pontos: { kaito: 1 }, flags: ["Meia_verdade_Ren"] },
+      { texto: "C. “Ela esperou um dia pra te contar isso no ouvido. Pensa por quê.”", proxima: "c6_egc1", pontos: { kaito: 2 }, flags: ["Pensa_por_que"] }
+    ]},
+    c6_egc1: { tipo: "narracao", texto: "Ele fica parado no sinal. Pensando. Ela sente pela respiração dele, pelas costas. O sinal abre.", proxima: "c6_egc2" },
+    c6_egc2: { quem: "kaito", texto: "...Você ainda não falou o que ele queria.", proxima: "c6_egc3" },
+    c6_egc3: { quem: "eu", texto: "Ele viu o ponche. Ofereceu contar. Eu disse obrigada, mas que não precisava. Só isso. Eu não quero nada dele.", proxima: "c6_6c_5" },
     c6_07: { quem: "kaito", texto: "Que ela viu o Ren saindo da varanda de cima, na festa. Pela escada dos fundos. Na hora que eu desci pra pegar água.", proxima: "c6_08" },
     c6_08: { tipo: "pensamento", texto: "Ela viu. Ou não viu, e alguém contou pra ela. E ela não usou isso comigo. Ela guardou. Ela esperou um dia. E colocou no ouvido dele, como quem não quer nada.", proxima: "c6_cam" },
     c6_cam: { caminhos: [
