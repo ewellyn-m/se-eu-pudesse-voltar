@@ -212,9 +212,10 @@ Roteiro.registrar("capitulo41", {
     c5_5c_3: { quem: "victor", texto: "Você é melhor que eu nisso. Você assustou até a mim. Três horas. Na garagem. Traz essa voz.", proxima: "c5_13" },
 
     // (todas as opções continuam aqui)
-    c5_13: { tipo: "narracao", sprite: "takeo:escolar", texto: "O Takeo aparece do lado deles, mancando menos, com a mochila no ombro bom.", proxima: "c5_14" },
-    c5_14: { quem: "takeo", sprite: "takeo:escolar", texto: "Placa? Eu ouvi placa. Eu sei fazer régua de letra com barbante e prego. Eu vi num vídeo. Eu posso ir? Eu tenho um braço, mas eu tenho opinião.", proxima: "c5_15" },
-    c5_15: { quem: "victor", texto: "Um braço e opinião. Contratado. Três horas.", proxima: "c6_01" },
+    c5_13: { tipo: "narracao", sprite: "takeo:escolar", texto: "O Takeo aparece do lado deles, com a mochila no ombro bom.", proxima: "c5_14" },
+    c5_14: { quem: "takeo", sprite: "takeo:escolar", texto: "Placa? Eu ouvi placa. Eu queria ir. Mas hoje é o raio-x do braço. A minha avó marcou faz um mês. Se eu faltar, ela me engessa de novo.", proxima: "c5_14b" },
+    c5_14b: { tipo: "narracao", texto: "Ele olha para a SN. Depois para o Victor. Depois para a SN de novo. Um segundo a mais do que precisava.", proxima: "c5_15" },
+    c5_15: { quem: "victor", texto: "Então somos dois. Eu e a artista. Três horas. Não atrasa, que tinta seca.", proxima: "c6_01" },
 
     /* =================== CENA 6 — A SAÍDA (Kaito e Serena) =================== */
     c6_01: { tipo: "narracao", cenario: "saida-colegio", transicao: "tempo", legenda: "Saída — Cena 6", sprite: "kaito", texto: "Na saída, o Kaito está encostado na moto no meio-fio, com o capacete vermelho no braço. A Serena passa do lado dele no caminho do portão, para um segundo, e fala alguma coisa baixinho, perto do ouvido dele, como quem conta um segredo pequeno. Depois sorri, acena para ele, e vai embora com as amigas.", proxima: "c6_02" },
@@ -281,7 +282,10 @@ Roteiro.registrar("capitulo41", {
     // (todas as opções continuam aqui)
     c6_09: { tipo: "narracao", cenario: "frente-casa-sn", transicao: "tempo", texto: "Na frente do prédio, ela desce. Devolve o capacete. Ele fica sentado na moto, olhando para ela.", proxima: "c6_10" },
     c6_10: { quem: "kaito", texto: "Hoje à tarde eu tenho que ajudar o tio. Na prefeitura de novo. Segunda tentativa do protocolo.", proxima: "c6_11" },
-    c6_11: { quem: "eu", texto: "Eu vou na garagem do Victor pintar a placa da oficina. Com o Takeo.", proxima: "c6_12" },
+    c6_11: { quem: "eu", texto: "Eu vou na garagem do Victor pintar a placa da oficina.", proxima: "c6_11b" },
+    c6_11b: { quem: "kaito", texto: "...Com o Takeo?", proxima: "c6_11c" },
+    c6_11c: { quem: "eu", texto: "O Takeo tem raio-x. Só eu e o Victor.", proxima: "c6_11d" },
+    c6_11d: { tipo: "narracao", texto: "Ele fica parado um segundo, com a mão no guidão. Depois faz que sim.", proxima: "c6_12" },
     c6_12: { quem: "kaito", texto: "Pinta reto. O Victor não sabe pintar reto.", proxima: "c6_13" },
     c6_13: { tipo: "narracao", texto: "Ele quase vai embora. Depois desliga a moto. Desce. E dá um passo até ela, no pé dos três degraus, e fica parado, perto, sem fazer nada. Só olhando.", proxima: "c6_14" },
     c6_14: { quem: "kaito", texto: "...Amanhã. Sete horas.", proxima: "c6_15" },
@@ -289,24 +293,30 @@ Roteiro.registrar("capitulo41", {
 
     /* =================== CENA 7 — A PLACA (Victor e Takeo) =================== */
     c7_01: { roupa: "fora", foto: "caramelo", tipo: "narracao", cenario: "quintal-victor", transicao: "tempo", legenda: "15h — Cena 7", sprite: null, texto: "Às três, a garagem do Victor. A porta de enrolar aberta, o rádio velho tocando, três motos desmontadas, o Caramelo dormindo em cima de um pneu. E, deitada em cima de dois cavaletes, no meio da garagem, uma tábua de madeira comprida, lixada, pintada de branco. A placa.", proxima: "c7_02" },
-    c7_02: { sprite: "victor", quem: "victor", texto: "Damas e cavalheiro de um braço só. A placa.", proxima: "c7_03" },
-    c7_03: { tipo: "narracao", sprite: "takeo:escolar", texto: "O Takeo chega mancando, com um rolo de barbante, uma caixinha de prego e uma régua de madeira, tudo dentro de uma sacola da avó. Ele estica o barbante de uma ponta da placa até a outra, com a mão boa, e prende com dois pregos. Uma linha reta perfeita.", proxima: "c7_04" },
-    c7_04: { quem: "takeo", sprite: "takeo:escolar", texto: "Linha guia. Assim a letra não sobe. A letra do Victor sobe. Eu vi o caderno dele.", proxima: "c7_05" },
+    c7_02: { sprite: "victor", quem: "victor", texto: "Dama. A placa. O Takeo me mandou um áudio de três minutos sobre linha guia com barbante. Eu não ouvi. Eu vou confiar no seu olho.", proxima: "c7_03" },
+    c7_03: { tipo: "narracao", texto: "Ele estica um barbante de uma ponta da placa até a outra, sozinho, e prende com dois pregos. Fica torto. Muito torto. Ela ri. Ele finge que foi de propósito. Depois os dois se ajoelham juntos no chão da garagem, um de cada lado do barbante, e esticam de novo, devagar, até ficar reto. As mãos dos dois no mesmo barbante.", proxima: "c7_04" },
+    c7_04: { quem: "victor", texto: "Pronto. Reto. O Takeo ia ficar orgulhoso. Não conta pra ele que eu precisei de ajuda.", proxima: "c7_05" },
     c7_05: { quem: "victor", texto: "A minha letra tem ambição. Ela quer subir na vida.", proxima: "c7_06" },
     c7_06: { tipo: "narracao", texto: "A SN pega o pincel fino e a lata de tinta azul. O Victor fica do lado, segurando a lata, sem pirulito, olhando para a placa branca como quem olha para um bebê recém-nascido.", proxima: "c7_07" },
     c7_07: { quem: "victor", texto: "O nome dela em cima. Grande. Embaixo, “Oficina”. Menor. E embaixo de tudo, bem pequenininho, no canto, “e filho”. Ela não sabe do “e filho”. É surpresa.", proxima: "c7_08" },
-    c7_08: { tipo: "narracao", texto: "Ela pinta. Devagar. Uma letra de cada vez, encostando no barbante do Takeo. O Takeo fica do outro lado, segurando a placa firme com a mão boa, para não balançar. O Victor fica no meio, segurando a lata, sem falar nada. O Victor sem falar nada por quarenta minutos.", proxima: "c7_09" },
+    c7_08: { tipo: "narracao", texto: "Ela pinta. Devagar. Uma letra de cada vez, encostando no barbante. Para alcançar o meio da placa, ela tem que se inclinar por cima da tábua, e a placa balança. O Victor larga a lata e segura a placa por trás dela, um braço de cada lado. Ela fica entre os braços dele. Ele fica quieto. O Victor quieto.", proxima: "c7_08b" },
+    c7_08b: { tipo: "pensamento", texto: "Ele está muito perto. Eu sinto a respiração dele no meu cabelo. Ele não fez nenhuma piada há cinco minutos. O Victor nunca fica cinco minutos sem piada.", proxima: "c7_08c" },
+    c7_08c: { tipo: "narracao", texto: "No “a” do nome da mãe dele, a mão dela escorrega. Um risco azul sobe pela bochecha dela. Ela vira, rindo, com o pincel no ar. E o rosto dele está ali, a um palmo do dela.", proxima: "c7_08d" },
+    c7_08d: { tipo: "narracao", texto: "Ele levanta a mão, devagar, e tira a tinta da bochecha dela com o polegar. Uma vez. Duas. Depois o polegar para. Fica ali. Ele está olhando para a boca dela. Ela vê. E por um segundo, um segundo inteiro, nenhum dos dois respira.", proxima: "c7_08e" },
+    c7_08e: { quem: "victor", texto: "...Ficou um pouco azul. Aqui.", proxima: "c7_08f" },
+    c7_08f: { tipo: "narracao", texto: "A voz dele sai baixa, sem nada de gatinha. E aí o Caramelo late para o portão, e os dois se afastam ao mesmo tempo, rápido demais, ele pegando a lata, ela olhando para a placa.", proxima: "c7_08g" },
+    c7_08g: { tipo: "narracao", texto: "Do outro lado da rua, atrás do muro da padaria, alguém abaixa um celular. Um barulho de chaveiro, baixinho, some na esquina. Ninguém na garagem vê. Ninguém na garagem ouve. Só o Caramelo continua olhando para o portão, rosnando baixo.", proxima: "c7_09" },
     c7_09: { tipo: "narracao", texto: "Quando ela termina o nome da mãe dele, ela para. O Victor fica olhando. Ele não fala nada. Ele só passa a mão no rosto, rápido, e vira de costas, e finge que está procurando alguma coisa na prateleira de ferramenta.", proxima: "c7_10" },
-    c7_10: { quem: "takeo", sprite: "takeo:escolar", texto: "...Victor, você está chorando?", proxima: "c7_11" },
+    c7_10: { quem: "eu", texto: "...Victor, você está chorando?", proxima: "c7_11" },
     c7_11: { quem: "victor", texto: "É a tinta. Tinta azul tem um gás. Um gás que faz chorar. É científico.", proxima: "c7_12" },
-    c7_12: { quem: "takeo", sprite: "takeo:escolar", texto: "Tinta à base de água não tem gás.", proxima: "c7_13" },
-    c7_13: { quem: "victor", texto: "Takeo. Você está despedido.", proxima: "c7_esc6" },
+    c7_12: { quem: "eu", texto: "Tinta à base de água não tem gás.", proxima: "c7_13" },
+    c7_13: { quem: "victor", texto: "Você andou demais com o Takeo. Isso é contagioso.", proxima: "c7_esc6" },
 
     // ▶ ESCOLHA 6 — A placa
     c7_esc6: { escolhas: [
       { texto: "A. Abraçar o Victor por trás, de lado, rápido. “Ficou bonita. Ela vai chorar também.”", proxima: "c7_6a_1", pontos: { victor: 3 }, flags: ["Abraco_placa"] },
       { texto: "B. Pintar o “e filho” no canto, bem caprichado, com uma estrelinha do lado.", proxima: "c7_6b_1", pontos: { victor: 3 }, flags: ["E_filho_estrela"] },
-      { texto: "C. Sujar a ponta do nariz do Takeo com tinta azul. “Agora você é da equipe de verdade.”", proxima: "c7_6c_1", pontos: { takeo: 3, victor: 1 }, flags: ["Nariz_azul_Takeo"] }
+      { texto: "C. Sujar a ponta do nariz dele com tinta azul. “Agora a gente está quite.”", proxima: "c7_6c_1", pontos: { victor: 3 }, flags: ["Nariz_azul_Victor"] }
     ]},
     c7_6a_1: { tipo: "narracao", texto: "Ela abraça o Victor de lado, rápido, por trás, com o pincel ainda na mão. Ele fica completamente parado, de costas, com uma chave de fenda na mão, olhando para a prateleira.", proxima: "c7_6a_2" },
     c7_6a_2: { quem: "eu", texto: "Ficou bonita. Ela vai chorar também.", proxima: "c7_6a_3" },
@@ -315,18 +325,50 @@ Roteiro.registrar("capitulo41", {
     c7_6b_2: { quem: "victor", texto: "Uma estrela. Por quê?", proxima: "c7_6b_3" },
     c7_6b_3: { quem: "eu", texto: "Porque o filho também brilha. Mesmo quando cai na piscina.", proxima: "c7_6b_4" },
     c7_6b_4: { tipo: "narracao", texto: "Ele levanta. Não faz piada. Pega o pirulito do bolso, olha para ele, e guarda de volta sem abrir.", proxima: "c7_14" },
-    c7_6c_1: { tipo: "narracao", texto: "Ela molha a ponta do dedo na tinta azul e encosta no nariz do Takeo. Ele fica parado, vesgo, olhando para o próprio nariz azul.", proxima: "c7_6c_2" },
-    c7_6c_2: { quem: "eu", texto: "Agora você é da equipe de verdade.", proxima: "c7_6c_3" },
-    c7_6c_3: { quem: "takeo", sprite: "takeo:escolar", texto: "...Eu tenho que ir pra casa assim? A minha avó vai achar que eu fui atacado de novo.", proxima: "c7_6c_4" },
-    c7_6c_4: { tipo: "narracao", texto: "O Victor ri tão alto que acorda o Caramelo, que pula do pneu e lambe o nariz azul do Takeo, e o Takeo grita, e cai sentado no chão da garagem, rindo, com o gesso para cima.", proxima: "c7_14" },
+    c7_6c_1: { tipo: "narracao", texto: "Ela molha a ponta do dedo na tinta azul e encosta no nariz dele. Ele fica parado, vesgo, olhando para o próprio nariz azul.", proxima: "c7_6c_2" },
+    c7_6c_2: { quem: "eu", texto: "Agora a gente está quite.", proxima: "c7_6c_3" },
+    c7_6c_3: { quem: "victor", texto: "...Quite. Tá. Mas eu tirei o seu com cuidado. Você me atacou.", proxima: "c7_6c_4" },
+    c7_6c_4: { tipo: "narracao", texto: "Ele ri, alto, e acorda o Caramelo de novo, que pula do pneu e lambe o nariz azul dele. E ele cai sentado no chão da garagem, rindo, e por um segundo o Victor de sempre volta. Por um segundo.", proxima: "c7_14" },
 
     // (todas as opções continuam aqui)
-    c7_14: { tipo: "narracao", transicao: "tempo", legenda: "17h", texto: "Às cinco, a placa está pronta. Secando nos cavaletes. O nome da mãe do Victor em azul, reto, encostado no barbante do Takeo. “Oficina” embaixo. E, no canto, “e filho”.", proxima: "c7_15" },
-    c7_15: { tipo: "narracao", texto: "Os três ficam sentados no chão da garagem, encostados na parede, olhando para a placa. O Caramelo no meio, dormindo de novo. O rádio velho tocando uma música antiga. Ninguém fala nada por um tempo. É bom.", proxima: "c7_16" },
-    c7_16: { quem: "victor", texto: "Sábado eu penduro. Em cima da porta da garagem. A minha mãe chega do trabalho às sete. Vocês têm que estar aqui. Os dois. Isso não é convite, é intimação.", proxima: "c7_17" },
-    c7_17: { quem: "takeo", sprite: "takeo:escolar", texto: "Eu venho. Eu trago a minha avó. Ela vai trazer bolo de caqui. Ela leva bolo de caqui pra tudo que é importante.", proxima: "c7_18" },
-    c7_18: { tipo: "narracao", sprite: null, texto: "O Victor olha para o Takeo. Depois para a SN. E faz uma coisa que ela nunca viu ele fazer: fica tímido. O Victor, que chama o bairro inteiro de gatinha, tímido no chão da própria garagem.", proxima: "c7_19" },
-    c7_19: { quem: "victor", texto: "...Ninguém nunca veio numa coisa minha. Nem aniversário. Eu não faço aniversário. Vai ser a primeira vez que tem gente.", proxima: "r_cam" },
+    c7_14: { tipo: "narracao", transicao: "tempo", legenda: "17h", texto: "Às cinco, a placa está pronta. Secando nos cavaletes. O nome da mãe do Victor em azul, reto, encostado no barbante. “Oficina” embaixo. E, no canto, “e filho”.", proxima: "c7_15" },
+    c7_15: { tipo: "narracao", texto: "Os dois ficam sentados no chão da garagem, encostados na parede, olhando para a placa. O Caramelo no meio, dormindo de novo. O rádio velho tocando uma música antiga. Ninguém fala nada por um tempo. Os ombros dos dois quase encostam. Quase.", proxima: "c7_16" },
+    c7_16: { quem: "victor", texto: "Sábado eu penduro. Em cima da porta da garagem. A minha mãe chega do trabalho às sete. Você tem que estar aqui. Traz o Takeo. Traz a avó dele. Isso não é convite, é intimação.", proxima: "c7_18" },
+    c7_18: { tipo: "narracao", sprite: null, texto: "Ele olha para ela. E faz uma coisa que ela nunca viu ele fazer: fica tímido. O Victor, que chama o bairro inteiro de gatinha, tímido no chão da própria garagem.", proxima: "c7_19" },
+    c7_19: { quem: "victor", texto: "...Ninguém nunca veio numa coisa minha. Nem aniversário. Eu não faço aniversário. Vai ser a primeira vez que tem gente.", proxima: "c7_20" },
+    c7_20: { tipo: "narracao", texto: "Na porta da garagem, quando ela vai embora, ele segura a porta de enrolar com uma mão, e fica parado, olhando para ela.", proxima: "c7_21" },
+    c7_21: { quem: "victor", texto: "Obrigado. Por ter vindo. Sozinha.", proxima: "c7_22" },
+    c7_22: { tipo: "pensamento", texto: "Sozinha. Ele falou “sozinha” como se fosse a parte mais importante.", proxima: "c8_01" },
+
+    /* =================== CENA 8 — A ESQUINA (Kaito) =================== */
+    c8_01: { tipo: "narracao", cenario: "rua-padaria", transicao: "tempo", legenda: "18h — Cena 8", sprite: "kaito", texto: "Na esquina da padaria, a moto vermelha parada no meio-fio. O Kaito, voltando da prefeitura com o tio, que já entrou na padaria. Ele está sentado na moto, com o celular na mão. Ele vê ela vindo. E não sorri.", proxima: "c8_02" },
+    c8_02: { quem: "eu", texto: "E a prefeitura?", proxima: "c8_03" },
+    c8_03: { quem: "kaito", texto: "Audiência. Daqui a duas semanas.", proxima: "c8_04" },
+    c8_04: { tipo: "narracao", texto: "Ele fala isso olhando para a bochecha dela. Para o resto de azul que ficou perto da orelha, que ela não viu no espelho da garagem. Ele não pergunta. Ele olha muito tempo para aquele azul.", proxima: "c8_05" },
+    c8_05: { quem: "kaito", texto: "...Pintou reto?", proxima: "c8_06" },
+    c8_06: { quem: "eu", texto: "Pintei. O nome da mãe dele. Ficou bonito. Ele chorou e disse que era gás da tinta.", proxima: "c8_07" },
+    c8_07: { tipo: "narracao", texto: "Ela ri. Ele não ri. O celular, na mão dele, acende sozinho, com a tela virada um pouco para ela. Uma notificação. Ela lê sem querer, de cabeça para baixo: “Serena enviou uma foto”. E, embaixo, a prévia: “achei que você devia saber 🤍”.", proxima: "c8_08" },
+    c8_08: { tipo: "narracao", texto: "Ele vira o celular para baixo, em cima da coxa. Rápido. E fica olhando para a rua.", proxima: "c8_09" },
+    c8_09: { tipo: "pensamento", texto: "Uma foto. Da Serena. De quê? Ele já tinha visto antes de eu chegar. Eu sei que ele já tinha visto, porque ele não sorriu.", proxima: "c8_esc" },
+    c8_esc: { escolhas: [
+      { texto: "A. “Kaito. O que a Serena te mandou?”", proxima: "c8_a1", pontos: { kaito: 1 }, flags: ["Perguntou_foto_Serena"] },
+      { texto: "B. Não perguntar. Tirar o azul da própria bochecha com a manga e esperar ele falar.", proxima: "c8_b1", pontos: {}, flags: ["Esperou_Kaito_falar"] },
+      { texto: "C. Encostar a mão no braço dele. “Você está estranho.”", proxima: "c8_c1", pontos: { kaito: 2 }, flags: ["Voce_esta_estranho"] }
+    ]},
+    c8_a1: { quem: "eu", texto: "Kaito. O que a Serena te mandou?", proxima: "c8_a2" },
+    c8_a2: { quem: "kaito", texto: "...Nada. Uma foto. Não é nada.", proxima: "c8_a3" },
+    c8_a3: { tipo: "narracao", texto: "Ele fala “não é nada” do mesmo jeito que falou “tá” na festa. Ela conhece esse jeito agora. É o jeito dele de guardar uma coisa que está doendo.", proxima: "c8_10" },
+    c8_b1: { tipo: "narracao", texto: "Ela não pergunta. Passa a manga na bochecha, devagar, tirando o azul. Ele acompanha a manga com os olhos. Quando ela abaixa o braço, ele desvia.", proxima: "c8_b2" },
+    c8_b2: { tipo: "narracao", texto: "Ela espera. Ele não fala. Um carro passa. Outro. A padaria fecha a porta de vidro. Ele não fala.", proxima: "c8_10" },
+    c8_c1: { tipo: "narracao", texto: "Ela encosta a mão no braço dele. Ele não tira. Mas também não vira.", proxima: "c8_c2" },
+    c8_c2: { quem: "eu", texto: "Você está estranho.", proxima: "c8_c3" },
+    c8_c3: { quem: "kaito", texto: "Eu tô cansado. Prefeitura cansa.", proxima: "c8_c4" },
+    c8_c4: { tipo: "pensamento", texto: "Não é a prefeitura. Ele saiu da prefeitura com uma audiência marcada. Hoje de manhã ele ficaria feliz com isso. Ele não está feliz.", proxima: "c8_10" },
+    c8_10: { tipo: "narracao", texto: "O tio sai da padaria com um saco de pão. Vê os dois. Fala oi para ela, com aquele olhar de quem procura um rosto. Sobe na garupa do sobrinho.", proxima: "c8_11" },
+    c8_11: { quem: "kaito", texto: "Amanhã. Sete horas.", proxima: "c8_12" },
+    c8_12: { tipo: "narracao", sprite: null, texto: "Ele liga a moto. Não espera ela responder. Não olha para trás na esquina. Ela fica parada na calçada, com a manga suja de azul, olhando a moto vermelha sumir.", proxima: "c8_13" },
+    c8_13: { tipo: "pensamento", texto: "“Achei que você devia saber.” Saber o quê? Eu passei a tarde pintando o nome da mãe do Victor numa tábua. Não tem nada pra saber.", proxima: "c8_14" },
+    c8_14: { tipo: "pensamento", texto: "...Não tem?", proxima: "r_cam" },
 
     /* =================== ROTA — QUINTA À NOITE =================== */
     r_cam: { caminhos: [
@@ -360,7 +402,9 @@ Roteiro.registrar("capitulo41", {
     rk_c3: { quem: "kaito", texto: "...Tá. Eu gosto desse nome.", proxima: "r_fim" },
 
     // ---------- Rota Takeo ----------
-    rt_01: { tipo: "narracao", cenario: "rua-padaria-noite", transicao: "tempo", legenda: "Quinta, 18h", sprite: "takeo:escolar", texto: "Saindo da garagem do Victor, ela leva o Takeo em casa, pela rua da padaria, que tem luz. Ele ainda está com a ponta do nariz azul, ou um pouco de tinta no gesso, ou só com a cara feliz de quem passou a tarde fazendo uma coisa boa.", proxima: "rt_02" },
+    rt_01: { tipo: "narracao", cenario: "rua-padaria-noite", transicao: "tempo", legenda: "Quinta, 19h", sprite: "takeo:escolar", texto: "Ela não vai direto pra casa. Passa no portão verde do Takeo, pela rua da padaria, que tem luz, para saber do raio-x. Ele está sentado no degrau do portão, com o gesso no colo e um envelope grande de exame do lado.", proxima: "rt_01b" },
+    rt_01b: { quem: "takeo", texto: "O osso colou. O médico disse que está bonito. Eu nunca achei que alguém ia chamar um osso meu de bonito. Como foi a placa?", proxima: "rt_01c" },
+    rt_01c: { tipo: "narracao", texto: "Ele olha para a manga dela, suja de azul. Depois para o rosto dela. Ele não pergunta mais nada sobre a placa. O Takeo percebe as coisas que não são ditas.", proxima: "rt_02" },
     rt_02: { quem: "takeo", sprite: "takeo:escolar", texto: "O trabalho de história. Eu, você e a Reina. Eu fico nervoso. Eu fico nervoso com a Reina perto. E eu fico nervoso com você perto. E com as duas perto eu acho que eu vou desmaiar na biblioteca.", proxima: "rt_esc" },
     rt_esc: { escolhas: [
       { texto: "A. “Então eu fico do seu lado. A Reina do outro. Você no meio. Você é bom em ficar no meio.”", proxima: "rt_a1", pontos: { takeo: 3 }, flags: ["Meio_trio"] },
@@ -409,7 +453,7 @@ Roteiro.registrar("capitulo41", {
     rr_c1: { tipo: "narracao", texto: "Ela sobe na Relâmpago. Eles vão até a sorveteria da praça pela volta grande. No caminho, ele grita que a moto está dourada de novo, porque o sol está se pondo, e ela grita que está, e as pessoas na calçada olham para os dois gritando “dourada” numa moto amarela.", proxima: "r_fim" },
 
     // ---------- Rota Victor ----------
-    rv_01: { tipo: "narracao", cenario: "quintal-victor", transicao: "tempo", legenda: "Quinta, 18h", sprite: "victor", texto: "Depois que o Takeo vai embora, ela fica mais um pouco na garagem. O Victor está sentado no chão na frente da placa, secando, abraçado nos joelhos, com o Caramelo no colo.", proxima: "rv_02" },
+    rv_01: { tipo: "narracao", cenario: "quintal-victor", transicao: "tempo", legenda: "Quinta, 19h", sprite: "victor", texto: "Ela não consegue ir pra casa. Volta pra garagem do Victor. A porta ainda está meio aberta. O Victor está sentado no chão na frente da placa, secando, abraçado nos joelhos, com o Caramelo no colo.", proxima: "rv_02" },
     rv_02: { quem: "victor", texto: "Hoje no banco eu falei que sou ruim. Pra perceber quem é ruim. Eu falei sério. Eu não sou bom igual o líder. Eu sou o cara que sabe quando alguém está fingindo, porque eu finjo o tempo todo.", proxima: "rv_03" },
     rv_03: { quem: "victor", texto: "O gatinha. As piadas. O pirulito. Eu finjo que eu não ligo pra nada. Você é a única que percebe.", proxima: "rv_esc" },
     rv_esc: { escolhas: [
@@ -437,7 +481,8 @@ Roteiro.registrar("capitulo41", {
     f_07: { tipo: "pensamento", texto: "Ela não mentiu em nada. Ela não falou o nome dele. Ela não falou o meu. Ela só postou um braço e uma frase. E a escola inteira escreveu o resto.", proxima: "f_08" },
     f_08: { tipo: "narracao", texto: "O celular vibra de novo. Não é a Mio. É o Kaito.", proxima: "f_09" },
     f_09: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Alguém me marcou numa foto. Eu não entendi. Eu só carreguei caixa.", proxima: "f_10" },
-    f_10: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Eu não pedi pra ela postar.", proxima: "f_esc" },
+    f_10: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Eu não pedi pra ela postar.", proxima: "f_10b" },
+    f_10b: { tipo: "pensamento", texto: "Ele fala da foto das caixas. Ele não fala da outra. Da que ela mandou pra ele hoje à tarde. “Achei que você devia saber.” Eu não sei o que tinha nela. E ele não vai me contar.", proxima: "f_esc" },
 
     // ▶ ESCOLHA FINAL — A foto
     f_esc: { escolhas: [
