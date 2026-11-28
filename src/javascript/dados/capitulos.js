@@ -429,15 +429,24 @@ const Capitulos = [
     pagina: "src/html/capitulo45.html",
     capa: "src/imagens/cenarios/sala-de-aula.jpg",
     descricao: "Uma conversa no hall, quatro gizes quebrados e um cabo de guerra que ninguém explica."
+  },
+  {
+    id: "capitulo46",
+    numero: 46,
+    titulo: "Feira de talentos",
+    subtitulo: "",
+    pagina: "src/html/capitulo46.html",
+    capa: "src/imagens/cenarios/patio.jpg",
+    descricao: "Uma queda de braço, uma mesa de ferro e um dueto em que só um canta."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 46,
-  titulo: "Capítulo 46",
-  capa: "src/imagens/cenarios/frente-casa-sn.png",
-  descricao: "Seis e cinquenta e cinco. Eu chego antes."
+  numero: 47,
+  titulo: "Capítulo 47",
+  capa: "src/imagens/cenarios/sala-de-aula.jpg",
+  descricao: "A escola inteira tem uma foto. Eu não."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);
