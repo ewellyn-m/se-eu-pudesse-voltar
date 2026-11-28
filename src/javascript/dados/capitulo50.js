@@ -67,9 +67,9 @@ Roteiro.registrar("capitulo50", {
     c1_k05: { tipo: "narracao", texto: "Ele estende o capacete vermelho. Ela pega. Coloca. E espera. Ele não estica a mão. Ele olha para ela.", proxima: "c1_k06" },
     c1_k06: { quem: "kaito", texto: "Posso?", proxima: "c1_k07" },
     c1_k07: { tipo: "narracao", texto: "Ela faz que sim. Ele fecha a fivela. Clique. Devagar, sem pressa, sem demorar mais do que precisa. Ele está seguindo a regra. Ela vê ele seguindo a regra, e alguma coisa no peito dela afrouxa um pouco.", proxima: "c1_k08" },
-    c1_k08: { quem: "kaito", texto: "O tio mandou isso. Ele disse que é pra cliente pequenininha. Eu não pedi. Ele que mandou. Eu só estou entregando.", proxima: "c1_k09" },
+    c1_k08: { quem: "kaito", texto: "O tio mandou isso. Ele disse que é pra você. Eu só estou entregando.", proxima: "c1_k09" },
     c1_k09: { tipo: "narracao", texto: "Um onigiri, embrulhado em papel, com um desenho de carinha feito de caneta. A letra do tio, torta. Ela guarda na mochila.", proxima: "c1_k10" },
-    c1_k10: { tipo: "narracao", cenario: "rua", transicao: "tempo", texto: "No caminho, ela segura na camisa dele. Não na cintura. Ainda não. No primeiro sinal vermelho, ele não coloca a mão em cima da dela. Ele fala, sem virar.", proxima: "c1_k11" },
+    c1_k10: { tipo: "narracao", cenario: "rua", transicao: "tempo", texto: "No caminho, ela segura na camisa dele. No primeiro sinal vermelho, ele fala, sem virar.", proxima: "c1_k11" },
     c1_k11: { quem: "kaito", texto: "Hoje vai ter falatório. Sobre ontem. Sobre a Serena. Eu vou ouvir. Eu não vou responder. Eu só queria que você soubesse antes.", proxima: "c1_esc1" },
 
     // ▶ ESCOLHA 1 — No sinal
@@ -79,7 +79,7 @@ Roteiro.registrar("capitulo50", {
       { texto: "C. Não falar nada. Só apertar a camisa um pouco mais.", proxima: "c1_1c_1", pontos: { kaito: 3 }, flags: ["Apertou_jaqueta"] }
     ]},
     c1_1a_1: { quem: "eu", texto: "Eu sei. Eu também não vou responder.", proxima: "c1_1a_2" },
-    c1_1a_2: { quem: "kaito", texto: "A gente não responde junto, então. Separado. Mas junto.", proxima: "c1_k12" },
+    c1_1a_2: { quem: "kaito", texto: "A gente responde a mesma coisa.", proxima: "c1_k12" },
     c1_1b_1: { quem: "eu", texto: "Se perguntarem pra mim, eu falo a verdade. Que você falou o que tinha que falar. Do jeito certo.", proxima: "c1_1b_2" },
     c1_1b_2: { tipo: "narracao", texto: "Ele não responde. Mas ela vê, pelo retrovisor, ele fechar os olhos um segundo, como quem respira depois de muito tempo embaixo d'água.", proxima: "c1_k12" },
     c1_1c_1: { tipo: "narracao", texto: "Ela não fala nada. Só aperta a camisa dele um pouco mais. Ele percebe. O sinal fica verde. Ele demora meio segundo para andar.", proxima: "c1_k12" },

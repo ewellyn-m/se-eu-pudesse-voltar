@@ -474,15 +474,24 @@ const Capitulos = [
     pagina: "src/html/capitulo50.html",
     capa: "src/imagens/cenarios/sala-de-aula.jpg",
     descricao: "Um “posso?”, um “parabéns” doce demais e um livro que não pode ser pulado."
+  },
+  {
+    id: "capitulo51",
+    numero: 51,
+    titulo: "Vapor",
+    subtitulo: "",
+    pagina: "src/html/capitulo51.html",
+    capa: "src/imagens/cenarios/loja-lamen.png",
+    descricao: "Um cabelo penteado pela metade, um joelho encostado e uma cozinha pequena demais para dois."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 51,
-  titulo: "Capítulo 51",
+  numero: 52,
+  titulo: "Capítulo 52",
   capa: "src/imagens/cenarios/sala-de-aula.jpg",
-  descricao: "A carteira perto da porta."
+  descricao: "A carteira perto da porta continua vazia."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);
