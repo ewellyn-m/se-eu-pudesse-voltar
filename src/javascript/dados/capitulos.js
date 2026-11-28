@@ -501,15 +501,24 @@ const Capitulos = [
     pagina: "src/html/capitulo53.html",
     capa: "src/imagens/cenarios/sala-de-estar.jpg",
     descricao: "Uma escada de serviço, uma moto embaixo do poste e um sofá com quatro paredes em volta."
+  },
+  {
+    id: "capitulo54",
+    numero: 54,
+    titulo: "Plantão",
+    subtitulo: "",
+    pagina: "src/html/capitulo54.html",
+    capa: "src/imagens/cenarios/sala-de-estar.jpg",
+    descricao: "Três palavras no portão, uma panela horrível e a página cinquenta."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 54,
-  titulo: "Capítulo 54",
+  numero: 55,
+  titulo: "Capítulo 55",
   capa: "src/imagens/cenarios/cozinha.png",
-  descricao: "Amanhã a gente conversa. Sobre tudo."
+  descricao: "Oito da manhã. A mãe volta do plantão."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);
