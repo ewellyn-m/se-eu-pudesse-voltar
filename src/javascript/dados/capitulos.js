@@ -393,15 +393,24 @@ const Capitulos = [
     pagina: "src/html/capitulo41.html",
     capa: "src/imagens/cenarios/portao-escola.png",
     descricao: "Um pedido de desculpas com plateia, sete caixas no caminho e uma foto com um braço de jaqueta preta."
+  },
+  {
+    id: "capitulo42",
+    numero: 42,
+    titulo: "Capacete vermelho",
+    subtitulo: "",
+    pagina: "src/html/capitulo42.html",
+    capa: "src/imagens/cenarios/portao-escola.png",
+    descricao: "Uma palavra no celular, uma fivela que ninguém fecha e o capacete vermelho na cabeça errada."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 42,
-  titulo: "Capítulo 42",
-  capa: "src/imagens/cenarios/frente-casa-sn.png",
-  descricao: "Amanhã. Sete horas. Eu vou chegar mais cedo."
+  numero: 43,
+  titulo: "Capítulo 43",
+  capa: "src/imagens/cenarios/quintal-casa-victor.png",
+  descricao: "Sábado. Sem hall, sem sete horas. Só a placa do Victor."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);
