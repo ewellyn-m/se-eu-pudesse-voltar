@@ -438,15 +438,24 @@ const Capitulos = [
     pagina: "src/html/capitulo46.html",
     capa: "src/imagens/cenarios/patio.jpg",
     descricao: "Uma queda de braço, uma mesa de ferro e um dueto em que só um canta."
+  },
+  {
+    id: "capitulo47",
+    numero: 47,
+    titulo: "Então decide",
+    subtitulo: "",
+    pagina: "src/html/capitulo47.html",
+    capa: "src/imagens/cenarios/frente-casa-sn.png",
+    descricao: "Um ultimato às sete, um armário torto e um pedido feito longe da escola."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 47,
-  titulo: "Capítulo 47",
-  capa: "src/imagens/cenarios/sala-de-aula.jpg",
-  descricao: "A escola inteira tem uma foto. Eu não."
+  numero: 48,
+  titulo: "Capítulo 48",
+  capa: "src/imagens/cenarios/quarto.png",
+  descricao: "Sábado. Quase não é resposta."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);
