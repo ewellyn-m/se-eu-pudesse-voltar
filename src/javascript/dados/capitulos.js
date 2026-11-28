@@ -384,15 +384,24 @@ const Capitulos = [
     pagina: "src/html/capitulo40.html",
     capa: "src/imagens/cenarios/sala-reina.png",
     descricao: "A avó viajou, a casa é da Reina, a Serena se molhou de ponche e ninguém dorme em quarto vazio."
+  },
+  {
+    id: "capitulo41",
+    numero: 41,
+    titulo: "Inocente",
+    subtitulo: "",
+    pagina: "src/html/capitulo41.html",
+    capa: "src/imagens/cenarios/portao-escola.png",
+    descricao: "Um pedido de desculpas com plateia, sete caixas no caminho e uma foto com um braço de jaqueta preta."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 41,
-  titulo: "Capítulo 41",
-  capa: "src/imagens/cenarios/frente-casa-reina.png",
-  descricao: "Eu voltei doze anos. Eu também estou esperando alguém?"
+  numero: 42,
+  titulo: "Capítulo 42",
+  capa: "src/imagens/cenarios/frente-casa-sn.png",
+  descricao: "Amanhã. Sete horas. Eu vou chegar mais cedo."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);
