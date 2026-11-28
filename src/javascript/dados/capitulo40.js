@@ -339,15 +339,17 @@ Roteiro.registrar("capitulo40", {
     c7_06: { tipo: "narracao", sprite: "serena", texto: "A Serena fica um tempo em silêncio. Olha para as próprias mãos. Quando fala, a voz sai baixa, quebrada, feita para a roda inteira ouvir e sentir pena.", proxima: "c7_07" },
     c7_07: { quem: "serena", texto: "Se você tivesse percebido antes... no primeiro ano. Quando eu levei o bolo. Se você tivesse percebido antes de tudo isso... o que você faria?", proxima: "c7_08" },
     c7_08: { tipo: "narracao", sprite: null, texto: "A roda inteira fica em silêncio. A Mio abaixa o microfone. Todo mundo olha para o Kaito. Depois para a SN, do lado dele. Depois para a Serena, com os olhos cheios. É uma pergunta feita para não ter resposta boa.", proxima: "c7_09" },
-    c7_09: { tipo: "pensamento", texto: "Se ele disser “nada”, ele é o cara cruel que humilhou a menina que levou bolo. Se ele disser qualquer outra coisa, ela ganha. Ela não fez uma pergunta. Ela armou uma armadilha.", proxima: "c7_10" },
+    c7_09: { tipo: "pensamento", texto: "porque eu estou tão nervosa???", proxima: "c7_10" },
     c7_10: { tipo: "narracao", sprite: "kaito", texto: "O Kaito não responde. Ele estica a mão até o meio da roda, pega um copo de plástico de ponche, cheio, e bebe. Inteiro. Sem parar. Sem tirar os olhos do copo. Ele não tinha bebido nada a noite inteira.", proxima: "c7_11" },
     c7_11: { tipo: "narracao", texto: "Ele coloca o copo vazio no tapete, de cabeça para baixo. Limpa a boca com as costas da mão. E não fala nada. A regra é clara: quem não responde, bebe. Ele bebeu.", proxima: "c7_12" },
-    c7_12: { tipo: "narracao", sprite: "serena", texto: "A Serena fica parada. A boca dela treme. E ela faz a coisa que faz melhor. Ela deixa uma lágrima cair. Só uma. Bem devagar. E sorri, um sorriso pequeno, de mártir.", proxima: "c7_13" },
-    c7_13: { quem: "serena", texto: "Tudo bem. Eu entendi. Desculpa ter perguntado. Eu não queria estragar a festa de ninguém. Eu sei que eu sou a chata aqui.", proxima: "c7_14" },
-    c7_14: { tipo: "narracao", sprite: null, texto: "E a roda cai. Ela vê a roda cair. Uma menina abraça a Serena. Outra fala “não, você não é chata”. Um menino do terceiro ano olha para o Kaito com cara feia. E várias pessoas olham para a SN. Como se fosse culpa dela. Como se ela tivesse feito o Kaito beber.", proxima: "c7_15" },
-    c7_15: { quem: "serena", sprite: "serena", texto: "Eu vou embora. Ninguém precisa se preocupar comigo. Eu sempre fico bem sozinha.", proxima: "c7_16" },
-    c7_16: { tipo: "narracao", texto: "Ela levanta, devagar, e as amigas levantam junto, e ela atravessa a sala de cabeça baixa, com metade da festa olhando para ela com pena. Na porta, ela passa do lado da SN. E, sem mudar a cara triste, sem que ninguém mais ouça, ela fala baixinho.", proxima: "c7_17" },
-    c7_17: { quem: "serena", texto: "Ele bebeu porque não teve coragem de dizer que não. Pensa nisso. Isso não acabou.", proxima: "c7_esc4" },
+    c7_12: { tipo: "narracao", sprite: "serena", texto: "A Serena olha para o copo virado no tapete. Depois para ele. E, devagar, ela sorri. Não o sorriso de mártir. Outro. Pequeno, satisfeito. Como quem esperava ouvir um não e não ouviu.", proxima: "c7_13" },
+    c7_13: { quem: "serena", texto: "Tudo bem. Não precisa responder. Eu entendi.", proxima: "c7_14" },
+    c7_14: { tipo: "narracao", sprite: null, texto: "E a roda entende do jeito dela. Uma menina cochicha “ele não disse não”. Outra faz “uuuuh” baixinho. Alguém olha para a SN, do lado dele, com pena. E a Serena ajeita o cabelo, com o queixo alto de novo, como quem ganhou alguma coisa.", proxima: "c7_14b" },
+    c7_14b: { tipo: "pensamento", texto: "Ele não respondeu. Por quê? Se a resposta fosse “nada”, era só falar. Ele falou “não” pra ela no começo da festa sem nem pensar. Por que agora ele bebeu?", proxima: "c7_14c" },
+    c7_14c: { tipo: "pensamento", texto: "Ele bebeu pra não magoar ela? Ou pra não me magoar? Se ele tivesse percebido antes... ele teria ficado com ela?", proxima: "c7_15" },
+    c7_15: { quem: "serena", sprite: "serena", texto: "Eu vou indo. Eu já tive a resposta que eu queria.", proxima: "c7_16" },
+    c7_16: { tipo: "narracao", texto: "Ela levanta, devagar, e as amigas levantam junto, e ela atravessa a sala sem pressa, com um sorriso pequeno que não sai do rosto. Na porta, ela passa do lado da SN. E, sem que ninguém mais ouça, ela fala baixinho.", proxima: "c7_17" },
+    c7_17: { quem: "serena", texto: "Ele não disse não. Pensa nisso. Isso não acabou.", proxima: "c7_esc4" },
 
     // ▶ ESCOLHA 4 — A saída da Serena
     c7_esc4: { escolhas: [
@@ -356,23 +358,23 @@ Roteiro.registrar("capitulo40", {
       { texto: "C. “Tchau, Serena. Cuidado com o ponche no caminho.”", proxima: "c7_4c_1", pontos: { desvio: 1 }, flags: ["Cuidado_ponche"] }
     ]},
     c7_4a_1: { quem: "eu", texto: "Ele bebeu porque a resposta não era sobre você.", proxima: "c7_4a_2" },
-    c7_4a_2: { tipo: "narracao", sprite: "serena", texto: "A Serena trava. Um segundo. O rosto de mártir racha, e por baixo aparece a raiva, pura, rápida. Depois ela ajeita o cabelo e sai, e o rosto de mártir volta antes de ela chegar no portão.", proxima: "c7_18" },
+    c7_4a_2: { tipo: "narracao", sprite: "serena", texto: "A Serena trava. Um segundo. Depois o sorriso volta, maior, e ela fala uma palavra só: “Será?” E sai, sem pressa, como quem deixou a porta aberta de propósito.", proxima: "c7_18" },
     c7_4b_1: { tipo: "narracao", texto: "Ela não responde. Ela fica parada, de cara tranquila, olhando a Serena ir. A Serena espera, na porta, um segundo a mais, esperando a resposta, a briga, alguma coisa para contar depois. Não vem nada. Ela vai embora sem a cena.", proxima: "c7_18" },
     c7_4c_1: { quem: "eu", texto: "Tchau, Serena. Cuidado com o ponche no caminho.", proxima: "c7_4c_2" },
-    c7_4c_2: { tipo: "narracao", sprite: "serena", texto: "A Serena sorri. Ela gostou. Ela vira para as amigas e fala alto, chorando de novo: “Vocês ouviram? Até agora ela debocha de mim.” E sai com mais pena do que entrou.", proxima: "c7_18" },
+    c7_4c_2: { tipo: "narracao", sprite: "serena", texto: "A Serena ri, baixo, sem virar. “Cuidado você.” E sai, com os chaveiros balançando, mais leve do que entrou.", proxima: "c7_18" },
 
     // (todas as opções continuam aqui)
     c7_18: { tipo: "narracao", sprite: null, texto: "A porta fecha. Os chaveiros somem pela rua. A roda fica num silêncio esquisito. A Mio acende o microfone rosa, olha para a SN, e desliga de novo sem falar nada, o que nunca aconteceu na história da rádio.", proxima: "c7_19" },
     c7_19: { tipo: "narracao", sprite: "reina", texto: "A Reina levanta, bate palma duas vezes, e manda a Akane voltar para o piano, e alguém aumentar a música. A festa volta, devagar. Mas a SN ainda sente os olhares.", proxima: "c7_20" },
     c7_20: { tipo: "narracao", sprite: "kaito", texto: "O Kaito levanta da roda e para do lado dela, na parede da porta de vidro. Ele está com o rosto um pouco vermelho do ponche, que ele não está acostumado a beber.", proxima: "c7_21" },
     c7_21: { quem: "eu", texto: "Você bebeu.", proxima: "c7_22" },
-    c7_22: { quem: "kaito", texto: "Eu não ia responder aquilo. Não na frente de todo mundo. Não pra ela.", proxima: "c7_23" },
-    c7_23: { quem: "eu", texto: "Ela disse que você bebeu porque não teve coragem de dizer não.", proxima: "c7_24" },
-    c7_24: { tipo: "narracao", texto: "O Kaito olha para ela. Sério. O rosto vermelho do ponche, mas os olhos não.", proxima: "c7_25" },
-    c7_25: { quem: "kaito", texto: "A resposta verdadeira era “nada”. Mas ela chorou. Duas vezes hoje. Uma eu não sei de quem foi a culpa. A segunda foi minha. Eu bebi e ela chorou. Eu fui cruel?", proxima: "c7_26" },
-    c7_26: { quem: "eu", texto: "Você não foi cruel. Ela escolheu chorar na frente de todo mundo. Ela escolhe tudo, Kaito. Até quando parece que não escolheu.", proxima: "c7_27" },
-    c7_27: { tipo: "narracao", texto: "Ele olha para ela. Faz que sim. Mas ela vê a dúvida ainda lá, pequena, no canto do olho dele. Não dúvida dela. Dúvida de tudo. A Serena plantou uma semente. Ela sabe disso. E sabe que vai ter que esperar a semente secar sozinha.", proxima: "c7_28" },
-    c7_28: { quem: "kaito", texto: "Pra você eu falo. Tudo. Só me dá um tempo pra entender o que aconteceu hoje.", proxima: "r_cam" },
+    c7_22: { quem: "kaito", texto: "Eu não ia responder aquilo. Não na frente de todo mundo.", proxima: "c7_23" },
+    c7_23: { quem: "eu", texto: "Era só falar “nada”, Kaito.", proxima: "c7_24" },
+    c7_24: { tipo: "narracao", texto: "Ele olha para ela. Abre a boca. Fecha. O rosto vermelho do ponche, e os olhos baixos.", proxima: "c7_25" },
+    c7_25: { quem: "kaito", texto: "...Ela chorou duas vezes hoje. Eu não queria fazer ela chorar a terceira.", proxima: "c7_26" },
+    c7_26: { tipo: "narracao", texto: "Ela não responde. Ele não explica mais. E ela fica sem saber se aquilo foi cuidado com a Serena, ou com ela, ou com ninguém.", proxima: "c7_27" },
+    c7_27: { tipo: "pensamento", texto: "Se ele tivesse percebido antes. No primeiro ano. Com o bolo. Será que hoje era ela do lado dele nessa parede, e não eu?", proxima: "c7_28" },
+    c7_28: { tipo: "narracao", texto: "Ele fica do lado dela, encostado na mesma parede. Mas, pela primeira vez na noite, ela não pega a mão dele. E ele percebe.", proxima: "r_cam" },
 
     /* =================== ROTA — MADRUGADA =================== */
     r_cam: { caminhos: [
@@ -433,7 +435,7 @@ Roteiro.registrar("capitulo40", {
 
     // ---------- Rota Takeo ----------
     rt_01: { tipo: "narracao", cenario: "jardim-reina", transicao: "tempo", legenda: "1h30 — Jardim", sprite: "takeo", texto: "Uma e meia. Ela sai para o jardim para respirar. O Takeo vem atrás, mancando, com o gesso no peito, e para do lado dela, embaixo das luzinhas que ele mesmo pendurou.", proxima: "rt_02" },
-    rt_02: { quem: "takeo", sprite: "takeo", texto: "O Kaito bebeu pra não responder a Serena. Metade da festa achou ele cruel. Eu achei corajoso. Eu queria ter essa coragem. A de fazer sem pensar.", proxima: "rt_03" },
+    rt_02: { quem: "takeo", sprite: "takeo", texto: "O Kaito bebeu pra não responder a Serena. Metade da festa achou que foi um sim. Eu acho que ele só não teve coragem de falar nada. Eu entendo. Eu também nunca tenho.", proxima: "rt_03" },
     rt_03: { quem: "takeo", sprite: "takeo", texto: "Eu sempre penso antes. Eu penso tanto que a coisa passa.", proxima: "rt_esc" },
     rt_esc: { escolhas: [
       { texto: "A. Falar no ouvido dele: “Eu voltei de muito longe por sua causa. Um dia eu te conto.”", proxima: "rt_a1", pontos: { takeo: 4 }, flags: ["Voltei_longe_Takeo"] },
@@ -512,7 +514,7 @@ Roteiro.registrar("capitulo40", {
     f_k5: { quem: "kaito", texto: "Isso. Tudo isso. Amanhã, quando não for festa.", proxima: "f_k6" },
     f_k6: { quem: "eu", texto: "Amanhã. E depois de amanhã. Kaito. Dorme.", proxima: "f_k7" },
     f_k7: { tipo: "narracao", texto: "Ele ri baixo, com o peito subindo embaixo da cabeça dela. E dorme primeiro. Ela fica acordada mais um pouco, ouvindo o coração dele, e a casa grande demais cheia de gente respirando, e lá da varanda dos fundos, bem baixinho, duas vozes ainda conversando. A Reina e o Takeo.", proxima: "f_end" },
-    f_o1: { tipo: "narracao", sprite: null, texto: "Ela fica com o sofá pequeno, do lado da janela. O Kaito pega o chão do lado, de costas para o sofá, com a jaqueta de travesseiro. Antes de dormir, ele estica a mão para trás, sem virar, e ela pega. E os dois dormem assim, de mão dada por cima do braço do sofá.", proxima: "f_end" },
+    f_o1: { tipo: "narracao", sprite: null, texto: "Ela fica com o sofá pequeno, do lado da janela. O Kaito pega o chão do lado, de costas para o sofá, com a jaqueta de travesseiro. Antes de dormir, ele estica a mão para trás, sem virar. Ela demora um segundo, pensando na roda. Mas pega. E os dois dormem assim, de mão dada por cima do braço do sofá.", proxima: "f_end" },
     f_end: { tipo: "narracao", sprite: null, texto: "O celular dela vibra no bolso. A mãe, saindo do plantão.", proxima: "f_m1" },
     f_m1: { quem: "mensagem", rotulo: "Mensagem — Mãe", texto: "Água entre cada copo? Ninguém entrou em carro de quem bebeu?", proxima: "f_m2" },
     f_m2: { quem: "mensagem", rotulo: "Mensagem — SN", texto: "Sim. Ninguém. Vou dormir na Reina. Todo mundo vai.", proxima: "f_m3" },
