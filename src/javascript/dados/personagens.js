@@ -260,6 +260,7 @@ const Cenarios = {
   laboratorio:       { img: CEN + "Laboratório.png" },              // laboratório de biologia (aquário)
   "loja-conveniencia": { img: CEN + "Loja-de-Conveniência.png" }, // loja de conveniência da avenida, à noite
   "parquinho-noite": { img: CEN + "parquinho.png", tom: "noite" },  // pracinha do balanço, à noite
+  "parquinho-tarde": { img: CEN + "parquinho.png", tom: "entardecer" }, // pracinha do balanço, fim de tarde (capítulo 49)
   "casa-takeo":      { img: CEN + "frente-casa-takeo.png" },        // frente da casa do Takeo (portão azul)
   "casa-takeo-sala": { img: CEN + "casa-takeo-sala.png" },          // sala da casa do Takeo
   shopping:          { img: CEN + "shopping.png" },                 // corredores e lojas do shopping (capítulo 14)

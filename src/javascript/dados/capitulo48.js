@@ -76,7 +76,7 @@ Roteiro.registrar("capitulo48", {
     c3_08: { tipo: "narracao", texto: "O Blake fala isso com a voz tranquila de sempre, mas ela percebe. Ele está se gabando. O Blake. O Blake que fala três palavras por dia está contando história de briga com detalhe, com movimento de mão, com o queixo levantado.", proxima: "c3_09" },
     c3_09: { quem: "victor", texto: "Seis contra quatro! E a gente ganhou! A gangue do Taijo saiu correndo pela avenida igual barata quando acende a luz! Eu nunca vi o Taijo correr! Ele corre feio! Ele corre igual pato!", proxima: "c3_10" },
     c3_10: { tipo: "narracao", texto: "E o Victor imita o Taijo correndo. Com os braços para trás, o pescoço esticado, pelo corredor da lan inteira. Os três moleques morrem de rir. O dono da lan grita “ninguém correndo no corredor”.", proxima: "c3_11" },
-    c3_11: { quem: "ryuji", sprite: "ryuji", texto: "Eu também ajudei! Eu segurei a porta da Relâmpago! E aí a porta bateu no meu nariz! E aí eu caí! E aí eu fiquei no chão e ninguém me bateu porque acharam que eu já tinha apanhado! Foi uma estratégia! Sem querer!", proxima: "c3_12" },
+    c3_11: { quem: "ryuji", sprite: "ryuji", texto: "Eu também ajudei! Eu segurei a porta do banheiro! E aí a porta bateu no meu nariz! E aí eu caí! E aí eu fiquei no chão e ninguém me bateu porque acharam que eu já tinha apanhado! Foi uma estratégia! Sem querer!", proxima: "c3_12" },
     c3_12: { tipo: "narracao", sprite: null, texto: "E aí os três olham para o fundo da lan. E veem ela. Sentada no meio de três moleques de dez anos, com o fone no pescoço, olhando para eles.", proxima: "c3_13" },
     c3_13: { tipo: "narracao", texto: "O Victor para no meio da imitação do pato. O Ryuji coloca a mão no curativo de dinossauro, como se pudesse esconder. O Blake abaixa a mão enfaixada, devagar, para trás do corpo.", proxima: "c3_14" },
     c3_14: { quem: "victor", texto: "...Oi. A gente não sabia que você estava aqui. A gente... a gente veio jogar. Só jogar. Normal.", proxima: "c3_15" },
@@ -223,7 +223,7 @@ Roteiro.registrar("capitulo48", {
     c5_34: { quem: "ren", texto: "Porque ele vai achar que eu quero alguma coisa em troca.", proxima: "c5_35" },
     c5_35: { quem: "eu", texto: "E você quer?", proxima: "c5_36" },
     c5_36: { tipo: "narracao", texto: "Ele fica parado. O sol está atrás dele, e ela não consegue ver direito a cara dele. Só o contorno.", proxima: "c5_37" },
-    c5_37: { quem: "ren", texto: "Eu queria que aquele senhor sorrisse. Ele sorriu. Já tenho o que eu queria.", proxima: "c5_38" },
+    c5_37: { quem: "ren", texto: "Eu queria que você.. Quer dizer, que aquele senhor sorrisse. Ele sorriu. Já tenho o que eu queria.", proxima: "c5_38" },
     c5_38: { tipo: "narracao", texto: "E vai embora pela rua, com as mãos nos bolsos, sem olhar para trás. Ela fica parada na calçada, com o saquinho de onigiri na mão, olhando ele ir até virar a esquina.", proxima: "c5_39" },
     c5_39: { tipo: "pensamento", texto: "Eu não sei se ele mentiu. Eu não sei se é só isso que ele quer. Mas o tio sorriu. Isso é verdade. Isso eu vi.", proxima: "r_cam" },
 
@@ -239,7 +239,7 @@ Roteiro.registrar("capitulo48", {
     // ---------- Rota Kaito ----------
     rk_01: { roupa: null, tipo: "narracao", cenario: "quarto-sn-noite", transicao: "tempo", legenda: "Sábado, 22h", sprite: null, texto: "Dez da noite. O celular vibra. Ela olha. O nome dele. Depois de dois dias sem nada.", proxima: "rk_02" },
     rk_02: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Eu sei que você falou pra eu só falar quando decidir. Isso não é falar. Isso é avisar.", proxima: "rk_03" },
-    rk_03: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Ontem eu briguei com raiva. O Ryuji percebeu. Eu nunca brigo com raiva. Eu estava batendo no Taijo, mas eu estava bravo comigo. Hoje eu vi você fazendo curativo neles e eu entendi que não dá mais pra ficar parado sem saber o que fazer.", proxima: "rk_04" },
+    rk_03: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Hoje eu vi você fazendo curativo neles e eu entendi que não dá mais pra ficar parado sem saber o que fazer.", proxima: "rk_04" },
     rk_04: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Amanhã. Domingo. Sete da noite. No hall. Eu vou com a resposta inteira. Se você não descer, eu entendo.", proxima: "rk_esc" },
     rk_esc: { escolhas: [
       { texto: "A. Responder: “Eu desço.”", proxima: "rk_a1", pontos: { kaito: 3 }, flags: ["Desce_domingo"] },

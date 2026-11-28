@@ -456,15 +456,24 @@ const Capitulos = [
     pagina: "src/html/capitulo48.html",
     capa: "src/imagens/cenarios/lanhouse.png",
     descricao: "Três meninos arranhados, um líder sem nenhum arranhão e uma calçada vazia."
+  },
+  {
+    id: "capitulo49",
+    numero: 49,
+    titulo: "A resposta inteira",
+    subtitulo: "",
+    pagina: "src/html/capitulo49.html",
+    capa: "src/imagens/cenarios/frente-casa-sn.png",
+    descricao: "Um bolo de emergência, um balanço que range e uma resposta às sete da noite."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 49,
-  titulo: "Capítulo 49",
+  numero: 50,
+  titulo: "Capítulo 50",
   capa: "src/imagens/cenarios/frente-casa-sn.png",
-  descricao: "Domingo. Sete da noite. A resposta inteira."
+  descricao: "Seis e quarenta. Cento e doze azulejos."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);
