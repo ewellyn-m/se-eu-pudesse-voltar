@@ -113,17 +113,17 @@ Roteiro.registrar("capitulo41", {
     /* =================== CENA 3 — O TRIO (Takeo e Reina) =================== */
     c3_01: { tipo: "narracao", cenario: "sala-de-aula", transicao: "tempo", legenda: "História — Cena 3", sprite: null, texto: "Na sala, o professor de história anuncia trabalho em trio, para a semana que vem. Tema: revoluções. Ele sorteia os grupos tirando papelzinho de um pote de sorvete vazio.", proxima: "c3_02" },
     c3_02: { quem: "desconhecido", rotulo: "Professor de história", texto: "SN, Takeo e Reina. Revolução industrial. Vocês três já estavam conversando de máquina a vapor semana passada, então agora vão conversar com nota.", proxima: "c3_03" },
-    c3_03: { tipo: "narracao", sprite: "takeo:machucado", texto: "O Takeo, atrás dela, fica vermelho na hora. A Reina, na frente, vira na cadeira e olha para os dois com o queixo alto, como quem acabou de ganhar uma reunião de diretoria.", proxima: "c3_04" },
+    c3_03: { tipo: "narracao", sprite: "takeo:escolar", texto: "O Takeo, atrás dela, fica vermelho na hora. A Reina, na frente, vira na cadeira e olha para os dois com o queixo alto, como quem acabou de ganhar uma reunião de diretoria.", proxima: "c3_04" },
     c3_04: { quem: "reina", sprite: "reina", texto: "Ótimo. Eu tenho a biblioteca inteira da minha avó. E uma impressora colorida. E um motorista. Esse trabalho vai ser o melhor trabalho da história da história.", proxima: "c3_05" },
-    c3_05: { quem: "takeo", sprite: "takeo:machucado", texto: "Eu sei onde ficam os livros de revolução industrial na biblioteca da escola. Prateleira sete, terceira fileira. Eu sou do plantão.", proxima: "c3_06" },
+    c3_05: { quem: "takeo", sprite: "takeo:escolar", texto: "Eu sei onde ficam os livros de revolução industrial na biblioteca da escola. Prateleira sete, terceira fileira. Eu sou do plantão.", proxima: "c3_06" },
     c3_06: { tipo: "narracao", sprite: null, texto: "Os dois falam ao mesmo tempo e depois se olham. A SN fica no meio, literalmente, entre a carteira da frente e a de trás.", proxima: "c3_cam_rt" },
     c3_cam_rt: { caminhos: [
       { flag: "Rota_Kaito", proxima: "c3_rt_k" }
     ], proxima: "c3_07" },
     c3_rt_k: { tipo: "narracao", texto: "Mas ela percebe uma coisa. A Reina não briga com o Takeo. Ela não fala “briga limpa”. Ela olha para ele, um segundo, de um jeito mais quieto que o normal, e ele olha de volta, e os dois desviam ao mesmo tempo. Alguma coisa aconteceu naquela varanda dos fundos da festa. Ela não sabe o quê. Ela não pergunta.", proxima: "c3_07" },
-    c3_07: { tipo: "narracao", sprite: "takeo:machucado", texto: "No meio da aula, o Takeo cutuca o ombro dela com a mão boa. Ela vira. Ele está com o gesso apoiado na carteira, e o gesso tem agora mais três assinaturas, uma pizza, um caqui, e uma coroa de papelão desenhada pela Mio.", proxima: "c3_08" },
-    c3_08: { quem: "takeo", sprite: "takeo:machucado", texto: "Uma semana e meia. Eu contei. Dez dias pra tirar o gesso. Eu tô riscando no calendário da cozinha. A minha avó tá riscando junto.", proxima: "c3_09" },
-    c3_09: { quem: "takeo", sprite: "takeo:machucado", texto: "E depois eu vou poder escrever com as duas mãos. E carregar mochila nos dois ombros. E levantar o braço pra responder pergunta. Eu nunca levantei o braço pra responder pergunta, mas agora eu quero, só porque eu posso.", proxima: "c3_esc3" },
+    c3_07: { tipo: "narracao", sprite: "takeo:escolar", texto: "No meio da aula, o Takeo cutuca o ombro dela com a mão boa. Ela vira. Ele está com o gesso apoiado na carteira, e o gesso tem agora mais três assinaturas, uma pizza, um caqui, e uma coroa de papelão desenhada pela Mio.", proxima: "c3_08" },
+    c3_08: { quem: "takeo", sprite: "takeo:escolar", texto: "Uma semana e meia. Eu contei. Dez dias pra tirar o gesso. Eu tô riscando no calendário da cozinha. A minha avó tá riscando junto.", proxima: "c3_09" },
+    c3_09: { quem: "takeo", sprite: "takeo:escolar", texto: "E depois eu vou poder escrever com as duas mãos. E carregar mochila nos dois ombros. E levantar o braço pra responder pergunta. Eu nunca levantei o braço pra responder pergunta, mas agora eu quero, só porque eu posso.", proxima: "c3_esc3" },
 
     // ▶ ESCOLHA 3 — O gesso
     c3_esc3: { escolhas: [
@@ -132,17 +132,17 @@ Roteiro.registrar("capitulo41", {
       { texto: "C. Passar o dedo no caqui desenhado no gesso. “Esse vai sumir quando você tirar.”", proxima: "c3_3c_1", pontos: { takeo: 3 }, flags: ["Caqui_some"] }
     ]},
     c3_3a_1: { quem: "eu", texto: "No dia que você tirar, você levanta o braço na aula e eu bato palma.", proxima: "c3_3a_2" },
-    c3_3a_2: { quem: "takeo", sprite: "takeo:machucado", texto: "Sozinha? No meio da aula? Vai ser muito constrangedor.", proxima: "c3_3a_3" },
+    c3_3a_2: { quem: "takeo", sprite: "takeo:escolar", texto: "Sozinha? No meio da aula? Vai ser muito constrangedor.", proxima: "c3_3a_3" },
     c3_3a_3: { quem: "eu", texto: "Muito. Eu vou bater de pé.", proxima: "c3_3a_4" },
     c3_3a_4: { tipo: "narracao", texto: "Ele ri, baixinho, com a mão boa na boca, e a Reina vira para trás para olhar o que é tão engraçado, e ele para de rir na hora, e fica vermelho de novo.", proxima: "c3_10" },
     c3_3b_1: { quem: "eu", texto: "O que você vai fazer primeiro com as duas mãos?", proxima: "c3_3b_2" },
     c3_3b_2: { tipo: "narracao", texto: "Ele pensa. Muito. Com aquela cara de quem pesquisa a resposta numa biblioteca dentro da cabeça.", proxima: "c3_3b_3" },
-    c3_3b_3: { quem: "takeo", sprite: "takeo:machucado", texto: "Prender o balanço de corda direito no caquizeiro. Ele está torto desde que eu quebrei o braço. Com uma mão só eu não consigo dar o nó.", proxima: "c3_3b_4" },
+    c3_3b_3: { quem: "takeo", sprite: "takeo:escolar", texto: "Prender o balanço de corda direito no caquizeiro. Ele está torto desde que eu quebrei o braço. Com uma mão só eu não consigo dar o nó.", proxima: "c3_3b_4" },
     c3_3b_4: { quem: "eu", texto: "Eu te ajudo a dar o nó.", proxima: "c3_3b_5" },
-    c3_3b_5: { quem: "takeo", sprite: "takeo:machucado", texto: "...Tá. Mas o nó é meu. Você só segura a corda.", proxima: "c3_10" },
+    c3_3b_5: { quem: "takeo", sprite: "takeo:escolar", texto: "...Tá. Mas o nó é meu. Você só segura a corda.", proxima: "c3_10" },
     c3_3c_1: { tipo: "narracao", texto: "Ela passa a ponta do dedo no caqui pequenininho desenhado no gesso. O Takeo fica parado, olhando para o dedo dela no braço dele, por cima do gesso.", proxima: "c3_3c_2" },
     c3_3c_2: { quem: "eu", texto: "Esse vai sumir quando você tirar.", proxima: "c3_3c_3" },
-    c3_3c_3: { quem: "takeo", sprite: "takeo:machucado", texto: "Eu vou guardar o gesso. A minha avó disse que é nojento. Eu vou guardar mesmo assim. No armário. Do lado das coisas importantes.", proxima: "c3_10" },
+    c3_3c_3: { quem: "takeo", sprite: "takeo:escolar", texto: "Eu vou guardar o gesso. A minha avó disse que é nojento. Eu vou guardar mesmo assim. No armário. Do lado das coisas importantes.", proxima: "c3_10" },
 
     // (todas as opções continuam aqui)
     c3_10: { tipo: "narracao", sprite: "ren", texto: "Na carteira perto da porta, o Ren lê. Ele não olha para ela. Ela não olha para ele. A sala está normal. Ela prefere assim.", proxima: "c4_01" },
@@ -212,8 +212,8 @@ Roteiro.registrar("capitulo41", {
     c5_5c_3: { quem: "victor", texto: "Você é melhor que eu nisso. Você assustou até a mim. Três horas. Na garagem. Traz essa voz.", proxima: "c5_13" },
 
     // (todas as opções continuam aqui)
-    c5_13: { tipo: "narracao", sprite: "takeo:machucado", texto: "O Takeo aparece do lado deles, mancando menos, com a mochila no ombro bom.", proxima: "c5_14" },
-    c5_14: { quem: "takeo", sprite: "takeo:machucado", texto: "Placa? Eu ouvi placa. Eu sei fazer régua de letra com barbante e prego. Eu vi num vídeo. Eu posso ir? Eu tenho um braço, mas eu tenho opinião.", proxima: "c5_15" },
+    c5_13: { tipo: "narracao", sprite: "takeo:escolar", texto: "O Takeo aparece do lado deles, mancando menos, com a mochila no ombro bom.", proxima: "c5_14" },
+    c5_14: { quem: "takeo", sprite: "takeo:escolar", texto: "Placa? Eu ouvi placa. Eu sei fazer régua de letra com barbante e prego. Eu vi num vídeo. Eu posso ir? Eu tenho um braço, mas eu tenho opinião.", proxima: "c5_15" },
     c5_15: { quem: "victor", texto: "Um braço e opinião. Contratado. Três horas.", proxima: "c6_01" },
 
     /* =================== CENA 6 — A SAÍDA (Kaito e Serena) =================== */
@@ -270,16 +270,16 @@ Roteiro.registrar("capitulo41", {
     /* =================== CENA 7 — A PLACA (Victor e Takeo) =================== */
     c7_01: { roupa: "fora", foto: "caramelo", tipo: "narracao", cenario: "quintal-victor", transicao: "tempo", legenda: "15h — Cena 7", sprite: null, texto: "Às três, a garagem do Victor. A porta de enrolar aberta, o rádio velho tocando, três motos desmontadas, o Caramelo dormindo em cima de um pneu. E, deitada em cima de dois cavaletes, no meio da garagem, uma tábua de madeira comprida, lixada, pintada de branco. A placa.", proxima: "c7_02" },
     c7_02: { sprite: "victor", quem: "victor", texto: "Damas e cavalheiro de um braço só. A placa.", proxima: "c7_03" },
-    c7_03: { tipo: "narracao", sprite: "takeo:machucado", texto: "O Takeo chega mancando, com um rolo de barbante, uma caixinha de prego e uma régua de madeira, tudo dentro de uma sacola da avó. Ele estica o barbante de uma ponta da placa até a outra, com a mão boa, e prende com dois pregos. Uma linha reta perfeita.", proxima: "c7_04" },
-    c7_04: { quem: "takeo", sprite: "takeo:machucado", texto: "Linha guia. Assim a letra não sobe. A letra do Victor sobe. Eu vi o caderno dele.", proxima: "c7_05" },
+    c7_03: { tipo: "narracao", sprite: "takeo:escolar", texto: "O Takeo chega mancando, com um rolo de barbante, uma caixinha de prego e uma régua de madeira, tudo dentro de uma sacola da avó. Ele estica o barbante de uma ponta da placa até a outra, com a mão boa, e prende com dois pregos. Uma linha reta perfeita.", proxima: "c7_04" },
+    c7_04: { quem: "takeo", sprite: "takeo:escolar", texto: "Linha guia. Assim a letra não sobe. A letra do Victor sobe. Eu vi o caderno dele.", proxima: "c7_05" },
     c7_05: { quem: "victor", texto: "A minha letra tem ambição. Ela quer subir na vida.", proxima: "c7_06" },
     c7_06: { tipo: "narracao", texto: "A SN pega o pincel fino e a lata de tinta azul. O Victor fica do lado, segurando a lata, sem pirulito, olhando para a placa branca como quem olha para um bebê recém-nascido.", proxima: "c7_07" },
     c7_07: { quem: "victor", texto: "O nome dela em cima. Grande. Embaixo, “Oficina”. Menor. E embaixo de tudo, bem pequenininho, no canto, “e filho”. Ela não sabe do “e filho”. É surpresa.", proxima: "c7_08" },
     c7_08: { tipo: "narracao", texto: "Ela pinta. Devagar. Uma letra de cada vez, encostando no barbante do Takeo. O Takeo fica do outro lado, segurando a placa firme com a mão boa, para não balançar. O Victor fica no meio, segurando a lata, sem falar nada. O Victor sem falar nada por quarenta minutos.", proxima: "c7_09" },
     c7_09: { tipo: "narracao", texto: "Quando ela termina o nome da mãe dele, ela para. O Victor fica olhando. Ele não fala nada. Ele só passa a mão no rosto, rápido, e vira de costas, e finge que está procurando alguma coisa na prateleira de ferramenta.", proxima: "c7_10" },
-    c7_10: { quem: "takeo", sprite: "takeo:machucado", texto: "...Victor, você está chorando?", proxima: "c7_11" },
+    c7_10: { quem: "takeo", sprite: "takeo:escolar", texto: "...Victor, você está chorando?", proxima: "c7_11" },
     c7_11: { quem: "victor", texto: "É a tinta. Tinta azul tem um gás. Um gás que faz chorar. É científico.", proxima: "c7_12" },
-    c7_12: { quem: "takeo", sprite: "takeo:machucado", texto: "Tinta à base de água não tem gás.", proxima: "c7_13" },
+    c7_12: { quem: "takeo", sprite: "takeo:escolar", texto: "Tinta à base de água não tem gás.", proxima: "c7_13" },
     c7_13: { quem: "victor", texto: "Takeo. Você está despedido.", proxima: "c7_esc6" },
 
     // ▶ ESCOLHA 6 — A placa
@@ -297,14 +297,14 @@ Roteiro.registrar("capitulo41", {
     c7_6b_4: { tipo: "narracao", texto: "Ele levanta. Não faz piada. Pega o pirulito do bolso, olha para ele, e guarda de volta sem abrir.", proxima: "c7_14" },
     c7_6c_1: { tipo: "narracao", texto: "Ela molha a ponta do dedo na tinta azul e encosta no nariz do Takeo. Ele fica parado, vesgo, olhando para o próprio nariz azul.", proxima: "c7_6c_2" },
     c7_6c_2: { quem: "eu", texto: "Agora você é da equipe de verdade.", proxima: "c7_6c_3" },
-    c7_6c_3: { quem: "takeo", sprite: "takeo:machucado", texto: "...Eu tenho que ir pra casa assim? A minha avó vai achar que eu fui atacado de novo.", proxima: "c7_6c_4" },
+    c7_6c_3: { quem: "takeo", sprite: "takeo:escolar", texto: "...Eu tenho que ir pra casa assim? A minha avó vai achar que eu fui atacado de novo.", proxima: "c7_6c_4" },
     c7_6c_4: { tipo: "narracao", texto: "O Victor ri tão alto que acorda o Caramelo, que pula do pneu e lambe o nariz azul do Takeo, e o Takeo grita, e cai sentado no chão da garagem, rindo, com o gesso para cima.", proxima: "c7_14" },
 
     // (todas as opções continuam aqui)
     c7_14: { tipo: "narracao", transicao: "tempo", legenda: "17h", texto: "Às cinco, a placa está pronta. Secando nos cavaletes. O nome da mãe do Victor em azul, reto, encostado no barbante do Takeo. “Oficina” embaixo. E, no canto, “e filho”.", proxima: "c7_15" },
     c7_15: { tipo: "narracao", texto: "Os três ficam sentados no chão da garagem, encostados na parede, olhando para a placa. O Caramelo no meio, dormindo de novo. O rádio velho tocando uma música antiga. Ninguém fala nada por um tempo. É bom.", proxima: "c7_16" },
     c7_16: { quem: "victor", texto: "Sábado eu penduro. Em cima da porta da garagem. A minha mãe chega do trabalho às sete. Vocês têm que estar aqui. Os dois. Isso não é convite, é intimação.", proxima: "c7_17" },
-    c7_17: { quem: "takeo", sprite: "takeo:machucado", texto: "Eu venho. Eu trago a minha avó. Ela vai trazer bolo de caqui. Ela leva bolo de caqui pra tudo que é importante.", proxima: "c7_18" },
+    c7_17: { quem: "takeo", sprite: "takeo:escolar", texto: "Eu venho. Eu trago a minha avó. Ela vai trazer bolo de caqui. Ela leva bolo de caqui pra tudo que é importante.", proxima: "c7_18" },
     c7_18: { tipo: "narracao", sprite: null, texto: "O Victor olha para o Takeo. Depois para a SN. E faz uma coisa que ela nunca viu ele fazer: fica tímido. O Victor, que chama o bairro inteiro de gatinha, tímido no chão da própria garagem.", proxima: "c7_19" },
     c7_19: { quem: "victor", texto: "...Ninguém nunca veio numa coisa minha. Nem aniversário. Eu não faço aniversário. Vai ser a primeira vez que tem gente.", proxima: "r_cam" },
 
@@ -340,20 +340,20 @@ Roteiro.registrar("capitulo41", {
     rk_c3: { quem: "kaito", texto: "...Tá. Eu gosto desse nome.", proxima: "r_fim" },
 
     // ---------- Rota Takeo ----------
-    rt_01: { tipo: "narracao", cenario: "rua-padaria-noite", transicao: "tempo", legenda: "Quinta, 18h", sprite: "takeo:machucado", texto: "Saindo da garagem do Victor, ela leva o Takeo em casa, pela rua da padaria, que tem luz. Ele ainda está com a ponta do nariz azul, ou um pouco de tinta no gesso, ou só com a cara feliz de quem passou a tarde fazendo uma coisa boa.", proxima: "rt_02" },
-    rt_02: { quem: "takeo", sprite: "takeo:machucado", texto: "O trabalho de história. Eu, você e a Reina. Eu fico nervoso. Eu fico nervoso com a Reina perto. E eu fico nervoso com você perto. E com as duas perto eu acho que eu vou desmaiar na biblioteca.", proxima: "rt_esc" },
+    rt_01: { tipo: "narracao", cenario: "rua-padaria-noite", transicao: "tempo", legenda: "Quinta, 18h", sprite: "takeo:escolar", texto: "Saindo da garagem do Victor, ela leva o Takeo em casa, pela rua da padaria, que tem luz. Ele ainda está com a ponta do nariz azul, ou um pouco de tinta no gesso, ou só com a cara feliz de quem passou a tarde fazendo uma coisa boa.", proxima: "rt_02" },
+    rt_02: { quem: "takeo", sprite: "takeo:escolar", texto: "O trabalho de história. Eu, você e a Reina. Eu fico nervoso. Eu fico nervoso com a Reina perto. E eu fico nervoso com você perto. E com as duas perto eu acho que eu vou desmaiar na biblioteca.", proxima: "rt_esc" },
     rt_esc: { escolhas: [
       { texto: "A. “Então eu fico do seu lado. A Reina do outro. Você no meio. Você é bom em ficar no meio.”", proxima: "rt_a1", pontos: { takeo: 3 }, flags: ["Meio_trio"] },
       { texto: "B. “Por que você fica nervoso comigo, Takeo?”", proxima: "rt_b1", pontos: { takeo: 3 }, flags: ["Nervoso_comigo"] },
       { texto: "C. “A gente faz na sua casa. Embaixo do caquizeiro. A sua avó serve doce. Ninguém desmaia com doce.”", proxima: "rt_c1", pontos: { takeo: 2 }, flags: ["Trabalho_caquizeiro"] }
     ]},
     rt_a1: { quem: "eu", texto: "Então eu fico do seu lado. A Reina do outro. Você no meio. Você é bom em ficar no meio.", proxima: "rt_a2" },
-    rt_a2: { quem: "takeo", sprite: "takeo:machucado", texto: "Eu sou bom em ficar no meio do caminho. No meio de duas pessoas eu nunca testei.", proxima: "r_fim" },
+    rt_a2: { quem: "takeo", sprite: "takeo:escolar", texto: "Eu sou bom em ficar no meio do caminho. No meio de duas pessoas eu nunca testei.", proxima: "r_fim" },
     rt_b1: { quem: "eu", texto: "Por que você fica nervoso comigo, Takeo?", proxima: "rt_b2" },
     rt_b2: { tipo: "narracao", texto: "Ele para no meio da calçada. Embaixo do poste. Fica vermelho até o gesso.", proxima: "rt_b3" },
-    rt_b3: { quem: "takeo", sprite: "takeo:machucado", texto: "...Pelo mesmo motivo que eu ficava nervoso antes de você subir na escada comigo. Eu ainda estou pesquisando o motivo. Mas eu já sei a resposta.", proxima: "r_fim" },
+    rt_b3: { quem: "takeo", sprite: "takeo:escolar", texto: "...Pelo mesmo motivo que eu ficava nervoso antes de você subir na escada comigo. Eu ainda estou pesquisando o motivo. Mas eu já sei a resposta.", proxima: "r_fim" },
     rt_c1: { quem: "eu", texto: "A gente faz na sua casa. Embaixo do caquizeiro. A sua avó serve doce. Ninguém desmaia com doce.", proxima: "rt_c2" },
-    rt_c2: { quem: "takeo", sprite: "takeo:machucado", texto: "A Reina embaixo do meu caquizeiro. Você embaixo do meu caquizeiro. A minha avó vai achar que é casamento duplo.", proxima: "r_fim" },
+    rt_c2: { quem: "takeo", sprite: "takeo:escolar", texto: "A Reina embaixo do meu caquizeiro. Você embaixo do meu caquizeiro. A minha avó vai achar que é casamento duplo.", proxima: "r_fim" },
 
     // ---------- Rota Blake ----------
     rb_01: { tipo: "narracao", cenario: "livraria-shopping", transicao: "tempo", legenda: "Quinta, 19h", sprite: "blake", texto: "Às sete, ela passa pela livraria do shopping. O Blake está atrás do balcão, de avental verde. Ele vê ela entrar e já estende uma bala de café, das que a dona deixa num pote no caixa.", proxima: "rb_02" },
