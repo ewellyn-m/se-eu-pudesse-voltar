@@ -41,13 +41,28 @@ Roteiro.registrar("capitulo54", {
   cenas: {
 
     /* =================== CENA 1 — MANHÃ =================== */
-    c1_01: { roupa: null, tipo: "narracao", cenario: "sala-sn", transicao: "tempo", legenda: "Quinta, 6h40 — Cena 1", sprite: "ren", texto: "De manhã, a sala do 407 cheira a café. O Ren está sentado no sofá, com o cobertor dobrado do lado, do jeito que a mãe ensinou. O olho roxo está menos inchado. Ele já consegue abrir metade.", proxima: "c1_02" },
+    c1_01: { roupa: null, tipo: "narracao", cenario: "sala-sn", transicao: "tempo", legenda: "Quinta, 6h40 — Cena 1", sprite: "ren", texto: "De manhã, a sala do 407 cheira a café. O Ren está sentado no sofá, com o cobertor dobrado do lado, do jeito que a mãe ensinou. O olho roxo está menos inchado. Ele já consegue abrir metade.", proxima: "c1_01c" },
+    c1_01c: { caminhos: [
+      { flag: "Contou_Kaito_Ren", proxima: "c1_01k" }
+    ], proxima: "c1_02" },
+    c1_01k: { tipo: "narracao", sprite: "kaito", texto: "No chão, do lado do sofá, o Kaito já dobrou o colchonete e o travesseiro, empilhados no canto, certinhos. Ele está sentado em cima da pilha, com o capacete vermelho no colo, esperando. Ele e o Ren não estão conversando. Mas também não estão se olhando torto.", proxima: "c1_02" },
     c1_02: { tipo: "narracao", texto: "A mãe passa pela sala de bolsa no ombro, apressada, e para na frente dele.", proxima: "c1_03" },
     c1_03: { sprite: "mae", quem: "mae", texto: "Hoje eu tenho plantão. Saio às seis da tarde, volto amanhã de manhã. A nossa conversa fica pra depois do plantão. Você fica. Não discute. Fica até poder voltar pra casa. Tem comida na geladeira. E você, filha, não cozinha nada. Pelo amor de Deus.", proxima: "c1_04" },
     c1_04: { tipo: "narracao", texto: "A mãe sai. A porta fecha. O Ren olha para ela.", proxima: "c1_05" },
     c1_05: { sprite: "ren", quem: "ren", texto: "Por que você não pode cozinhar?", proxima: "c1_06" },
     c1_06: { quem: "eu", texto: "Longa história. Envolve cookie.", proxima: "c1_07" },
-    c1_07: { tipo: "narracao", texto: "Ele não pergunta mais. Mas o canto da boca dele sobe, do lado que não está cortado.", proxima: "c1_08" },
+    c1_07: { tipo: "narracao", texto: "Ele não pergunta mais. Mas o canto da boca dele sobe, do lado que não está cortado.", proxima: "c1_07c" },
+    c1_07c: { caminhos: [
+      { flag: "Contou_Kaito_Ren", proxima: "c1_08k" }
+    ], proxima: "c1_08" },
+
+    // ----- O Kaito dormiu no 407: os dois descem juntos -----
+    c1_08k: { tipo: "narracao", sprite: "kaito", texto: "O Kaito levanta da pilha do colchonete. Passa pelo sofá. Para um segundo do lado do Ren, que levanta os olhos do livro.", proxima: "c1_08k2" },
+    c1_08k2: { quem: "kaito", texto: "Toma o remédio.", proxima: "c1_08k3" },
+    c1_08k3: { quem: "ren", sprite: "ren", texto: "...Vai logo.", proxima: "c1_08k4" },
+    c1_08k4: { roupa: "escolar", tipo: "narracao", cenario: "frente-casa-sn", transicao: "tempo", sprite: "kaito", texto: "Eles descem juntos a escada da frente. Na portaria, o porteiro olha para os dois saindo do mesmo apartamento às seis e quarenta, e volta para o jornal sem falar nada, com cara de quem vai contar para o prédio inteiro até o almoço.", proxima: "c1_08k5" },
+    c1_08k5: { tipo: "narracao", texto: "Lá fora, a moto dormiu na calçada, embaixo do poste. Duas meninas do prédio da frente passam, olham para ele, cochicham. Ele não percebe. Ele pega o capacete vermelho do guidão e entrega para ela.", proxima: "c1_12" },
+
     c1_08: { roupa: "escolar", tipo: "narracao", cenario: "frente-casa-sn", transicao: "tempo", sprite: "kaito", texto: "Na frente do prédio, o Kaito. Encostado na moto, braço cruzado, olhando o celular com cara de tédio. Duas meninas do prédio da frente passam, olham para ele, cochicham. Ele não levanta os olhos.", proxima: "c1_09" },
     c1_09: { tipo: "narracao", texto: "Quando ela sai, ele levanta. Guarda o celular. Joga o capacete vermelho para ela, de leve, por baixo. Ela pega no ar.", proxima: "c1_10" },
     c1_10: { quem: "kaito", texto: "Bom dia.", proxima: "c1_11" },
