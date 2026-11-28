@@ -465,15 +465,24 @@ const Capitulos = [
     pagina: "src/html/capitulo49.html",
     capa: "src/imagens/cenarios/frente-casa-sn.png",
     descricao: "Um bolo de emergência, um balanço que range e uma resposta às sete da noite."
+  },
+  {
+    id: "capitulo50",
+    numero: 50,
+    titulo: "Começar do zero",
+    subtitulo: "",
+    pagina: "src/html/capitulo50.html",
+    capa: "src/imagens/cenarios/sala-de-aula.jpg",
+    descricao: "Um “posso?”, um “parabéns” doce demais e um livro que não pode ser pulado."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 50,
-  titulo: "Capítulo 50",
-  capa: "src/imagens/cenarios/frente-casa-sn.png",
-  descricao: "Seis e quarenta. Cento e doze azulejos."
+  numero: 51,
+  titulo: "Capítulo 51",
+  capa: "src/imagens/cenarios/sala-de-aula.jpg",
+  descricao: "A carteira perto da porta."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);

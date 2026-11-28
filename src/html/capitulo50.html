@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-raiz="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capítulo 50 · Se eu pudesse voltar...</title>
+  <link rel="icon" type="image/png" href="../../src/imagens/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../src/css/reset.css">
+  <link rel="stylesheet" href="../../src/css/base.css">
+  <link rel="stylesheet" href="../../src/css/capitulo.css">
+  <link rel="stylesheet" href="../../src/css/configuracoes.css">
+</head>
+<body class="pagina-capitulo" data-capitulo="capitulo50">
+  <!-- Palco do capítulo. O texto vem de src/javascript/dados/capitulo50.js -->
+  <main class="palco">
+    <div class="cenario"></div>
+    <div class="cenario"></div>
+    <div class="vinheta" aria-hidden="true"></div>
+    <img class="sprite" alt="">
+    <img class="item" alt="">
+    <div class="area-clique" aria-hidden="true"></div>
+
+    <div class="hud">
+      <button type="button" class="botao-hud" data-acao="historico" title="Histórico (H)">Histórico</button>
+      <button type="button" class="botao-hud" data-acao="auto" aria-pressed="false" title="Avanço automático (A)">Auto</button>
+      <button type="button" class="botao-hud" data-acao="musica" aria-pressed="false" title="Música">Música</button>
+      <button type="button" class="botao-hud" data-acao="pausa" title="Menu (Esc)">Menu</button>
+    </div>
+
+    <div class="escolhas" role="group" aria-label="Escolhas"></div>
+
+    <div class="caixa apagada" aria-live="polite">
+      <div class="retrato" aria-hidden="true"><div class="retrato-avatar"></div></div>
+      <p class="placa-nome"></p>
+      <p class="texto"></p>
+      <span class="indicador" aria-hidden="true"></span>
+    </div>
+
+    <div class="cartao" aria-live="polite"></div>
+    <div class="fim"></div>
+  </main>
+
+  <!-- Pausa -->
+  <dialog id="modal-pausa" class="modal modal-pequeno">
+    <h2 class="titulo-modal">Pausa</h2>
+    <div class="lista-botoes">
+      <button type="button" class="botao-menu" data-acao="retomar">Continuar</button>
+      <button type="button" class="botao-menu" data-acao="historico">Histórico</button>
+      <button type="button" class="botao-menu" data-acao="config">Configurações</button>
+      <a class="botao-menu" href="../../index.html">Voltar ao menu <small>o progresso fica salvo</small></a>
+    </div>
+  </dialog>
+
+  <!-- Configurações (mesmo painel da página configuracoes.html) -->
+  <dialog id="modal-config" class="modal modal-pequeno">
+    <button type="button" class="fechar" data-fechar aria-label="Fechar">×</button>
+    <h2 class="titulo-modal">Configurações</h2>
+    <div data-painel-config></div>
+  </dialog>
+
+  <!-- Histórico -->
+  <dialog id="modal-historico" class="modal">
+    <button type="button" class="fechar" data-fechar aria-label="Fechar">×</button>
+    <h2 class="titulo-modal">Histórico</h2>
+    <ol class="historico" data-historico></ol>
+  </dialog>
+  <script src="../../src/javascript/comum/base.js"></script>
+  <script src="../../src/javascript/comum/estado.js"></script>
+  <script src="../../src/javascript/comum/musica.js"></script>
+  <script src="../../src/javascript/dados/personagens.js"></script>
+  <script src="../../src/javascript/dados/capitulos.js"></script>
+  <script src="../../src/javascript/dados/roteiro.js"></script>
+  <script src="../../src/javascript/dados/capitulo50.js"></script>
+  <script src="../../src/javascript/comum/avatar.js"></script>
+  <script src="../../src/javascript/comum/motor.js"></script>
+  <script src="../../src/javascript/comum/configuracoes.js"></script>
+  <script src="../../src/javascript/paginas/capitulo.js"></script>
+</body>
+</html>

@@ -43,7 +43,7 @@ Roteiro.registrar("capitulo49", {
 
     /* =================== CENA 1 — DOMINGO =================== */
     c1_01: { roupa: null, tipo: "narracao", cenario: "quarto-sn", transicao: "tempo", legenda: "Domingo, 10h — Cena 1", sprite: null, texto: "Domingo. Ela acorda com cheiro de café e com a voz da mãe no telefone, na cozinha, falando com a vizinha sobre o preço do tomate. Coisa normal. Coisa de domingo.", proxima: "c1_02" },
-    c1_02: { tipo: "narracao", texto: "O celular rachado na mesinha. Ela pega. Uma mensagem. Mandada às sete da manhã.", proxima: "c1_03" },
+    c1_02: { tipo: "narracao", texto: "O celular na mesinha. Ela pega. Uma mensagem. Mandada às sete da manhã.", proxima: "c1_03" },
     c1_03: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Hoje. Sete da noite. No hall. Eu vou estar lá com uma resposta inteira. Se você quiser descer, desce. Se não quiser, eu entendo, e eu volto amanhã às sete da manhã do mesmo jeito.", proxima: "c1_04" },
     c1_04: { tipo: "pensamento", texto: "Uma resposta inteira. Ele falou isso com todas as letras. Ele nunca fala com todas as letras.", proxima: "c1_05" },
     c1_05: { tipo: "pensamento", texto: "E se a resposta inteira for “ela”? E se ele vier dizer que pensou e escolheu ela, educadinho, com o capacete na mão?", proxima: "c1_06" },
@@ -73,15 +73,15 @@ Roteiro.registrar("capitulo49", {
     c2_esc1: { escolhas: [
       { texto: "A. “Vou. Eu dei o ultimato. Agora eu tenho que ouvir a resposta.”", proxima: "c2_1a_1", pontos: { kaito: 2 }, flags: ["Vou_descer"] },
       { texto: "B. “Vou. Mas se ele começar com “é complicado”, eu subo na hora.”", proxima: "c2_1b_1", pontos: { kaito: 1 }, flags: ["Sobe_complicado"] },
-      { texto: "C. “Eu não sei. Eu vou decidir às sete menos um.”", proxima: "c2_1c_1", pontos: {}, flags: ["Sete_menos_um"] }
+      { texto: "C. “Eu não sei. Eu vou decidir às seis e cinquenta e nove.”", proxima: "c2_1c_1", pontos: {}, flags: ["Sete_menos_um"] }
     ]},
     c2_1a_1: { quem: "eu", texto: "Vou. Eu dei o ultimato. Agora eu tenho que ouvir a resposta. Seja qual for.", proxima: "c2_1a_2" },
     c2_1a_2: { quem: "reina", texto: "Adulta. Assustadoramente adulta. Toma um pedaço de bolo.", proxima: "c2_16" },
     c2_1b_1: { quem: "eu", texto: "Vou. Mas se ele começar com “é complicado”, eu subo na hora. Na hora.", proxima: "c2_1b_2" },
     c2_1b_2: { quem: "mio", texto: "Justo. Muito justo. A Hana anota isso.", proxima: "c2_1b_3" },
     c2_1b_3: { tipo: "narracao", texto: "A Hana anota. “Gatilho de saída: ‘é complicado’.”", proxima: "c2_16" },
-    c2_1c_1: { quem: "eu", texto: "Eu não sei. Eu vou decidir às sete menos um.", proxima: "c2_1c_2" },
-    c2_1c_2: { quem: "mio", texto: "Ninguém decide nada às sete menos um. Às sete menos um a gente só entra em pânico. Mas tá. Eu respeito o pânico.", proxima: "c2_16" },
+    c2_1c_1: { quem: "eu", texto: "Eu não sei. Eu vou decidir às seis e cinquenta e nove..", proxima: "c2_1c_2" },
+    c2_1c_2: { quem: "mio", texto: "Ninguém decide nada àsseis e cinquenta e nove.. Às seis e cinquenta e nove. a gente só entra em pânico. Mas tá. Eu respeito o pânico.", proxima: "c2_16" },
 
     // (todas as opções continuam aqui)
     c2_16: { tipo: "narracao", sprite: null, texto: "O celular vibra. E vibra de novo. E de novo. O grupo dos meninos, que alguém colocou ela dentro na semana do torneio e ninguém tirou. Está explodindo.", proxima: "c2_17" },
@@ -169,7 +169,7 @@ Roteiro.registrar("capitulo49", {
     ], proxima: "c4_21d" },
     c4_21k: { quem: "kaito", texto: "Eu escolho você. Não ela. Não ninguém. Você. Desde a fivela do primeiro dia. Desde antes, eu acho. Eu só demorei pra ter coragem de falar em voz alta.", proxima: "c4_22" },
     c4_21d: { quem: "kaito", texto: "Eu escolho você. Não ela. Eu não sei ainda o nome disso que eu sinto, mas eu sei que é você que eu quero buscar às sete. Não ela. Não ninguém.", proxima: "c4_22" },
-    c4_22: { quem: "kaito", texto: "Mas eu não vou te pedir nada agora. Eu não mereço pedir agora. Eu deixei você esperando, eu levei ela no seu capacete, eu subi no palco. Eu não vou chegar aqui com uma frase bonita e achar que está tudo certo.", proxima: "c4_23" },
+    c4_22: { quem: "kaito", texto: "Mas eu não vou te pedir nada agora. Eu não mereço pedir agora. Eu deixei você esperando, eu levei ela no seu capacete, na sua metade da moto... Eu subi no palco. Eu não vou chegar aqui com uma frase bonita e achar que está tudo certo.", proxima: "c4_23" },
     c4_23: { quem: "kaito", texto: "Eu vou te mostrar. Todo dia. Até você achar que eu mereço pedir. Se você achar.", proxima: "c4_24" },
     c4_24: { tipo: "narracao", texto: "Silêncio no hall. A lâmpada do teto zumbindo baixinho. Lá fora, um carro passa devagar. Ela fica olhando para ele, no pé dos degraus, com o capacete vermelho nas mãos, a cara de quem acabou de carregar a caixa mais pesada do mundo até o último andar.", proxima: "c4_25" },
     c4_25: { tipo: "pensamento", texto: "A Hana estava certa. Sessenta e oito por cento. E a Mio também. Eu estou quase chorando.", proxima: "c4_26" },
@@ -197,7 +197,7 @@ Roteiro.registrar("capitulo49", {
     // (todas as opções continuam aqui)
     c4_27: { tipo: "narracao", texto: "Ele levanta o capacete vermelho. Estende para ela. Não sobe os degraus. Espera ela descer.", proxima: "c4_28" },
     c4_28: { quem: "kaito", texto: "Esse aqui. Eu lavei. Três vezes. Ninguém mais usa esse. Só você. Nem chovendo. Nem com o pé torcido. Nem se o prédio cair.", proxima: "c4_29" },
-    c4_29: { tipo: "narracao", texto: "Ela desce os três degraus. Um. Dois. Três. Devagar. Para na frente dele. Pega o capacete. Os dedos dela encostam nos dele. Dessa vez ninguém tira a mão rápido.", proxima: "c4_30" },
+    c4_29: { tipo: "narracao", texto: "Ela desce os três degraus. Devagar, para na frente dele, pega o capacete. Os dedos dela encostam nos dele, dessa vez ninguém tira a mão rápido.", proxima: "c4_30" },
     c4_30: { quem: "kaito", texto: "Amanhã. Sete horas. Posso?", proxima: "c4_esc4" },
 
     // ▶ ESCOLHA 4 — Amanhã
@@ -245,7 +245,7 @@ Roteiro.registrar("capitulo49", {
       { texto: "C. “Boa noite, Kaito.” Só isso. Mas com um ponto, não sem.", proxima: "rk_c1", pontos: { kaito: 2 }, flags: ["Boa_noite_ponto"] }
     ]},
     rk_a1: { quem: "mensagem", rotulo: "Mensagem — SN", texto: "É estranho. Continua.", proxima: "rk_a2" },
-    rk_a2: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Continuo. Boa noite. Seis e quarenta. Cento e doze azulejos.", proxima: "r_fim" },
+    rk_a2: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Continuo. Boa noite. Amanhã, seis e quarenta.", proxima: "r_fim" },
     rk_b1: { quem: "mensagem", rotulo: "Mensagem — SN", texto: "Kaito. Eu ainda não te perdoei inteiro. Mas hoje foi um começo.", proxima: "rk_b2" },
     rk_b2: { quem: "mensagem", rotulo: "Mensagem — Kaito", texto: "Começo é bom. Eu não preciso do inteiro agora. Eu preciso de amanhã. Depois eu preciso do outro amanhã. Eu vou juntando.", proxima: "r_fim" },
     rk_c1: { quem: "mensagem", rotulo: "Mensagem — SN", texto: "Boa noite, Kaito.", proxima: "rk_c2" },
