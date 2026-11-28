@@ -492,15 +492,24 @@ const Capitulos = [
     pagina: "src/html/capitulo52.html",
     capa: "src/imagens/cenarios/fliperama-abandonado.png",
     descricao: "Uma carteira vazia, cinco meninos num fliperama fechado e um sexto andar sem parede."
+  },
+  {
+    id: "capitulo53",
+    numero: 53,
+    titulo: "407",
+    subtitulo: "",
+    pagina: "src/html/capitulo53.html",
+    capa: "src/imagens/cenarios/sala-de-estar.jpg",
+    descricao: "Uma escada de serviço, uma moto embaixo do poste e um sofá com quatro paredes em volta."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 53,
-  titulo: "Capítulo 53",
-  capa: "src/imagens/cenarios/predio-abandonado.png",
-  descricao: "Não sozinha."
+  numero: 54,
+  titulo: "Capítulo 54",
+  capa: "src/imagens/cenarios/cozinha.png",
+  descricao: "Amanhã a gente conversa. Sobre tudo."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);
