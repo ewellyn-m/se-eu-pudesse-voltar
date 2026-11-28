@@ -411,15 +411,24 @@ const Capitulos = [
     pagina: "src/html/capitulo43.html",
     capa: "src/imagens/cenarios/rua.png",
     descricao: "Uma placa descoberta, um hall vazio às sete e vinte minutos a pé. E as mãos que não obedecem mais."
+  },
+  {
+    id: "capitulo44",
+    numero: 44,
+    titulo: "Quatro da manhã",
+    subtitulo: "",
+    pagina: "src/html/capitulo44.html",
+    capa: "src/imagens/cenarios/lanhouse.png",
+    descricao: "Um mouse, um fone, um banco, uma parede. E a foto que ela ainda não tinha visto."
   }
 ];
 
 /* Próximo capítulo, ainda não escrito: aparece bloqueado */
 const CapituloEmBreve = {
-  numero: 44,
-  titulo: "Capítulo 44",
+  numero: 45,
+  titulo: "Capítulo 45",
   capa: "src/imagens/cenarios/frente-casa-sn.png",
-  descricao: "Amanhã, às sete, ele diz que vai estar lá. E eu não sei se eu vou descer."
+  descricao: "Seis e quarenta. Com dois braços."
 };
 
 const capituloPorId = id => Capitulos.find(c => c.id === id);
